@@ -1,16 +1,17 @@
 package com.example.interviewquestion.views
 
+import android.content.ActivityNotFoundException
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.interviewquestion.Constant
 import com.example.interviewquestion.R
@@ -160,13 +161,38 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.item_rate ->{
-
+                val appPackageName = packageName
+                try {
+                    startActivity(
+                        Intent(
+                            Intent.ACTION_VIEW,
+                            Uri.parse("market://details?id=$appPackageName")
+                        )
+                    )
+                } catch (anfe: ActivityNotFoundException) {
+                    startActivity(
+                        Intent(
+                            Intent.ACTION_VIEW,
+                            Uri.parse("https://play.google.com/store/apps/details?id=$appPackageName")
+                        )
+                    )
+                }
             }
             R.id.item_share ->{
-
+                val intent= Intent()
+                intent.action=Intent.ACTION_SEND
+                intent.putExtra(Intent.EXTRA_TEXT,"Hey Check out this Great app:")
+                intent.type="text/plain"
+                startActivity(Intent.createChooser(intent,"Share To:"))
             }
             R.id.item_other_app ->{
-
+                val uri = Uri.parse("https://play.google.com/store/apps/developer?id=Suvarna+Tech+Lab")
+                val myAppLinkToMarket = Intent(Intent.ACTION_VIEW, uri)
+                try {
+                    startActivity(myAppLinkToMarket)
+                } catch (e: ActivityNotFoundException) {
+                    Toast.makeText(this, "Impossible to find an application for the market", Toast.LENGTH_LONG).show()
+                }
             }
         }
         return super.onOptionsItemSelected(item)
