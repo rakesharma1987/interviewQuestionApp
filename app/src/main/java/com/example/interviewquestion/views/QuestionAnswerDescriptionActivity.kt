@@ -6,9 +6,11 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.text.HtmlCompat
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.interviewquestion.Constant
 import com.example.interviewquestion.R
@@ -44,6 +46,12 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity() {
         markedAsReadData = intent.getSerializableExtra(Constant.MARKED_AS_READ, MarkedAsReadQues::class.java)!!
         isSaveOrMarkedAsRead = intent.getBooleanExtra(Constant.IS_SAVE_OR_MARKED_AS_READ_DATA, false)
 
+        viewModel.message.observe(this, Observer {
+            it.getContentIfNotHandled()?.let {
+                Toast.makeText(this@QuestionAnswerDescriptionActivity, it, Toast.LENGTH_SHORT).show()
+            }
+        })
+
         binding.tvQuestion.text = saveForLaterData?.Question
         if (saveForLaterData?.isHtmlTag!!){
             binding.webView.visibility = View.VISIBLE
@@ -78,9 +86,11 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity() {
         when(item.itemId){
             R.id.item_mark_as_read ->{
                 viewModel.saveForLater(saveForLaterData)
+                viewModel.deleteQuestionAnswer(QuestionAnswer(saveForLaterData.SrNo, saveForLaterData.isHtmlTag, saveForLaterData.quesType, saveForLaterData.Question, saveForLaterData.Answer))
             }
             R.id.item_save ->{
                 viewModel.saveMarkedAsRead(markedAsReadData)
+                viewModel.deleteQuestionAnswer(QuestionAnswer(markedAsReadData.SrNo, markedAsReadData.isHtmlTag, markedAsReadData.quesType, markedAsReadData.Question, markedAsReadData.Answer))
             }
         }
         return true

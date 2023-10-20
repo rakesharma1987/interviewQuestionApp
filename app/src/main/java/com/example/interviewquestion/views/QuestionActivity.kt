@@ -26,29 +26,22 @@ import com.example.interviewquestion.db.AppRepository
 import com.example.interviewquestion.db.MarkedAsReadQues
 import com.example.interviewquestion.db.SaveForLaterQues
 import com.example.interviewquestion.factory.DbFactory
-import com.example.interviewquestion.factory.QuestionAnswerFactory
-import com.example.interviewquestion.interfaces.OnItemClickListener
 import com.example.interviewquestion.interfaces.OnQuestionClickListener
 import com.example.interviewquestion.model.QuestionAnswer
 import com.example.interviewquestion.model.QuestionAnswerList
 import com.example.interviewquestion.viewModel.DbViewModel
-import com.example.interviewquestion.viewModel.QuestionsAnswerViewModel
-import com.google.gson.Gson
 
 class QuestionActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityQuestionBinding
     private lateinit var list: QuestionAnswerList
-    private lateinit var viewModel: QuestionsAnswerViewModel
     private lateinit var viewModel2: DbViewModel
     private var isSaveOrMarkedOpen: Boolean = false
     private lateinit var allDataList:ArrayList<QuestionAnswer>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_question)
-        val questionAnswerJsonString = intent.getStringExtra(Constant.QUESTIONANSWERLIST)
-        list = Gson().fromJson(questionAnswerJsonString, QuestionAnswerList::class.java)
-        var factory = QuestionAnswerFactory(list)
-        viewModel = ViewModelProvider(this, factory)[QuestionsAnswerViewModel::class.java]
+        binding.rvQuestionList.layoutManager = LinearLayoutManager(this)
+        binding.rvQuestionList.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
 
         allDataList = ArrayList<QuestionAnswer>()
 
@@ -56,25 +49,16 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
         val factory2 = DbFactory(AppRepository(dao))
         viewModel2 = ViewModelProvider(this, factory2)[DbViewModel::class.java]
 
-        binding.rvQuestionList.layoutManager = LinearLayoutManager(this)
-        binding.rvQuestionList.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
-
-        viewModel.tempList.observe(this, Observer {
-            if (it.size > 0){
-                allDataList.addAll(it)
-                setUpRecyclerView(it)
-            }
-        })
-
-        viewModel.isTxtShowHide.observe(this, Observer {
-            if (it){
-                binding.tvOopsMoment.visibility = View.VISIBLE
-            }else{
+        list = QuestionAnswerList()
+        viewModel2.getAllQuestionAnswerData.observe(this, Observer {
+            if (it.isNotEmpty()){
+            allDataList.addAll(it)
+            setUpRecyclerView(it)
                 binding.tvOopsMoment.visibility = View.GONE
+            }else{
+                binding.tvOopsMoment.visibility = View.VISIBLE
             }
         })
-
-        viewModel.questionBasedOnType()
 
         binding.btnAllQuestion.setOnClickListener(this)
         binding.btnSaveForLatter.setOnClickListener(this)
@@ -83,7 +67,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
 
     }
 
-    private fun setUpRecyclerView(tempList: ArrayList<QuestionAnswer>){
+    private fun setUpRecyclerView(tempList: List<QuestionAnswer>){
         var questionAnswerAdapter = QuestionActivityAdapter(this, tempList, object: OnQuestionClickListener{
             override fun onClick(position: Int, item: QuestionAnswer) {
                 var intent = Intent(this@QuestionActivity, QuestionAnswerDescriptionActivity::class.java)
@@ -110,8 +94,8 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
                 binding.btnTips.setBackgroundColor(applicationContext.getColor(R.color.card_foreground_color))
 
                 isSaveOrMarkedOpen = false
-                viewModel.tempList.observe(this, Observer {
-                    if (it.size > 0){
+                viewModel2.getAllQuestionAnswerData.observe(this, Observer {
+                    if (it.isNotEmpty()){
                         setUpRecyclerView(it)
                     }
                 })

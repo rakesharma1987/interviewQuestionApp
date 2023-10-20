@@ -13,7 +13,7 @@ import com.example.interviewquestion.interfaces.OnQuestionClickListener
 import com.example.interviewquestion.model.QuestionAnswer
 import com.example.interviewquestion.model.QuestionAnswerList
 
-class QuestionActivityAdapter(private var context: Context, private var list: ArrayList<QuestionAnswer>, private var onItemClickListener: OnQuestionClickListener): RecyclerView.Adapter<QuestionActivityAdapter.MyViewHolder>() {
+class QuestionActivityAdapter(private var context: Context, private var list: List<QuestionAnswer>, private var onItemClickListener: OnQuestionClickListener): RecyclerView.Adapter<QuestionActivityAdapter.MyViewHolder>() {
 
     inner class MyViewHolder(val itemDashboardItemBinding: LayoutQuestionListBinding?): RecyclerView.ViewHolder(itemDashboardItemBinding!!.root)
 

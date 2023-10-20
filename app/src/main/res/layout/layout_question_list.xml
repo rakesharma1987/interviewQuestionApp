@@ -11,19 +11,18 @@
         android:layout_height="wrap_content">
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:id="@+id/rl_value"
             app:layout_constraintTop_toTopOf="parent"
             android:gravity="center_vertical"
             android:layout_marginLeft="@dimen/margin_5dp"
             android:layout_marginRight="@dimen/margin_5dp">
             <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
+                android:layout_width="35dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/tv_srno_value"
                 android:text="1"
                 android:textSize="@dimen/text_size"
-                android:textStyle="bold"
                 android:layout_centerVertical="true"
                 android:gravity="center"
                 />
@@ -36,18 +35,16 @@
                 android:layout_toRightOf="@id/tv_srno_value"
                 android:text="What is your name?"
                 android:textSize="@dimen/text_size"
-                android:textStyle="bold"
                 android:layout_marginLeft="10dp"
                 android:layout_toLeftOf="@id/tv_priority_value"
                 android:layout_marginRight="@dimen/margin_5dp"/>
             <com.google.android.material.textview.MaterialTextView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:id="@+id/tv_priority_value"
                 android:text="L"
                 android:layout_alignParentEnd="true"
                 android:textSize="@dimen/text_size"
-                android:textStyle="bold"
                 android:layout_centerVertical="true"
                 android:textColor="@color/white"
                 android:background="@drawable/spinner_background"
