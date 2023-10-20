@@ -9,22 +9,31 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <RelativeLayout
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/rl_value"
             app:layout_constraintTop_toTopOf="parent"
-            android:gravity="center_vertical"
-            android:layout_marginLeft="@dimen/margin_5dp"
-            android:layout_marginRight="@dimen/margin_5dp">
+            app:cardCornerRadius="@dimen/margin_5dp"
+            app:cardUseCompatPadding="true"
+            app:cardMaxElevation="@dimen/margin_2dp"
+            >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rl_value"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="@dimen/margin_2dp"
+            android:layout_marginBottom="@dimen/margin_2dp">
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="35dp"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
                 android:id="@+id/tv_srno_value"
                 android:text="1"
                 android:textSize="@dimen/text_size"
                 android:layout_centerVertical="true"
                 android:gravity="center"
+                android:background="@drawable/shap_circle"
                 />
 
             <com.google.android.material.textview.MaterialTextView
@@ -51,5 +60,6 @@
                 android:gravity="center"
                 />
         </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

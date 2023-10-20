@@ -3,15 +3,10 @@ package com.example.interviewquestion.views
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.AdapterView
-import android.widget.SearchView
-import android.widget.SearchView.OnQueryTextListener
 import android.widget.Toast
-import androidx.compose.ui.text.toLowerCase
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -41,7 +36,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_question)
         binding.rvQuestionList.layoutManager = LinearLayoutManager(this)
-        binding.rvQuestionList.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
+//        binding.rvQuestionList.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
 
         allDataList = ArrayList<QuestionAnswer>()
 
@@ -171,9 +166,6 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
 
             }
             R.id.item_other_app ->{
-
-            }
-            R.id.item_settings ->{
 
             }
         }

@@ -18,9 +18,5 @@
         android:id="@+id/item_other_app"
         android:title="Other App"
         />
-    <item
-        android:id="@+id/item_settings"
-        android:title="Settings"
-        />
 
 </menu>
