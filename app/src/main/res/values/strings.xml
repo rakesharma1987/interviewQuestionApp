@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">InterviewQuestion</string>
+    <string name="txt_all_question">All Question</string>
+    <string name="txt_save_for_later">Save For Later</string>
+    <string name="txt_tips">Tips</string>
+    <string-array name="question_type">
+        <item >Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
+</resources>

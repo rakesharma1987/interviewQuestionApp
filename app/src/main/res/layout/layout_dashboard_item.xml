@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:id="@+id/card_view"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:cardUseCompatPadding="true"
+            app:cardMaxElevation="5dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/card_foreground_color">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_name"
+                android:text="Item Name"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
