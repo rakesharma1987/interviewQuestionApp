@@ -43,6 +43,7 @@ dependencies {
     def arch_version = "2.2.0"
     def room_version = "2.5.2"
     def coroutine_version = "1.7.3"
+    def billing_version = "5.2.0"
 
 
     // ViewModel
@@ -77,6 +78,9 @@ dependencies {
     implementation 'androidx.core:core-splashscreen:1.0.0-alpha01'
 
     implementation 'org.greenrobot:eventbus:3.2.0'
+    implementation("com.android.billingclient:billing-ktx:$billing_version")
+    implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
+    implementation 'com.google.guava:guava:24.1-jre'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

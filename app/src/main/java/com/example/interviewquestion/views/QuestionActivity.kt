@@ -1,9 +1,12 @@
 package com.example.interviewquestion.views
 
+import android.app.AlertDialog
 import android.content.ActivityNotFoundException
+import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -12,7 +15,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.interviewquestion.Constant
 import com.example.interviewquestion.R
 import com.example.interviewquestion.adapters.QuestionActivityAdapter
@@ -25,7 +30,9 @@ import com.example.interviewquestion.factory.DbFactory
 import com.example.interviewquestion.interfaces.OnQuestionClickListener
 import com.example.interviewquestion.model.QuestionAnswer
 import com.example.interviewquestion.model.QuestionAnswerList
+import com.example.interviewquestion.util.MyPreferences
 import com.example.interviewquestion.viewModel.DbViewModel
+
 
 class QuestionActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityQuestionBinding
@@ -33,11 +40,16 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var viewModel2: DbViewModel
     private var isSaveOrMarkedOpen: Boolean = false
     private lateinit var allDataList:ArrayList<QuestionAnswer>
+    private var oldFirstPos = -1
+    private  var oldLastPos:kotlin.Int = -1
+    private  var totalItemsViewed:kotlin.Int = 0
+    private lateinit var layoutmanager: LinearLayoutManager
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_question)
-        binding.rvQuestionList.layoutManager = LinearLayoutManager(this)
-//        binding.rvQuestionList.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
+        MyPreferences.init(this)
+        layoutmanager = LinearLayoutManager(this)
+        binding.rvQuestionList.layoutManager = layoutmanager
 
         allDataList = ArrayList<QuestionAnswer>()
 
@@ -216,5 +228,45 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
             setUpRecyclerView(filteredList)
         }
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+        binding.rvQuestionList.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                super.onScrolled(recyclerView, dx, dy)
+                val currFirstPos = layoutmanager!!.findFirstCompletelyVisibleItemPosition()
+                val currLastPos = layoutmanager.findLastCompletelyVisibleItemPosition()
+                val totalItemCount = layoutmanager.itemCount
+                if (oldFirstPos === -1) {
+                    totalItemsViewed += currLastPos - currFirstPos + 1
+                } else {
+                    if (dy > 0) {
+                        totalItemsViewed += Math.abs(currLastPos - oldLastPos)
+                    } else {
+                        totalItemsViewed -= Math.abs(oldLastPos - currLastPos)
+                    }
+                }
+                oldLastPos = currLastPos
+                oldFirstPos = currFirstPos
+                Log.e("totalItemsViewed", totalItemsViewed.toString())
+                if (totalItemsViewed >= 20){
+                    if (!MyPreferences.isPurchased()){
+                        val dialog = AlertDialog.Builder(this@QuestionActivity)
+                        dialog.setCancelable(false)
+                        dialog.setTitle(R.string.app_name)
+                        dialog.setMessage(getString(R.string.msg_subscription))
+                        dialog.setPositiveButton("SUBSCRIBE", object: DialogInterface.OnClickListener{
+                            override fun onClick(dialog: DialogInterface?, which: Int) {
+                                startActivity(Intent(this@QuestionActivity, BillingActivity::class.java))
+                                dialog!!.dismiss()
+                            }
+
+                        })
+                        dialog.show()
+                    }
+                }
+            }
+        })
     }
 }
