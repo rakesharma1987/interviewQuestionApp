@@ -55,7 +55,7 @@ class DashboardActivity : AppCompatActivity() {
             var intent = Intent(this@DashboardActivity, QuestionActivity::class.java)
             startActivity(intent)
             finish()
-        }, 2000)
+        }, 5000)
 
     }
 

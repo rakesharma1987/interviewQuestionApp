@@ -1,7 +1,8 @@
 package com.example.interviewquestion.db
 
-import androidx.lifecycle.LiveData
+import com.example.interviewquestion.model.MarkedAsReadQues
 import com.example.interviewquestion.model.QuestionAnswer
+import com.example.interviewquestion.model.SaveForLaterQues
 
 class AppRepository(private val appDao: AppDao) {
     val getSaveForLaterData = appDao.getAllSaveForLaterData()

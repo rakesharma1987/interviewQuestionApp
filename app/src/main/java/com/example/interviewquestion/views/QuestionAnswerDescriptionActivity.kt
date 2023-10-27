@@ -17,12 +17,11 @@ import com.example.interviewquestion.R
 import com.example.interviewquestion.databinding.ActivityQuestionAnswerDescriptionBinding
 import com.example.interviewquestion.db.AppDatabase
 import com.example.interviewquestion.db.AppRepository
-import com.example.interviewquestion.db.MarkedAsReadQues
-import com.example.interviewquestion.db.SaveForLaterQues
 import com.example.interviewquestion.factory.DbFactory
+import com.example.interviewquestion.model.MarkedAsReadQues
 import com.example.interviewquestion.model.QuestionAnswer
+import com.example.interviewquestion.model.SaveForLaterQues
 import com.example.interviewquestion.viewModel.DbViewModel
-import com.example.interviewquestion.viewModel.QuestionsAnswerViewModel
 import kotlin.properties.Delegates
 
 class QuestionAnswerDescriptionActivity : AppCompatActivity() {

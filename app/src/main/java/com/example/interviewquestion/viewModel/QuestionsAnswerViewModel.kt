@@ -2,14 +2,7 @@ package com.example.interviewquestion.viewModel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import com.example.interviewquestion.db.AppRepository
-import com.example.interviewquestion.db.MarkedAsReadQues
-import com.example.interviewquestion.db.SaveForLaterQues
 import com.example.interviewquestion.model.QuestionAnswer
-import com.example.interviewquestion.model.QuestionAnswerList
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 
 class QuestionsAnswerViewModel(private val list: ArrayList<QuestionAnswer>): ViewModel() {
     var tempList: MutableLiveData<ArrayList<QuestionAnswer>> = MutableLiveData()

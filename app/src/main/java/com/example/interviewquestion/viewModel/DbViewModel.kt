@@ -5,12 +5,11 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.interviewquestion.db.AppRepository
-import com.example.interviewquestion.db.MarkedAsReadQues
-import com.example.interviewquestion.db.SaveForLaterQues
+import com.example.interviewquestion.model.MarkedAsReadQues
 import com.example.interviewquestion.model.QuestionAnswer
+import com.example.interviewquestion.model.SaveForLaterQues
 import com.example.interviewquestion.util.Event
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 

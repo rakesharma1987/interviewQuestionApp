@@ -15,7 +15,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.interviewquestion.Constant
@@ -24,12 +23,12 @@ import com.example.interviewquestion.adapters.QuestionActivityAdapter
 import com.example.interviewquestion.databinding.ActivityQuestionBinding
 import com.example.interviewquestion.db.AppDatabase
 import com.example.interviewquestion.db.AppRepository
-import com.example.interviewquestion.db.MarkedAsReadQues
-import com.example.interviewquestion.db.SaveForLaterQues
 import com.example.interviewquestion.factory.DbFactory
 import com.example.interviewquestion.interfaces.OnQuestionClickListener
+import com.example.interviewquestion.model.MarkedAsReadQues
 import com.example.interviewquestion.model.QuestionAnswer
 import com.example.interviewquestion.model.QuestionAnswerList
+import com.example.interviewquestion.model.SaveForLaterQues
 import com.example.interviewquestion.util.MyPreferences
 import com.example.interviewquestion.viewModel.DbViewModel
 
@@ -250,20 +249,35 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
                 oldLastPos = currLastPos
                 oldFirstPos = currFirstPos
                 Log.e("totalItemsViewed", totalItemsViewed.toString())
-                if (totalItemsViewed >= 20){
+                if (totalItemsViewed >= 25){
                     if (!MyPreferences.isPurchased()){
-                        val dialog = AlertDialog.Builder(this@QuestionActivity)
-                        dialog.setCancelable(false)
-                        dialog.setTitle(R.string.app_name)
-                        dialog.setMessage(getString(R.string.msg_subscription))
-                        dialog.setPositiveButton("SUBSCRIBE", object: DialogInterface.OnClickListener{
-                            override fun onClick(dialog: DialogInterface?, which: Int) {
-                                startActivity(Intent(this@QuestionActivity, BillingActivity::class.java))
-                                dialog!!.dismiss()
-                            }
+                            val dialog = AlertDialog.Builder(this@QuestionActivity)
+                            dialog.setCancelable(false)
+                            dialog.setTitle(R.string.app_name)
+                            dialog.setMessage(getString(R.string.msg_subscription))
+                            dialog.setPositiveButton(
+                                "SUBSCRIBE",
+                                object : DialogInterface.OnClickListener {
+                                    override fun onClick(dialog: DialogInterface?, which: Int) {
+                                        dialog!!.dismiss()
+                                        startActivity(
+                                            Intent(
+                                                this@QuestionActivity,
+                                                BillingActivity::class.java
+                                            )
+                                        )
+                                    }
 
-                        })
-                        dialog.show()
+                                })
+                            dialog.setNegativeButton(
+                                "Cancel",
+                                object : DialogInterface.OnClickListener {
+                                    override fun onClick(dialog: DialogInterface?, which: Int) {
+                                        dialog!!.dismiss()
+                                    }
+
+                                })
+                        dialog.create().show()
                     }
                 }
             }
