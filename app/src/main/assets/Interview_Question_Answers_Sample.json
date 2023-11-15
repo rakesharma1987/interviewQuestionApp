@@ -1,3502 +1,1570 @@
 [
-{
-"SrNo": 1,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 2,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 3,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 4,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 5,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 6,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 7,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 8,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 9,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 10,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 11,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 12,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 13,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 14,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 15,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 16,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 17,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy ..."
-},
-{
-"SrNo": 18,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 19,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 20,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 21,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 22,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 23,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 24,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 25,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 26,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 27,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 28,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 29,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 30,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy ..."
-},
-{
-"SrNo": 31,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 32,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 33,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 34,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 35,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 36,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 37,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 38,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 39,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 40,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 41,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 42,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 43,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy ..."
-},
-{
-"SrNo": 44,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 45,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 46,
-"Question": "Vivamus efficitur mauris id quam condimentum phare…",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 47,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 48,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 49,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 50,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 51,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 52,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 53,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 54,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 55,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy ..."
-},
-{
-"SrNo": 56,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 57,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 58,
-"Question": "Vivamus efficitur mauris id quam condimentum phare…",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 59,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 60,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 61,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 62,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 63,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 64,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 65,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 66,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 67,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 68,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 69,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy ..."
-},
-{
-"SrNo": 70,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 71,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 72,
-"Question": "Vivamus efficitur mauris id quam condimentum phare…",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 73,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 74,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 75,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 76,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 77,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 78,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 79,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 80,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 81,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 82,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 83,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 84,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 85,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 86,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 87,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 88,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 89,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 90,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 91,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 92,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 93,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 94,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 95,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 96,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 97,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 98,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 99,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 100,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 101,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 102,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 103,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 104,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 105,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 106,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 107,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 108,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 109,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 110,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 111,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 112,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 113,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 114,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 115,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 116,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 117,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 118,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 119,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 120,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 121,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 122,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 123,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 124,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 125,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 126,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 127,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 128,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 129,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 130,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 131,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 132,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 133,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 134,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 135,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 136,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 137,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 138,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 139,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 140,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 141,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 142,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 143,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 144,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 145,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 146,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 147,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 148,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 149,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 150,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 151,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 152,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 153,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 154,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 155,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 156,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 157,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 158,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 159,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 160,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 161,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 162,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 163,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 164,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 165,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 166,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 167,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 168,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 169,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 170,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 171,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 172,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 173,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 174,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 175,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 176,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 177,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 178,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 179,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 180,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 181,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 182,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 183,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 184,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 185,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 186,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 187,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 188,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 189,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 190,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 191,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 192,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 193,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 194,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 195,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 196,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 197,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 198,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 199,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 200,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 201,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 202,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 203,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 204,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 205,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 206,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 207,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 208,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 209,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 210,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 211,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 212,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 213,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 214,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 215,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 216,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 217,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 218,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 219,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 220,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 221,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 222,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 223,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 224,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 225,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 226,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 227,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 228,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 229,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 230,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 231,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 232,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 233,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 234,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 235,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 236,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 237,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 238,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 239,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 240,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 241,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 242,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 243,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 244,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 245,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 246,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 247,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 248,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 249,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 250,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 251,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 252,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 253,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 254,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 255,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 256,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 257,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 258,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 259,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 260,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 261,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 262,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 263,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 264,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 265,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 266,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 267,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 268,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 269,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 270,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 271,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 272,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 273,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 274,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 275,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 276,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 277,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 278,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 279,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 280,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 281,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 282,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 283,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 284,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 285,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 286,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 287,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 288,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 289,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 290,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 291,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 292,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 293,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 294,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 295,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 296,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 297,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 298,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 299,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 300,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 301,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 302,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 303,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 304,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 305,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 306,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 307,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 308,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 309,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 310,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 311,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 312,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 313,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 314,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 315,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 316,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 317,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 318,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 319,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 320,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 321,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 322,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 323,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 324,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 325,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 326,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 327,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 328,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 329,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 330,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 331,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 332,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 333,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 334,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 335,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 336,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 337,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 338,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 339,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 340,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 341,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 342,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 343,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 344,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 345,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 346,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 347,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 348,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 349,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 350,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 351,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 352,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 353,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 354,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 355,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 356,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 357,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 358,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 359,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 360,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 361,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 362,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 363,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 364,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 365,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 366,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 367,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 368,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 369,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 370,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 371,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 372,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 373,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 374,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 375,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 376,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 377,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 378,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 379,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 380,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 381,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 382,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 383,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 384,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 385,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 386,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 387,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 388,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 389,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 390,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 391,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 392,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 393,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 394,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 395,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 396,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 397,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 398,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 399,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 400,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 401,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 402,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 403,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 404,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 405,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 406,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 407,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 408,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 409,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 410,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 411,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 412,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 413,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 414,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 415,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 416,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 417,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 418,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 419,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 420,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 421,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 422,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 423,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 424,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 425,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 426,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 427,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 428,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 429,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 430,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 431,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 432,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 433,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 434,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 435,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 436,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 437,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 438,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 439,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 440,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 441,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 442,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 443,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 444,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 445,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 446,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 447,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 448,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 449,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 450,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 451,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 452,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 453,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 454,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 455,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 456,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 457,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 458,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 459,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 460,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 461,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 462,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 463,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 464,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 465,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 466,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 467,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 468,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 469,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 470,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 471,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 472,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 473,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 474,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 475,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 476,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 477,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 478,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 479,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 480,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 481,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 482,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 483,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 484,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 485,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 486,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 487,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-},
-{
-"SrNo": 488,
-"Question": "1914 translation by H. Rackham",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
-},
-{
-"SrNo": 489,
-"Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Why do we use it?\\nIt is a long established fact t..."
-},
-{
-"SrNo": 490,
-"Question": "Vivamus efficitur mauris id quam condimentum phare...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
-},
-{
-"SrNo": 491,
-"Question": "Etiam tempor tellus quis tincidunt fringilla.",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Where can I get some?\\nThere are many variations o..."
-},
-{
-"SrNo": 492,
-"Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
-},
-{
-"SrNo": 493,
-"Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
-},
-{
-"SrNo": 494,
-"Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
-},
-{
-"SrNo": 495,
-"Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
-"isHtmlTag": true,
-"quesType": "High",
-"Answer": "Orci varius natoque penatibus et magnis dis partur..."
-},
-{
-"SrNo": 496,
-"Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
-},
-{
-"SrNo": 497,
-"Question": "What is a Primary Key?",
-"isHtmlTag": false,
-"quesType": "Low",
-"Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
-},
-{
-"SrNo": 498,
-"Question": "Clustered and Non-Clustered Index:",
-"isHtmlTag": false,
-"quesType": "Medium",
-"Answer": "Clustered indexes are indexes whose order of the r..."
-},
-{
-"SrNo": 499,
-"Question": "Html Table",
-"isHtmlTag": true,
-"quesType": "Low",
-"Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
-},
-{
-"SrNo": 500,
-"Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
-"isHtmlTag": true,
-"quesType": "Medium",
-"Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
-}
+  {
+    "SrNo": 1,
+    "Question": "What is a Primary Key?",
+    "isHtmlTag": "TRUE",
+    "quesType": "Low",
+    "Answer": "A FOREIGN KEY comprises of single or collection of fields in a table that essentially refers to the PRIMARY KEY in another table. Foreign key constraint ensures referential integrity in the relation between two tables.\nThe table with the foreign key constraint is labeled as the child table, and the table containing the candidate key is labeled as the referenced or parent table.\n<html>\n<head>\n</head>\n<body>\n<style type=\"text/css\"></body>.SQLCode{color:white;font-size:13px;font-family:'Times New Roman',Times,serif;white-space:pre;-o-tab-size:4;-moz-tab-size:4;-webkit-tab-size:4}.SQLComment{color:#a3d2a3}.SQLString{color:#8080ff}.SQLFunction{color:#a0a}.SQLKeyword{color:#f65050}.SQLOperator{color:wheat}.line{width:100px;height:47px;border-bottom:1px solid wheat;position:absolute}</style>\n<pre class=\"SQLCode\">\nDELIMITER $$\n<span class=\"SQLComment\">/* Set a new delimiter =&gt; */</span>\n<span class=\"SQLKeyword\">CREATE</span> <span class=\"SQLKeyword\">PROCEDURE</span> calctotal(\n   <span class=\"SQLComment\">/* Create the procedure */</span>\n   <span class=\"SQLOperator\">IN</span> number <span class=\"SQLKeyword\">INT</span><span class=\"SQLOperator\">,</span>\n   <span class=\"SQLComment\">/* Set Input and Ouput variables */</span>\n   <span class=\"SQLKeyword\">OUT</span> total <span class=\"SQLKeyword\">INT</span>\n) <span class=\"SQLKeyword\">BEGIN</span> <span class=\"SQLKeyword\">DECLARE</span> score <span class=\"SQLKeyword\">INT</span> <span class=\"SQLKeyword\">DEFAULT</span> <span class=\"SQLKeyword\">NULL</span><span class=\"SQLOperator\">;</span>\n\n<span class=\"SQLComment\">/* Set the default value =&gt; &quot;score&quot; */</span>\n<span class=\"SQLKeyword\">SELECT</span>\n   awards\n<span class=\"SQLKeyword\">FROM</span>\n   achievements\n   <span class=\"SQLComment\">/* Update &quot;score&quot; via SELECT query */</span>\n<span class=\"SQLKeyword\">WHERE</span>\n   id <span class=\"SQLOperator\">=</span> number <span class=\"SQLKeyword\">INTO</span> score<span class=\"SQLOperator\">;</span>\n\n<span class=\"SQLKeyword\">IF</span><span class=\"SQLErrorHighlight\"> score <span class=\"SQLKeyword\">IS</span> <span class=\"SQLKeyword\">NULL</span> THEN\n</span><span class=\"SQLKeyword\">SET</span>\n   total <span class=\"SQLOperator\">=</span> 0<span class=\"SQLOperator\">;</span>\n\n<span class=\"SQLComment\">/* Termination condition */</span>\n<span class=\"SQLKeyword\">ELSE</span> CALL calctotal(number <span class=\"SQLOperator\">+</span> 1)<span class=\"SQLOperator\">;</span>\n\n<span class=\"SQLComment\">/* Recursive call */</span>\n<span class=\"SQLKeyword\">SET</span>\n   total <span class=\"SQLOperator\">=</span> total <span class=\"SQLOperator\">+</span> score<span class=\"SQLOperator\">;</span>\n\n   <div class=\"line\"></div>\n\n<br></br>\n<span class=\"SQLComment\">/* Action after recursion */</span>\n<span class=\"SQLKeyword\">END</span> <span class=\"SQLKeyword\">IF</span><span class=\"SQLErrorHighlight\"><span class=\"SQLOperator\">;</span>\n\n<span class=\"SQLKeyword\">END</span> $$\n</span><span class=\"SQLComment\">/* End of procedure */</span>\nDELIMITER<span class=\"SQLOperator\">;</span>\n\n<span class=\"SQLKeyword\">CREATE</span> <span class=\"SQLKeyword\">TABLE</span> Students (\n   <span class=\"SQLComment\">/* Create table with a single field as primary key */</span>\n   ID <span class=\"SQLKeyword\">INT</span> <span class=\"SQLOperator\">NOT</span> <span class=\"SQLKeyword\">NULL</span> Name <span class=\"SQLKeyword\">VARCHAR</span>(255) <span class=\"SQLKeyword\">PRIMARY</span> <span class=\"SQLKeyword\">KEY</span> (ID)\n)<span class=\"SQLOperator\">;</span>\n\n<span class=\"SQLKeyword\">CREATE</span> <span class=\"SQLKeyword\">TABLE</span> Students (\n   <span class=\"SQLComment\">/* Create table with multiple fields as primary key */</span>\n   ID <span class=\"SQLKeyword\">INT</span> <span class=\"SQLOperator\">NOT</span> <span class=\"SQLKeyword\">NULL</span> LastName <span class=\"SQLKeyword\">VARCHAR</span>(255) FirstName <span class=\"SQLKeyword\">VARCHAR</span>(255) <span class=\"SQLOperator\">NOT</span> <span class=\"SQLKeyword\">NULL</span><span class=\"SQLOperator\">,</span>\n   <span class=\"SQLKeyword\">CONSTRAINT</span> PK_Student <span class=\"SQLKeyword\">PRIMARY</span> <span class=\"SQLKeyword\">KEY</span> (ID<span class=\"SQLOperator\">,</span> FirstName)\n)<span class=\"SQLOperator\">;</span>\n\n<span class=\"SQLKeyword\">ALTER</span> <span class=\"SQLKeyword\">TABLE</span>\n   Students\n   <span class=\"SQLComment\">/* Set a column as primary key */</span>\n<span class=\"SQLKeyword\">ADD</span>\n   <span class=\"SQLKeyword\">PRIMARY</span> <span class=\"SQLKeyword\">KEY</span> (ID)<span class=\"SQLOperator\">;</span>\n\n<span class=\"SQLKeyword\">ALTER</span> <span class=\"SQLKeyword\">TABLE</span>\n   Students\n   <span class=\"SQLComment\">/* Set multiple columns as primary key */</span>\n<span class=\"SQLKeyword\">ADD</span>\n   <span class=\"SQLKeyword\">CONSTRAINT</span> PK_Student\n   <span class=\"SQLComment\">/*Naming a Primary Key*/</span>\n   <span class=\"SQLKeyword\">PRIMARY</span> <span class=\"SQLKeyword\">KEY</span> (ID<span class=\"SQLOperator\">,</span> FirstName)<span class=\"SQLOperator\">;</span>\n\n<span class=\"SQLKeyword\">SELECT</span>\n   A<span class=\"SQLOperator\">.</span>emp_id <span class=\"SQLKeyword\">AS</span> &quot;Emp_ID&quot;<span class=\"SQLOperator\">,</span>\n   A<span class=\"SQLOperator\">.</span>emp_name <span class=\"SQLKeyword\">AS</span> &quot;Employee&quot;<span class=\"SQLOperator\">,</span>\n   B<span class=\"SQLOperator\">.</span>emp_id <span class=\"SQLKeyword\">AS</span> &quot;Sup_ID&quot;<span class=\"SQLOperator\">,</span>\n   B<span class=\"SQLOperator\">.</span>emp_name <span class=\"SQLKeyword\">AS</span> &quot;Supervisor&quot;\n<span class=\"SQLKeyword\">FROM</span>\n   employee A<span class=\"SQLOperator\">,</span>\n   employee B\n<span class=\"SQLKeyword\">WHERE</span>\n   A<span class=\"SQLOperator\">.</span>emp_sup <span class=\"SQLOperator\">=</span> B<span class=\"SQLOperator\">.</span>emp_id<span class=\"SQLOperator\">;</span>\n\n<span class=\"SQLKeyword\">UPDATE</span>\n   myDB<span class=\"SQLOperator\">.</span>students\n   <span class=\"SQLComment\">/* action query */</span>\n<span class=\"SQLKeyword\">SET</span>\n   fname <span class=\"SQLOperator\">=</span> <span class=\"SQLString\">'Captain'</span><span class=\"SQLOperator\">,</span>\n   lname <span class=\"SQLOperator\">=</span> <span class=\"SQLString\">'America'</span>\n<span class=\"SQLKeyword\">WHERE</span>\n   student_id <span class=\"SQLOperator\">=</span> 1<span class=\"SQLOperator\">;</span>\n\n<span class=\"SQLKeyword\">SELECT</span>\n   name<span class=\"SQLOperator\">,</span>\n   email<span class=\"SQLOperator\">,</span>\n   mob<span class=\"SQLOperator\">,</span>\n   address\n<span class=\"SQLKeyword\">FROM</span>\n   myDb<span class=\"SQLOperator\">.</span>contacts\n<span class=\"SQLKeyword\">WHERE</span>\n   roll_no <span class=\"SQLOperator\">IN</span> (\n      <span class=\"SQLKeyword\">SELECT</span>\n         roll_no\n      <span class=\"SQLKeyword\">FROM</span>\n         myDb<span class=\"SQLOperator\">.</span>students\n      <span class=\"SQLKeyword\">WHERE</span>\n         subject <span class=\"SQLOperator\">in</span> (<span class=\"SQLString\">'Maths'</span><span class=\"SQLOperator\">,</span> <span class=\"SQLString\">'Science'</span><span class=\"SQLOperator\">,</span> <span class=\"SQLString\">'History'</span><span class=\"SQLOperator\">,</span> <span class=\"SQLString\">'Sanksrit'</span><span class=\"SQLOperator\">,</span>)\n   )<span class=\"SQLOperator\">;</span></pre>\n</body>\n</html>\n\nThe SQL Join clause is used to combine records (rows) from two or more tables in a SQL database based on a related column between the two.\n\n<!DOCTYPE html>\n<html>\n  <head>\n    <style>\n      table {\n        border-collapse: collapse;\n      }\n\n      th,\n      td {\n        border: 1.5px solid tomato;\n      }\n\n      table.center {\n        margin-left: auto;\n        margin-right: auto;\n      }\n    </style>\n  </head>\n  <body>\n    <h1>Center a Table</h1>\n    <p>To center a table, set left and right margin to auto:</p>\n    <table class=\"center\">\n      <tr>\n        <th class=\"tg-za14\">Email</th>\n        <th class=\"tg-za14\">PAN</th>\n        <th class=\"tg-za14\">CreatedAt</th>\n        <th class=\"tg-7zrl\">UpdatedAt</th>\n        <th class=\"tg-7zrl\"></th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"tg-za14\">bvalerio0@ucoz.ru</td>\n        <td class=\"tg-za14\">57-377-1245</td>\n        <td class=\"tg-za14\">1908-08-08T12:36:16Z</td>\n        <td class=\"tg-7zrl\">2005-05-04T11:55:39Z</td>\n        <td class=\"tg-7zrl\">UpdatedAt</td>\n      </tr>\n      <tr>\n        <td class=\"tg-za14\">asamms1@adobe.com</td>\n        <td class=\"tg-za14\">54-783-0694</td>\n        <td class=\"tg-za14\">1988-03-09T03:13:52Z</td>\n        <td class=\"tg-7zrl\">1967-01-02T15:05:08Z</td>\n        <td class=\"tg-7zrl\">2005-05-04T11:55:39Z</td>\n      </tr>\n      <tr>\n        <td class=\"tg-za14\">tsummers2@npr.org</td>\n        <td class=\"tg-za14\">78-353-8511</td>\n        <td class=\"tg-za14\">1948-07-28T01:10:59Z</td>\n        <td class=\"tg-7zrl\">1939-12-04T07:22:08Z</td>\n        <td class=\"tg-7zrl\">1967-01-02T15:05:08Z</td>\n      </tr>\n      <tr>\n        <td class=\"tg-za14\">pvannini3@archive.org</td>\n        <td class=\"tg-za14\">49-024-4759</td>\n        <td class=\"tg-za14\">2004-09-17T14:00:52Z</td>\n        <td class=\"tg-7zrl\">1930-09-27T14:20:26Z</td>\n        <td class=\"tg-7zrl\">1939-12-04T07:22:08Z</td>\n      </tr>\n    </table>\n    <h2>Horizontal headers:</h2>\n    <table class=\"center\">\n      <tr>\n        <th>Name</th>\n        <th>Email</th>\n        <th>Phone</th>\n      </tr>\n      <tr>\n        <td>John Doe</td>\n        <td>john.doe@example.com</td>\n        <td>123-45-678</td>\n      </tr>\n    </table>\n    <h2>Vertical headers:</h2>\n    <table class=\"center\">\n      <tr>\n        <th>Name:</th>\n        <td>John Doe</td>\n      </tr>\n      <tr>\n        <th>Email:</th>\n        <td>john.doe@example.com</td>\n      </tr>\n      <tr>\n        <th>Phone:</th>\n        <td>123-45-678</td>\n      </tr>\n    </table>\n  </body>\n</html>\n\nA self JOIN is a case of regular join where a table is joined to itself based on some relation between its own column(s). Self-join uses the INNER JOIN or LEFT JOIN clause and a table alias is used to assign different names to the table within the query.\n"
+  },
+  {
+    "SrNo": 2,
+    "Question": "Clustered and Non-Clustered Index:",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": " What are Constraints in SQL?\nConstraints are used to specify the rules concerning data in the table. It can be applied for single or multiple fields in an SQL table during the creation of the table or after creating using the ALTER TABLE command. The constraints are:\n\nNOT NULL - Restricts NULL value from being inserted into a column.\nCHECK - Verifies that all values in a field satisfy a condition.\nDEFAULT - Automatically assigns a default value if no value has been specified for the field.\nUNIQUE - Ensures unique values to be inserted into the field.\nINDEX - Indexes a field providing faster retrieval of records.\nPRIMARY KEY - Uniquely identifies each record in a table.\nFOREIGN KEY - Ensures referential integrity for a record in another table.\n\n<!DOCTYPE html>\n<html>\n  <head>\n    <style>\n      table {\n        border-collapse: collapse;\n      }\n\n      th,\n      td {\n        border: 1.5px solid tomato;\n      }\n\n      table.center {\n        margin-left: auto;\n        margin-right: auto;\n      }\n    </style>\n  </head>\n  <body>\n    <h1>Center a Table</h1>\n    <p>To center a table, set left and right margin to auto:</p>\n    <table class=\"center\">\n      <tr>\n        <th class=\"tg-za14\">Email</th>\n        <th class=\"tg-za14\">PAN</th>\n        <th class=\"tg-za14\">CreatedAt</th>\n        <th class=\"tg-7zrl\">UpdatedAt</th>\n        <th class=\"tg-7zrl\"></th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"tg-za14\">bvalerio0@ucoz.ru</td>\n        <td class=\"tg-za14\">57-377-1245</td>\n        <td class=\"tg-za14\">1908-08-08T12:36:16Z</td>\n        <td class=\"tg-7zrl\">2005-05-04T11:55:39Z</td>\n        <td class=\"tg-7zrl\">UpdatedAt</td>\n      </tr>\n      <tr>\n        <td class=\"tg-za14\">asamms1@adobe.com</td>\n        <td class=\"tg-za14\">54-783-0694</td>\n        <td class=\"tg-za14\">1988-03-09T03:13:52Z</td>\n        <td class=\"tg-7zrl\">1967-01-02T15:05:08Z</td>\n        <td class=\"tg-7zrl\">2005-05-04T11:55:39Z</td>\n      </tr>\n      <tr>\n        <td class=\"tg-za14\">tsummers2@npr.org</td>\n        <td class=\"tg-za14\">78-353-8511</td>\n        <td class=\"tg-za14\">1948-07-28T01:10:59Z</td>\n        <td class=\"tg-7zrl\">1939-12-04T07:22:08Z</td>\n        <td class=\"tg-7zrl\">1967-01-02T15:05:08Z</td>\n      </tr>\n      <tr>\n        <td class=\"tg-za14\">pvannini3@archive.org</td>\n        <td class=\"tg-za14\">49-024-4759</td>\n        <td class=\"tg-za14\">2004-09-17T14:00:52Z</td>\n        <td class=\"tg-7zrl\">1930-09-27T14:20:26Z</td>\n        <td class=\"tg-7zrl\">1939-12-04T07:22:08Z</td>\n      </tr>\n    </table>\n    <h2>Horizontal headers:</h2>\n    <table class=\"center\">\n      <tr>\n        <th>Name</th>\n        <th>Email</th>\n        <th>Phone</th>\n      </tr>\n      <tr>\n        <td>John Doe</td>\n        <td>john.doe@example.com</td>\n        <td>123-45-678</td>\n      </tr>\n    </table>\n    <h2>Vertical headers:</h2>\n    <table class=\"center\">\n      <tr>\n        <th>Name:</th>\n        <td>John Doe</td>\n      </tr>\n      <tr>\n        <th>Email:</th>\n        <td>john.doe@example.com</td>\n      </tr>\n      <tr>\n        <th>Phone:</th>\n        <td>123-45-678</td>\n      </tr>\n    </table>\n  </body>\n</html>\n\nNon-unique indexes, on the other hand, are not used to enforce constraints on the tables with which they are associated. Instead, non-unique indexes are used solely to improve query performance by maintaining a sorted order of data values that are used frequently.\n\nClustered and Non-Clustered Index:\nClustered indexes are indexes whose order of the rows in the database corresponds to the order of the rows in the index. This is why only one clustered index can exist in a given table, whereas, multiple non-clustered indexes can exist in the table.\n\nThe only difference between clustered and non-clustered indexes is that the database manager attempts to keep the data in the database in the same order as the corresponding keys appear in the clustered index.\n\nClustering indexes can improve the performance of most query operations because they provide a linear-access path to data stored in the database"
+  },
+  {
+    "SrNo": 3,
+    "Question": "What are ACID properties? Is PostgreSQL compliant with ACID?",
+    "isHtmlTag": "FALSE",
+    "quesType": "Low",
+    "Answer": "4. What is SQL?\nSQL stands for Structured Query Language. It is the standard language for relational database management systems. It is especially useful in handling organized data comprised of entities (variables) and relations between different entities of the data.\n\n5. What is the difference between SQL and MySQL?\nSQL is a standard language for retrieving and manipulating structured databases. On the contrary, MySQL is a relational database management system, like SQL Server, Oracle or IBM DB2, that is used to manage SQL databases."
+  },
+  {
+    "SrNo": 4,
+    "Question": "What do you understand by command enable-debug?,  How do you check the rows affected as part of previous transactions?, What can you tell about WAL (Write Ahead Logging)?",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "6. What are Tables and Fields?\nA table is an organized collection of data stored in the form of rows and columns. Columns can be categorized as vertical and rows as horizontal. The columns in a table are called fields while the rows can be referred to as records.\n\n7. What are Constraints in SQL?\nConstraints are used to specify the rules concerning data in the table. It can be applied for single or multiple fields in an SQL table during the creation of the table or after creating using the ALTER TABLE command. The constraints are:\n\nNOT NULL - Restricts NULL value from being inserted into a column.\nCHECK - Verifies that all values in a field satisfy a condition.\nDEFAULT - Automatically assigns a default value if no value has been specified for the field.\nUNIQUE - Ensures unique values to be inserted into the field.\nINDEX - Indexes a field providing faster retrieval of records.\nPRIMARY KEY - Uniquely identifies each record in a table.\nFOREIGN KEY - Ensures referential integrity for a record in another table.\n\nAdvance your career with  \nMock Assessments\nReal-world coding challenges for top company interviews\nReal-Life Problems\nDetailed reports\nAttempt Now\n8. What is a Primary Key?\nThe PRIMARY KEY constraint uniquely identifies each row in a table. It must contain UNIQUE values and has an implicit NOT NULL constraint.\nA table in SQL is strictly restricted to have one and only one primary key, which is comprised of single or multiple fields (columns).\n\nCREATE TABLE Students (   /* Create table with a single field as primary key */\n   ID INT NOT NULL\n   Name VARCHAR(255)\n   PRIMARY KEY (ID)\n);\n\nCREATE TABLE Students (   /* Create table with multiple fields as primary key */\n   ID INT NOT NULL\n   LastName VARCHAR(255)\n   FirstName VARCHAR(255) NOT NULL,\n   CONSTRAINT PK_Student\n   PRIMARY KEY (ID, FirstName)\n);\n\nALTER TABLE Students   /* Set a column as primary key */\nADD PRIMARY KEY (ID);\nALTER TABLE Students   /* Set multiple columns as primary key */\nADD CONSTRAINT PK_Student   /*Naming a Primary Key*/\nPRIMARY KEY (ID, FirstName);"
+  },
+  {
+    "SrNo": 5,
+    "Question": "1914 translation by H. Rackham",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": " What are partitioned tables called in PostgreSQL?\nPartitioned tables are logical structures that are used for dividing large tables into smaller structures that are called partitions. This approach is used for effectively increasing the query performance while dealing with large database tables. To create a partition, a key called partition key which is usually a table column or an expression, and a partitioning method needs to be defined. There are three types of inbuilt partitioning methods provided by Postgres:\n\nRange Partitioning: This method is done by partitioning based on a range of values. This method is most commonly used upon date fields to get monthly, weekly or yearly data. In the case of corner cases like value belonging to the end of the range, for example: if the range of partition 1 is 10-20 and the range of partition 2 is 20-30, and the given value is 10, then 10 belongs to the second partition and not the first.\nList Partitioning: This method is used to partition based on a list of known values. \nMost commonly used when we have a key with a categorical value. For example, getting sales data based on regions divided as countries, cities, or states.\nHash Partitioning\n\n<!DOCTYPE html >\n<html>\n<head>\n</head>\n<body>\n<style type=\"text/css\">\n\tbody {\n  background-color: #252D37;\n}\n.SQLCode {\n\tcolor:white;\n\tfont-size: 13px;\n\tfont-family: 'Times New Roman', Times, serif;\n\twhite-space: pre;\n    -o-tab-size: 4;\n    -moz-tab-size: 4;\n    -webkit-tab-size: 4;\n}\n.SQLComment {\n\tcolor: #a3d2a3;\n}\n.SQLString {\n\tcolor: #8080ff;\n}\n.SQLFunction {\n\tcolor: #AA00AA;\n}\n.SQLKeyword {\n\tcolor: #f65050;\n}\n.SQLOperator {\n\tcolor: wheat;\n}\n\n.line{\nwidth: 100px;\nheight: 47px;\nborder-bottom: 1px solid wheat;\nposition: absolute;\n}\n\n\n</style>\n\n<pre class=\"SQLCode\">\nDELIMITER $$\n<span class=\"SQLComment\">/* Set a new delimiter =&gt; */</span>\n<span class=\"SQLKeyword\">CREATE</span> <span class=\"SQLKeyword\">PROCEDURE</span> calctotal(\n   <span class=\"SQLComment\">/* Create the procedure */</span>\n   <span class=\"SQLOperator\">IN</span> number <span class=\"SQLKeyword\">INT</span><span class=\"SQLOperator\">,</span>\n   <span class=\"SQLComment\">/* Set Input and Ouput variables */</span>\n   <span class=\"SQLKeyword\">OUT</span> total <span class=\"SQLKeyword\">INT</span>\n) <span class=\"SQLKeyword\">BEGIN</span> <span class=\"SQLKeyword\">DECLARE</span> score <span class=\"SQLKeyword\">INT</span> <span class=\"SQLKeyword\">DEFAULT</span> <span class=\"SQLKeyword\">NULL</span><span class=\"SQLOperator\">;</span>\n\n<span class=\"SQLComment\">/* Set the default value =&gt; &quot;score&quot; */</span>\n<span class=\"SQLKeyword\">SELECT</span>\n   awards\n<span class=\"SQLKeyword\">FROM</span>\n   achievements\n   <span class=\"SQLComment\">/* Update &quot;score&quot; via SELECT query */</span>\n<span class=\"SQLKeyword\">WHERE</span>\n   id <span class=\"SQLOperator\">=</span> number <span class=\"SQLKeyword\">INTO</span> score<span class=\"SQLOperator\">;</span>\n\n<span class=\"SQLKeyword\">IF</span><span class=\"SQLErrorHighlight\"> score <span class=\"SQLKeyword\">IS</span> <span class=\"SQLKeyword\">NULL</span> THEN\n</span><span class=\"SQLKeyword\">SET</span>\n   total <span class=\"SQLOperator\">=</span> 0<span class=\"SQLOperator\">;</span>\n\n<span class=\"SQLComment\">/* Termination condition */</span>\n<span class=\"SQLKeyword\">ELSE</span> CALL calctotal(number <span class=\"SQLOperator\">+</span> 1)<span class=\"SQLOperator\">;</span>\n\n<span class=\"SQLComment\">/* Recursive call */</span>\n<span class=\"SQLKeyword\">SET</span>\n   total <span class=\"SQLOperator\">=</span> total <span class=\"SQLOperator\">+</span> score<span class=\"SQLOperator\">;</span>\n\n   <div class=\"line\"></div>\n\n<br></br>\n<span class=\"SQLComment\">/* Action after recursion */</span>\n<span class=\"SQLKeyword\">END</span> <span class=\"SQLKeyword\">IF</span><span class=\"SQLErrorHighlight\"><span class=\"SQLOperator\">;</span>\n\n<span class=\"SQLKeyword\">END</span> $$\n</span><span class=\"SQLComment\">/* End of procedure */</span>\nDELIMITER<span class=\"SQLOperator\">;</span>\n\n<span class=\"SQLKeyword\">CREATE</span> <span class=\"SQLKeyword\">TABLE</span> Students (\n   <span class=\"SQLComment\">/* Create table with a single field as primary key */</span>\n   ID <span class=\"SQLKeyword\">INT</span> <span class=\"SQLOperator\">NOT</span> <span class=\"SQLKeyword\">NULL</span> Name <span class=\"SQLKeyword\">VARCHAR</span>(255) <span class=\"SQLKeyword\">PRIMARY</span> <span class=\"SQLKeyword\">KEY</span> (ID)\n)<span class=\"SQLOperator\">;</span>\n\n<span class=\"SQLKeyword\">CREATE</span> <span class=\"SQLKeyword\">TABLE</span> Students (\n   <span class=\"SQLComment\">/* Create table with multiple fields as primary key */</span>\n   ID <span class=\"SQLKeyword\">INT</span> <span class=\"SQLOperator\">NOT</span> <span class=\"SQLKeyword\">NULL</span> LastName <span class=\"SQLKeyword\">VARCHAR</span>(255) FirstName <span class=\"SQLKeyword\">VARCHAR</span>(255) <span class=\"SQLOperator\">NOT</span> <span class=\"SQLKeyword\">NULL</span><span class=\"SQLOperator\">,</span>\n   <span class=\"SQLKeyword\">CONSTRAINT</span> PK_Student <span class=\"SQLKeyword\">PRIMARY</span> <span class=\"SQLKeyword\">KEY</span> (ID<span class=\"SQLOperator\">,</span> FirstName)\n)<span class=\"SQLOperator\">;</span>\n\n<span class=\"SQLKeyword\">ALTER</span> <span class=\"SQLKeyword\">TABLE</span>\n   Students\n   <span class=\"SQLComment\">/* Set a column as primary key */</span>\n<span class=\"SQLKeyword\">ADD</span>\n   <span class=\"SQLKeyword\">PRIMARY</span> <span class=\"SQLKeyword\">KEY</span> (ID)<span class=\"SQLOperator\">;</span>\n\n<span class=\"SQLKeyword\">ALTER</span> <span class=\"SQLKeyword\">TABLE</span>\n   Students\n   <span class=\"SQLComment\">/* Set multiple columns as primary key */</span>\n<span class=\"SQLKeyword\">ADD</span>\n   <span class=\"SQLKeyword\">CONSTRAINT</span> PK_Student\n   <span class=\"SQLComment\">/*Naming a Primary Key*/</span>\n   <span class=\"SQLKeyword\">PRIMARY</span> <span class=\"SQLKeyword\">KEY</span> (ID<span class=\"SQLOperator\">,</span> FirstName)<span class=\"SQLOperator\">;</span>\n\n<span class=\"SQLKeyword\">SELECT</span>\n   A<span class=\"SQLOperator\">.</span>emp_id <span class=\"SQLKeyword\">AS</span> &quot;Emp_ID&quot;<span class=\"SQLOperator\">,</span>\n   A<span class=\"SQLOperator\">.</span>emp_name <span class=\"SQLKeyword\">AS</span> &quot;Employee&quot;<span class=\"SQLOperator\">,</span>\n   B<span class=\"SQLOperator\">.</span>emp_id <span class=\"SQLKeyword\">AS</span> &quot;Sup_ID&quot;<span class=\"SQLOperator\">,</span>\n   B<span class=\"SQLOperator\">.</span>emp_name <span class=\"SQLKeyword\">AS</span> &quot;Supervisor&quot;\n<span class=\"SQLKeyword\">FROM</span>\n   employee A<span class=\"SQLOperator\">,</span>\n   employee B\n<span class=\"SQLKeyword\">WHERE</span>\n   A<span class=\"SQLOperator\">.</span>emp_sup <span class=\"SQLOperator\">=</span> B<span class=\"SQLOperator\">.</span>emp_id<span class=\"SQLOperator\">;</span>\n\n<span class=\"SQLKeyword\">UPDATE</span>\n   myDB<span class=\"SQLOperator\">.</span>students\n   <span class=\"SQLComment\">/* action query */</span>\n<span class=\"SQLKeyword\">SET</span>\n   fname <span class=\"SQLOperator\">=</span> <span class=\"SQLString\">'Captain'</span><span class=\"SQLOperator\">,</span>\n   lname <span class=\"SQLOperator\">=</span> <span class=\"SQLString\">'America'</span>\n<span class=\"SQLKeyword\">WHERE</span>\n   student_id <span class=\"SQLOperator\">=</span> 1<span class=\"SQLOperator\">;</span>\n\n<span class=\"SQLKeyword\">SELECT</span>\n   name<span class=\"SQLOperator\">,</span>\n   email<span class=\"SQLOperator\">,</span>\n   mob<span class=\"SQLOperator\">,</span>\n   address\n<span class=\"SQLKeyword\">FROM</span>\n   myDb<span class=\"SQLOperator\">.</span>contacts\n<span class=\"SQLKeyword\">WHERE</span>\n   roll_no <span class=\"SQLOperator\">IN</span> (\n      <span class=\"SQLKeyword\">SELECT</span>\n         roll_no\n      <span class=\"SQLKeyword\">FROM</span>\n         myDb<span class=\"SQLOperator\">.</span>students\n      <span class=\"SQLKeyword\">WHERE</span>\n         subject <span class=\"SQLOperator\">in</span> (<span class=\"SQLString\">'Maths'</span><span class=\"SQLOperator\">,</span> <span class=\"SQLString\">'Science'</span><span class=\"SQLOperator\">,</span> <span class=\"SQLString\">'History'</span><span class=\"SQLOperator\">,</span> <span class=\"SQLString\">'Sanksrit'</span><span class=\"SQLOperator\">,</span>)\n   )<span class=\"SQLOperator\">;</span></pre>\n</body>\n</html>"
+  },
+  {
+    "SrNo": 6,
+    "Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Define tokens in PostgreSQL?\nA token in PostgreSQL is either a keyword, identifier, literal, constant, quotes identifier, or any symbol that has a distinctive personality. They may or may not be separated using a space, newline or a tab. If the tokens are keywords, they are usually commands with useful meanings. Tokens are known as building blocks of any PostgreSQL code.\n\n8. What is the importance of the TRUNCATE statement?"
+  },
+  {
+    "SrNo": 7,
+    "Question": "Command deletes complete data from the table along with removing the complete table structure too. In case our requirement entails just remove the data, then we would need to recreate the table to store data in it. In such cases, it is advised to use the TRUNCATE command",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "11. What are string constants in PostgreSQL?\nThey are character sequences bound within single quotes. These are using during data insertion or updation to characters in the database.\nThere are special string constants that are quoted in dollars. Syntax: $tag$<string_constant>$tag$ The tag in the constant is optional and when we are not specifying the tag, the constant is called a double-dollar string literal.\n\n12. How can you get a list of all databases in PostgreSQL?\nThis can be done by using the command \\l -> backslash followed by the lower-case letter L.\n\n13. How can you delete a database in PostgreSQL?\nThis can be done by using the DROP DATABASE command as shown in the syntax below:"
+  },
+  {
+    "SrNo": 8,
+    "Question": "Etiam tempor tellus quis tincidunt fringilla.",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Where can I get some?\\nThere are many variations o..."
+  },
+  {
+    "SrNo": 9,
+    "Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
+    "isHtmlTag": "FALSE",
+    "quesType": "High",
+    "Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
+  },
+  {
+    "SrNo": 10,
+    "Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
+  },
+  {
+    "SrNo": 11,
+    "Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "14. What are ACID properties? Is PostgreSQL compliant with ACID?\nACID stands for Atomicity, Consistency, Isolation, Durability. They are database transaction properties which are used for guaranteeing data validity in case of errors and failures.\n\nAtomicity: This property ensures that the transaction is completed in all-or-nothing way.\nConsistency: This ensures that updates made to the database is valid and follows rules and restrictions.\nIsolation: This property ensures integrity of transaction that are visible to all other transactions.\nDurability: This property ensures that the committed transactions are stored permanently in the database.\nPostgreSQL is compliant with ACID properties."
+  },
+  {
+    "SrNo": 12,
+    "Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Orci varius natoque penatibus et magnis dis partur..."
+  },
+  {
+    "SrNo": 13,
+    "Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
+  },
+  {
+    "SrNo": 14,
+    "Question": "What is a Primary Key?",
+    "isHtmlTag": "FALSE",
+    "quesType": "Low",
+    "Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
+  },
+  {
+    "SrNo": 15,
+    "Question": "Clustered and Non-Clustered Index:",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Clustered indexes are indexes whose order of the r..."
+  },
+  {
+    "SrNo": 16,
+    "Question": "Html Table",
+    "isHtmlTag": "TRUE",
+    "quesType": "Low",
+    "Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
+  },
+  {
+    "SrNo": 17,
+    "Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy ..."
+  },
+  {
+    "SrNo": 18,
+    "Question": "1914 translation by H. Rackham",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
+  },
+  {
+    "SrNo": 19,
+    "Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Why do we use it?\\nIt is a long established fact t..."
+  },
+  {
+    "SrNo": 20,
+    "Question": "Vivamus efficitur mauris id quam condimentum phare...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
+  },
+  {
+    "SrNo": 21,
+    "Question": "Etiam tempor tellus quis tincidunt fringilla.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Where can I get some?\\nThere are many variations o..."
+  },
+  {
+    "SrNo": 22,
+    "Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
+  },
+  {
+    "SrNo": 23,
+    "Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
+  },
+  {
+    "SrNo": 24,
+    "Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
+  },
+  {
+    "SrNo": 25,
+    "Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Orci varius natoque penatibus et magnis dis partur..."
+  },
+  {
+    "SrNo": 26,
+    "Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
+  },
+  {
+    "SrNo": 27,
+    "Question": "What is a Primary Key?",
+    "isHtmlTag": "FALSE",
+    "quesType": "Low",
+    "Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
+  },
+  {
+    "SrNo": 28,
+    "Question": "Clustered and Non-Clustered Index:",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Clustered indexes are indexes whose order of the r..."
+  },
+  {
+    "SrNo": 29,
+    "Question": "Html Table",
+    "isHtmlTag": "TRUE",
+    "quesType": "Low",
+    "Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
+  },
+  {
+    "SrNo": 30,
+    "Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy ..."
+  },
+  {
+    "SrNo": 31,
+    "Question": "1914 translation by H. Rackham",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
+  },
+  {
+    "SrNo": 32,
+    "Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Why do we use it?\\nIt is a long established fact t..."
+  },
+  {
+    "SrNo": 33,
+    "Question": "Vivamus efficitur mauris id quam condimentum phare...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
+  },
+  {
+    "SrNo": 34,
+    "Question": "Etiam tempor tellus quis tincidunt fringilla.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Where can I get some?\\nThere are many variations o..."
+  },
+  {
+    "SrNo": 35,
+    "Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
+  },
+  {
+    "SrNo": 36,
+    "Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
+  },
+  {
+    "SrNo": 37,
+    "Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
+  },
+  {
+    "SrNo": 38,
+    "Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Orci varius natoque penatibus et magnis dis partur..."
+  },
+  {
+    "SrNo": 39,
+    "Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
+  },
+  {
+    "SrNo": 40,
+    "Question": "What is a Primary Key?",
+    "isHtmlTag": "FALSE",
+    "quesType": "Low",
+    "Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
+  },
+  {
+    "SrNo": 41,
+    "Question": "Clustered and Non-Clustered Index:",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Clustered indexes are indexes whose order of the r..."
+  },
+  {
+    "SrNo": 42,
+    "Question": "Html Table",
+    "isHtmlTag": "TRUE",
+    "quesType": "Low",
+    "Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
+  },
+  {
+    "SrNo": 43,
+    "Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy ..."
+  },
+  {
+    "SrNo": 44,
+    "Question": "1914 translation by H. Rackham",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
+  },
+  {
+    "SrNo": 45,
+    "Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Why do we use it?\\nIt is a long established fact t..."
+  },
+  {
+    "SrNo": 46,
+    "Question": "Vivamus efficitur mauris id quam condimentum phare…",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
+  },
+  {
+    "SrNo": 47,
+    "Question": "Etiam tempor tellus quis tincidunt fringilla.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Where can I get some?\\nThere are many variations o..."
+  },
+  {
+    "SrNo": 48,
+    "Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
+  },
+  {
+    "SrNo": 49,
+    "Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
+  },
+  {
+    "SrNo": 50,
+    "Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
+  },
+  {
+    "SrNo": 51,
+    "Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Orci varius natoque penatibus et magnis dis partur..."
+  },
+  {
+    "SrNo": 52,
+    "Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
+  },
+  {
+    "SrNo": 53,
+    "Question": "What is a Primary Key?",
+    "isHtmlTag": "FALSE",
+    "quesType": "Low",
+    "Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
+  },
+  {
+    "SrNo": 54,
+    "Question": "Clustered and Non-Clustered Index:",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Clustered indexes are indexes whose order of the r..."
+  },
+  {
+    "SrNo": 55,
+    "Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy ..."
+  },
+  {
+    "SrNo": 56,
+    "Question": "1914 translation by H. Rackham",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
+  },
+  {
+    "SrNo": 57,
+    "Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Why do we use it?\\nIt is a long established fact t..."
+  },
+  {
+    "SrNo": 58,
+    "Question": "Vivamus efficitur mauris id quam condimentum phare…",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
+  },
+  {
+    "SrNo": 59,
+    "Question": "Etiam tempor tellus quis tincidunt fringilla.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Where can I get some?\\nThere are many variations o..."
+  },
+  {
+    "SrNo": 60,
+    "Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
+  },
+  {
+    "SrNo": 61,
+    "Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
+  },
+  {
+    "SrNo": 62,
+    "Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
+  },
+  {
+    "SrNo": 63,
+    "Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Orci varius natoque penatibus et magnis dis partur..."
+  },
+  {
+    "SrNo": 64,
+    "Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
+  },
+  {
+    "SrNo": 65,
+    "Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
+  },
+  {
+    "SrNo": 66,
+    "Question": "What is a Primary Key?",
+    "isHtmlTag": "FALSE",
+    "quesType": "Low",
+    "Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
+  },
+  {
+    "SrNo": 67,
+    "Question": "Clustered and Non-Clustered Index:",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Clustered indexes are indexes whose order of the r..."
+  },
+  {
+    "SrNo": 68,
+    "Question": "Html Table",
+    "isHtmlTag": "TRUE",
+    "quesType": "Low",
+    "Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
+  },
+  {
+    "SrNo": 69,
+    "Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy ..."
+  },
+  {
+    "SrNo": 70,
+    "Question": "1914 translation by H. Rackham",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
+  },
+  {
+    "SrNo": 71,
+    "Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Why do we use it?\\nIt is a long established fact t..."
+  },
+  {
+    "SrNo": 72,
+    "Question": "Vivamus efficitur mauris id quam condimentum phare…",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
+  },
+  {
+    "SrNo": 73,
+    "Question": "Etiam tempor tellus quis tincidunt fringilla.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Where can I get some?\\nThere are many variations o..."
+  },
+  {
+    "SrNo": 74,
+    "Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
+  },
+  {
+    "SrNo": 75,
+    "Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
+  },
+  {
+    "SrNo": 76,
+    "Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
+  },
+  {
+    "SrNo": 77,
+    "Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Orci varius natoque penatibus et magnis dis partur..."
+  },
+  {
+    "SrNo": 78,
+    "Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
+  },
+  {
+    "SrNo": 79,
+    "Question": "What is a Primary Key?",
+    "isHtmlTag": "FALSE",
+    "quesType": "Low",
+    "Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
+  },
+  {
+    "SrNo": 80,
+    "Question": "Clustered and Non-Clustered Index:",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Clustered indexes are indexes whose order of the r..."
+  },
+  {
+    "SrNo": 81,
+    "Question": "What is a Primary Key?",
+    "isHtmlTag": "FALSE",
+    "quesType": "Low",
+    "Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
+  },
+  {
+    "SrNo": 82,
+    "Question": "Clustered and Non-Clustered Index:",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Clustered indexes are indexes whose order of the r..."
+  },
+  {
+    "SrNo": 83,
+    "Question": "Html Table",
+    "isHtmlTag": "TRUE",
+    "quesType": "Low",
+    "Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
+  },
+  {
+    "SrNo": 84,
+    "Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
+  },
+  {
+    "SrNo": 85,
+    "Question": "1914 translation by H. Rackham",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
+  },
+  {
+    "SrNo": 86,
+    "Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Why do we use it?\\nIt is a long established fact t..."
+  },
+  {
+    "SrNo": 87,
+    "Question": "Vivamus efficitur mauris id quam condimentum phare...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
+  },
+  {
+    "SrNo": 88,
+    "Question": "Etiam tempor tellus quis tincidunt fringilla.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Where can I get some?\\nThere are many variations o..."
+  },
+  {
+    "SrNo": 89,
+    "Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
+  },
+  {
+    "SrNo": 90,
+    "Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
+  },
+  {
+    "SrNo": 91,
+    "Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
+  },
+  {
+    "SrNo": 92,
+    "Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Orci varius natoque penatibus et magnis dis partur..."
+  },
+  {
+    "SrNo": 93,
+    "Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
+  },
+  {
+    "SrNo": 94,
+    "Question": "What is a Primary Key?",
+    "isHtmlTag": "FALSE",
+    "quesType": "Low",
+    "Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
+  },
+  {
+    "SrNo": 95,
+    "Question": "Clustered and Non-Clustered Index:",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Clustered indexes are indexes whose order of the r..."
+  },
+  {
+    "SrNo": 96,
+    "Question": "Html Table",
+    "isHtmlTag": "TRUE",
+    "quesType": "Low",
+    "Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
+  },
+  {
+    "SrNo": 97,
+    "Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
+  },
+  {
+    "SrNo": 98,
+    "Question": "1914 translation by H. Rackham",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
+  },
+  {
+    "SrNo": 99,
+    "Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Why do we use it?\\nIt is a long established fact t..."
+  },
+  {
+    "SrNo": 100,
+    "Question": "Vivamus efficitur mauris id quam condimentum phare...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
+  },
+  {
+    "SrNo": 101,
+    "Question": "Etiam tempor tellus quis tincidunt fringilla.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Where can I get some?\\nThere are many variations o..."
+  },
+  {
+    "SrNo": 102,
+    "Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
+  },
+  {
+    "SrNo": 103,
+    "Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
+  },
+  {
+    "SrNo": 104,
+    "Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
+  },
+  {
+    "SrNo": 105,
+    "Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Orci varius natoque penatibus et magnis dis partur..."
+  },
+  {
+    "SrNo": 106,
+    "Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
+  },
+  {
+    "SrNo": 107,
+    "Question": "What is a Primary Key?",
+    "isHtmlTag": "FALSE",
+    "quesType": "Low",
+    "Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
+  },
+  {
+    "SrNo": 108,
+    "Question": "Clustered and Non-Clustered Index:",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Clustered indexes are indexes whose order of the r..."
+  },
+  {
+    "SrNo": 109,
+    "Question": "Html Table",
+    "isHtmlTag": "TRUE",
+    "quesType": "Low",
+    "Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
+  },
+  {
+    "SrNo": 110,
+    "Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
+  },
+  {
+    "SrNo": 111,
+    "Question": "1914 translation by H. Rackham",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
+  },
+  {
+    "SrNo": 112,
+    "Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Why do we use it?\\nIt is a long established fact t..."
+  },
+  {
+    "SrNo": 113,
+    "Question": "Vivamus efficitur mauris id quam condimentum phare...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
+  },
+  {
+    "SrNo": 114,
+    "Question": "Etiam tempor tellus quis tincidunt fringilla.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Where can I get some?\\nThere are many variations o..."
+  },
+  {
+    "SrNo": 115,
+    "Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
+  },
+  {
+    "SrNo": 116,
+    "Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
+  },
+  {
+    "SrNo": 117,
+    "Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
+  },
+  {
+    "SrNo": 118,
+    "Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Orci varius natoque penatibus et magnis dis partur..."
+  },
+  {
+    "SrNo": 119,
+    "Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
+  },
+  {
+    "SrNo": 120,
+    "Question": "What is a Primary Key?",
+    "isHtmlTag": "FALSE",
+    "quesType": "Low",
+    "Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
+  },
+  {
+    "SrNo": 121,
+    "Question": "Clustered and Non-Clustered Index:",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Clustered indexes are indexes whose order of the r..."
+  },
+  {
+    "SrNo": 122,
+    "Question": "Html Table",
+    "isHtmlTag": "TRUE",
+    "quesType": "Low",
+    "Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
+  },
+  {
+    "SrNo": 123,
+    "Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
+  },
+  {
+    "SrNo": 124,
+    "Question": "1914 translation by H. Rackham",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
+  },
+  {
+    "SrNo": 125,
+    "Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Why do we use it?\\nIt is a long established fact t..."
+  },
+  {
+    "SrNo": 126,
+    "Question": "Vivamus efficitur mauris id quam condimentum phare...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
+  },
+  {
+    "SrNo": 127,
+    "Question": "Etiam tempor tellus quis tincidunt fringilla.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Where can I get some?\\nThere are many variations o..."
+  },
+  {
+    "SrNo": 128,
+    "Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
+  },
+  {
+    "SrNo": 129,
+    "Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
+  },
+  {
+    "SrNo": 130,
+    "Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
+  },
+  {
+    "SrNo": 131,
+    "Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Orci varius natoque penatibus et magnis dis partur..."
+  },
+  {
+    "SrNo": 132,
+    "Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
+  },
+  {
+    "SrNo": 133,
+    "Question": "What is a Primary Key?",
+    "isHtmlTag": "FALSE",
+    "quesType": "Low",
+    "Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
+  },
+  {
+    "SrNo": 134,
+    "Question": "Clustered and Non-Clustered Index:",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Clustered indexes are indexes whose order of the r..."
+  },
+  {
+    "SrNo": 135,
+    "Question": "Html Table",
+    "isHtmlTag": "TRUE",
+    "quesType": "Low",
+    "Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
+  },
+  {
+    "SrNo": 136,
+    "Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
+  },
+  {
+    "SrNo": 137,
+    "Question": "1914 translation by H. Rackham",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
+  },
+  {
+    "SrNo": 138,
+    "Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Why do we use it?\\nIt is a long established fact t..."
+  },
+  {
+    "SrNo": 139,
+    "Question": "Vivamus efficitur mauris id quam condimentum phare...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
+  },
+  {
+    "SrNo": 140,
+    "Question": "Etiam tempor tellus quis tincidunt fringilla.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Where can I get some?\\nThere are many variations o..."
+  },
+  {
+    "SrNo": 141,
+    "Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
+  },
+  {
+    "SrNo": 142,
+    "Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
+  },
+  {
+    "SrNo": 143,
+    "Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
+  },
+  {
+    "SrNo": 144,
+    "Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Orci varius natoque penatibus et magnis dis partur..."
+  },
+  {
+    "SrNo": 145,
+    "Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
+  },
+  {
+    "SrNo": 146,
+    "Question": "What is a Primary Key?",
+    "isHtmlTag": "FALSE",
+    "quesType": "Low",
+    "Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
+  },
+  {
+    "SrNo": 147,
+    "Question": "Clustered and Non-Clustered Index:",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Clustered indexes are indexes whose order of the r..."
+  },
+  {
+    "SrNo": 148,
+    "Question": "Html Table",
+    "isHtmlTag": "TRUE",
+    "quesType": "Low",
+    "Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
+  },
+  {
+    "SrNo": 149,
+    "Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
+  },
+  {
+    "SrNo": 150,
+    "Question": "1914 translation by H. Rackham",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
+  },
+  {
+    "SrNo": 151,
+    "Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Why do we use it?\\nIt is a long established fact t..."
+  },
+  {
+    "SrNo": 152,
+    "Question": "Vivamus efficitur mauris id quam condimentum phare...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
+  },
+  {
+    "SrNo": 153,
+    "Question": "Etiam tempor tellus quis tincidunt fringilla.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Where can I get some?\\nThere are many variations o..."
+  },
+  {
+    "SrNo": 154,
+    "Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
+  },
+  {
+    "SrNo": 155,
+    "Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
+  },
+  {
+    "SrNo": 156,
+    "Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
+  },
+  {
+    "SrNo": 157,
+    "Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Orci varius natoque penatibus et magnis dis partur..."
+  },
+  {
+    "SrNo": 158,
+    "Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
+  },
+  {
+    "SrNo": 159,
+    "Question": "What is a Primary Key?",
+    "isHtmlTag": "FALSE",
+    "quesType": "Low",
+    "Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
+  },
+  {
+    "SrNo": 160,
+    "Question": "Clustered and Non-Clustered Index:",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Clustered indexes are indexes whose order of the r..."
+  },
+  {
+    "SrNo": 161,
+    "Question": "Html Table",
+    "isHtmlTag": "TRUE",
+    "quesType": "Low",
+    "Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
+  },
+  {
+    "SrNo": 162,
+    "Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
+  },
+  {
+    "SrNo": 163,
+    "Question": "1914 translation by H. Rackham",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
+  },
+  {
+    "SrNo": 164,
+    "Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Why do we use it?\\nIt is a long established fact t..."
+  },
+  {
+    "SrNo": 165,
+    "Question": "Vivamus efficitur mauris id quam condimentum phare...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
+  },
+  {
+    "SrNo": 166,
+    "Question": "Etiam tempor tellus quis tincidunt fringilla.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Where can I get some?\\nThere are many variations o..."
+  },
+  {
+    "SrNo": 167,
+    "Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
+  },
+  {
+    "SrNo": 168,
+    "Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
+  },
+  {
+    "SrNo": 169,
+    "Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
+  },
+  {
+    "SrNo": 170,
+    "Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Orci varius natoque penatibus et magnis dis partur..."
+  },
+  {
+    "SrNo": 171,
+    "Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
+  },
+  {
+    "SrNo": 172,
+    "Question": "What is a Primary Key?",
+    "isHtmlTag": "FALSE",
+    "quesType": "Low",
+    "Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
+  },
+  {
+    "SrNo": 173,
+    "Question": "Clustered and Non-Clustered Index:",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Clustered indexes are indexes whose order of the r..."
+  },
+  {
+    "SrNo": 174,
+    "Question": "Html Table",
+    "isHtmlTag": "TRUE",
+    "quesType": "Low",
+    "Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
+  },
+  {
+    "SrNo": 175,
+    "Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
+  },
+  {
+    "SrNo": 176,
+    "Question": "1914 translation by H. Rackham",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
+  },
+  {
+    "SrNo": 177,
+    "Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Why do we use it?\\nIt is a long established fact t..."
+  },
+  {
+    "SrNo": 178,
+    "Question": "Vivamus efficitur mauris id quam condimentum phare...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
+  },
+  {
+    "SrNo": 179,
+    "Question": "Etiam tempor tellus quis tincidunt fringilla.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Where can I get some?\\nThere are many variations o..."
+  },
+  {
+    "SrNo": 180,
+    "Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
+  },
+  {
+    "SrNo": 181,
+    "Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
+  },
+  {
+    "SrNo": 182,
+    "Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
+  },
+  {
+    "SrNo": 183,
+    "Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Orci varius natoque penatibus et magnis dis partur..."
+  },
+  {
+    "SrNo": 184,
+    "Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
+  },
+  {
+    "SrNo": 185,
+    "Question": "What is a Primary Key?",
+    "isHtmlTag": "FALSE",
+    "quesType": "Low",
+    "Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
+  },
+  {
+    "SrNo": 186,
+    "Question": "Clustered and Non-Clustered Index:",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Clustered indexes are indexes whose order of the r..."
+  },
+  {
+    "SrNo": 187,
+    "Question": "Html Table",
+    "isHtmlTag": "TRUE",
+    "quesType": "Low",
+    "Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
+  },
+  {
+    "SrNo": 188,
+    "Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
+  },
+  {
+    "SrNo": 189,
+    "Question": "1914 translation by H. Rackham",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
+  },
+  {
+    "SrNo": 190,
+    "Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Why do we use it?\\nIt is a long established fact t..."
+  },
+  {
+    "SrNo": 191,
+    "Question": "Vivamus efficitur mauris id quam condimentum phare...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
+  },
+  {
+    "SrNo": 192,
+    "Question": "Etiam tempor tellus quis tincidunt fringilla.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Where can I get some?\\nThere are many variations o..."
+  },
+  {
+    "SrNo": 193,
+    "Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
+  },
+  {
+    "SrNo": 194,
+    "Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
+  },
+  {
+    "SrNo": 195,
+    "Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
+  },
+  {
+    "SrNo": 196,
+    "Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Orci varius natoque penatibus et magnis dis partur..."
+  },
+  {
+    "SrNo": 197,
+    "Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
+  },
+  {
+    "SrNo": 198,
+    "Question": "What is a Primary Key?",
+    "isHtmlTag": "FALSE",
+    "quesType": "Low",
+    "Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
+  },
+  {
+    "SrNo": 199,
+    "Question": "Clustered and Non-Clustered Index:",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Clustered indexes are indexes whose order of the r..."
+  },
+  {
+    "SrNo": 200,
+    "Question": "Html Table",
+    "isHtmlTag": "TRUE",
+    "quesType": "Low",
+    "Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
+  },
+  {
+    "SrNo": 201,
+    "Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
+  },
+  {
+    "SrNo": 202,
+    "Question": "1914 translation by H. Rackham",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
+  },
+  {
+    "SrNo": 203,
+    "Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Why do we use it?\\nIt is a long established fact t..."
+  },
+  {
+    "SrNo": 204,
+    "Question": "Vivamus efficitur mauris id quam condimentum phare...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
+  },
+  {
+    "SrNo": 205,
+    "Question": "Etiam tempor tellus quis tincidunt fringilla.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Where can I get some?\\nThere are many variations o..."
+  },
+  {
+    "SrNo": 206,
+    "Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
+  },
+  {
+    "SrNo": 207,
+    "Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
+  },
+  {
+    "SrNo": 208,
+    "Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
+  },
+  {
+    "SrNo": 209,
+    "Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Orci varius natoque penatibus et magnis dis partur..."
+  },
+  {
+    "SrNo": 210,
+    "Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
+  },
+  {
+    "SrNo": 211,
+    "Question": "What is a Primary Key?",
+    "isHtmlTag": "FALSE",
+    "quesType": "Low",
+    "Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
+  },
+  {
+    "SrNo": 212,
+    "Question": "Clustered and Non-Clustered Index:",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Clustered indexes are indexes whose order of the r..."
+  },
+  {
+    "SrNo": 213,
+    "Question": "Html Table",
+    "isHtmlTag": "TRUE",
+    "quesType": "Low",
+    "Answer": "<html><head><META http-equiv=\"Content-Type\" conten>..."
+  },
+  {
+    "SrNo": 214,
+    "Question": "Section 1.10.32 of \"de Finibus Bonorum et Malorum\"...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "What is Lorem Ipsum?\\nLorem Ipsum is simply dummy …"
+  },
+  {
+    "SrNo": 215,
+    "Question": "1914 translation by H. Rackham",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "\"At vero eos et accusamus et iusto odio dignissimo\"..."
+  },
+  {
+    "SrNo": 216,
+    "Question": "Nulla volutpat turpis id tellus pulvinar luctus.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Why do we use it?\\nIt is a long established fact t..."
+  },
+  {
+    "SrNo": 217,
+    "Question": "Vivamus efficitur mauris id quam condimentum phare...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "Phasellus eu risus finibus, sodales lorem at, vene..."
+  },
+  {
+    "SrNo": 218,
+    "Question": "Etiam tempor tellus quis tincidunt fringilla.",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Where can I get some?\\nThere are many variations o..."
+  },
+  {
+    "SrNo": 219,
+    "Question": "Morbi quis orci fringilla, venenatis ex eget, auct...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Etiam bibendum dolor neque, eget lobortis sem fri..."
+  },
+  {
+    "SrNo": 220,
+    "Question": "Duis ultricies massa nec tellus fermentum, eu accu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "Medium",
+    "Answer": "Pellentesque sit amet urna lobortis, lobortis risu..."
+  },
+  {
+    "SrNo": 221,
+    "Question": "Pellentesque ultrices neque aliquet, hendrerit ris...",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "ipsum. Phasellus rhoncus lacinia lobortis. Nulla a..."
+  },
+  {
+    "SrNo": 222,
+    "Question": "Cras rhoncus odio eget purus luctus, non tempus tu...",
+    "isHtmlTag": "TRUE",
+    "quesType": "High",
+    "Answer": "Orci varius natoque penatibus et magnis dis partur..."
+  },
+  {
+    "SrNo": 223,
+    "Question": "Nunc pellentesque orci vel mi vestibulum suscipit.",
+    "isHtmlTag": "FALSE",
+    "quesType": "Medium",
+    "Answer": "i, vel tincidunt magna tempus vel. Pellentesque at..."
+  },
+  {
+    "SrNo": 224,
+    "Question": "What is a Primary Key?",
+    "isHtmlTag": "FALSE",
+    "quesType": "Low",
+    "Answer": "The PRIMARY KEY constraint uniquely identifies eac..."
+  }
 ]

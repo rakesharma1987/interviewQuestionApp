@@ -23,7 +23,8 @@
             android:text="What is your name"
             android:textStyle="bold"
             android:textColor="@color/black"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="@dimen/text_size"/>
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
