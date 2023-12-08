@@ -8,6 +8,7 @@ class AppRepository(private val appDao: AppDao) {
     val getSaveForLaterData = appDao.getAllSaveForLaterData()
     val getMarkedAsReadData = appDao.getAllMarkedAsReadData()
     val getAllQuestionAnswerData = appDao.getAllQuestionAnswerData()
+    val getTipsQuestion = appDao.getAllTipsQuestion()
 
     suspend fun saveForLaterData(data: SaveForLaterQues): Long{
         return appDao.saveForLater(data)

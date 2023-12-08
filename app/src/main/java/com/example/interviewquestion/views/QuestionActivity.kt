@@ -46,6 +46,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_question)
+        binding.rvQuestionList.alpha
         MyPreferences.init(this)
         layoutmanager = LinearLayoutManager(this)
         binding.rvQuestionList.layoutManager = layoutmanager
@@ -146,7 +147,13 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
                 binding.btnTips.setBackgroundColor(applicationContext.getColor(R.color.purple_500))
                 binding.btnAllQuestion.setBackgroundColor(applicationContext.getColor(R.color.card_foreground_color))
 
-                Toast.makeText(this, "Not implemented yet.", Toast.LENGTH_SHORT).show()
+                viewModel2.getTipsQuestion.observe(this, Observer {
+                    var tempList = ArrayList<QuestionAnswer>()
+                    for (it in it.listIterator()){
+                        tempList.add(it)
+                    }
+                    setUpRecyclerView(tempList)
+                })
             }
         }
     }
@@ -249,7 +256,8 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
                 oldLastPos = currLastPos
                 oldFirstPos = currFirstPos
                 Log.e("totalItemsViewed", totalItemsViewed.toString())
-                if (totalItemsViewed >= 25){
+                if (totalItemsViewed > 25){
+                    binding.rvQuestionList.suppressLayout(true)
                     if (!MyPreferences.isPurchased()){
                             val dialog = AlertDialog.Builder(this@QuestionActivity)
                             dialog.setCancelable(false)

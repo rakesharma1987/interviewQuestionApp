@@ -12,4 +12,5 @@
     <color name="color_low">#7fa208</color>
     <color name="color_medium">#0009ff</color>
     <color name="color_high">#ff0006</color>
+    <color name="color_tips">#FFEB3B</color>
 </resources>

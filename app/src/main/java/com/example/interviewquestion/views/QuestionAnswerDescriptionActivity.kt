@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.text.HtmlCompat
@@ -31,6 +32,7 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity() {
     private lateinit var markedAsReadData: MarkedAsReadQues
     private lateinit var myMenu: Menu
     private var isSaveOrMarkedAsRead by Delegates.notNull<Boolean>()
+    private var tipsList = ArrayList<String>()
 
     @RequiresApi(Build.VERSION_CODES.TIRAMISU)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,6 +46,13 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity() {
         saveForLaterData = intent.getSerializableExtra(Constant.SAVE_FOR_LATER, SaveForLaterQues::class.java)!!
         markedAsReadData = intent.getSerializableExtra(Constant.MARKED_AS_READ, MarkedAsReadQues::class.java)!!
         isSaveOrMarkedAsRead = intent.getBooleanExtra(Constant.IS_SAVE_OR_MARKED_AS_READ_DATA, false)
+        if (saveForLaterData.quesType == "Tips") {
+            var tipsString = saveForLaterData.Answer.split("\n").toList()
+            for (tips in tipsString.listIterator()){
+                tipsList.add(tips)
+            }
+
+        }
 
         viewModel.message.observe(this, Observer {
             it.getContentIfNotHandled()?.let {
@@ -56,8 +65,15 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity() {
             binding.webView.visibility = View.VISIBLE
             binding.tvAnswer.visibility = View.GONE
             binding.webView.loadDataWithBaseURL(null, saveForLaterData?.Answer!!, "text/html","utf-8", null)
-        }else {
+        }else if (saveForLaterData.quesType.equals("Tips")){
+            binding.webView.visibility = View.GONE
+            binding.tvAnswer.visibility = View.GONE
+            binding.rvTipsItem.visibility = View.VISIBLE
+            var tipAdapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, tipsList)
+            binding.rvTipsItem.adapter =tipAdapter
+            tipAdapter.notifyDataSetChanged()
 
+        }else{
             binding.webView.visibility = View.GONE
             binding.tvAnswer.visibility = View.VISIBLE
             binding.tvAnswer.text = HtmlCompat.fromHtml(saveForLaterData?.Answer!!, 0)
@@ -78,6 +94,7 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity() {
             menuItemSave.isVisible = true
             menuItemMarkedAsRead.isVisible = true
         }
+
         return super.onCreateOptionsMenu(menu)
     }
 

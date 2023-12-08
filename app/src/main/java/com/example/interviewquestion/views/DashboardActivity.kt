@@ -38,6 +38,7 @@ class DashboardActivity : AppCompatActivity() {
 
         listData = ArrayList<QuestionAnswer>()
         var jsonFile = readJSONFromAsset("Interview_Question_Answers_Sample.json")
+//        var tipsJsonFile = readJSONFromAsset("tips.json")
         val list = Gson().fromJson(jsonFile, QuestionAnswerList::class.java)
         val dao = AppDatabase.getInstance(this).dao
         val factory = DbFactory(AppRepository(dao))

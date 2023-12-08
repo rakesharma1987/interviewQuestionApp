@@ -34,4 +34,7 @@ interface AppDao {
     @Delete
     suspend fun deleteQuestionAnswerData(data: QuestionAnswer): Int
 
+    @Query("SELECT * FROM questionanswer WHERE quesType = 'Tips'")
+    fun getAllTipsQuestion(): LiveData<List<QuestionAnswer>>
+
 }

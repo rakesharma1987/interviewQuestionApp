@@ -60,4 +60,5 @@ class DbViewModel(private val repository: AppRepository): ViewModel() {
     val getAllSaveForLaterData = repository.getSaveForLaterData
     val getAllMarkedAsReadData = repository.getMarkedAsReadData
     val getAllQuestionAnswerData = repository.getAllQuestionAnswerData
+    val getTipsQuestion = repository.getTipsQuestion
 }

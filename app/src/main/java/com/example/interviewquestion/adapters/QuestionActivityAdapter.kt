@@ -15,6 +15,7 @@ import com.example.interviewquestion.model.QuestionAnswerList
 
 class QuestionActivityAdapter(private var context: Context, private var list: List<QuestionAnswer>, private var onItemClickListener: OnQuestionClickListener): RecyclerView.Adapter<QuestionActivityAdapter.MyViewHolder>() {
 
+    var srNoTip = 0
     inner class MyViewHolder(val itemDashboardItemBinding: LayoutQuestionListBinding?): RecyclerView.ViewHolder(itemDashboardItemBinding!!.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -28,8 +29,14 @@ class QuestionActivityAdapter(private var context: Context, private var list: Li
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         var questionAnswer = list[position]
-        holder.itemDashboardItemBinding!!.tvSrnoValue.text = questionAnswer.SrNo.toString()
-        holder.itemDashboardItemBinding.tvQuesTitleValue!!.text = questionAnswer.Question
+        if (questionAnswer.quesType == "Tips"){
+            srNoTip = srNoTip.plus(1)
+            holder.itemDashboardItemBinding!!.tvSrnoValue.text = srNoTip.toString()
+            questionAnswer.SrNo = srNoTip
+        }else {
+            holder.itemDashboardItemBinding!!.tvSrnoValue.text = questionAnswer.SrNo.toString()
+        }
+        holder.itemDashboardItemBinding!!.tvQuesTitleValue!!.text = questionAnswer.Question
 //        holder.itemDashboardItemBinding.tvPriorityValue!!.text = questionAnswer.quesType
         if (questionAnswer.quesType == "Low"){
             holder.itemDashboardItemBinding.tvPriorityValue!!.text = "L"
@@ -39,6 +46,10 @@ class QuestionActivityAdapter(private var context: Context, private var list: Li
             holder.itemDashboardItemBinding.tvPriorityValue!!.text = "M"
 //            holder.itemDashboardItemBinding.tvPriorityValue!!.setTextColor(context.getColor(R.color.color_medium))
             holder.itemDashboardItemBinding.tvPriorityValue.setBackgroundDrawable(context.getDrawable(R.drawable.drawable_medium_priority))
+        }else if (questionAnswer.quesType == "Tips"){
+            holder.itemDashboardItemBinding.tvPriorityValue!!.text = "Tips"
+//            holder.itemDashboardItemBinding.tvPriorityValue!!.setTextColor(context.getColor(R.color.color_medium))
+            holder.itemDashboardItemBinding.tvPriorityValue.setBackgroundDrawable(context.getDrawable(R.drawable.drawable_tips))
         }else{
             holder.itemDashboardItemBinding.tvPriorityValue!!.text = "H"
 //            holder.itemDashboardItemBinding.tvPriorityValue!!.setTextColor(context.getColor(R.color.color_high))
