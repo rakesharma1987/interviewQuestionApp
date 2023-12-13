@@ -6,7 +6,7 @@
         android:icon="@android:drawable/ic_menu_search"
         android:title="Search"
         app:actionViewClass="androidx.appcompat.widget.SearchView"
-        app:showAsAction="ifRoom|collapseActionView" />
+        app:showAsAction="always" />
     <item
         android:id="@+id/item_rate"
         android:title="Rate"/>

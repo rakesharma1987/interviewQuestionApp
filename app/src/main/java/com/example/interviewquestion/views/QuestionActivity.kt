@@ -62,13 +62,46 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
 
         list = QuestionAnswerList()
         viewModel2.getAllQuestionAnswerData.observe(this, Observer {
-            if (it.isNotEmpty()){
-            allDataList.addAll(it)
-            setUpRecyclerView(it)
-                binding.tvOopsMoment.visibility = View.GONE
+            if (!MyPreferences.isPurchased()) {
+                if (it.isNotEmpty()) {
+                    for (data in it.listIterator()) {
+                        if (allDataList.size <= 25) {
+                            allDataList.add(data)
+//                            setUpRecyclerView(it)
+                            binding.tvOopsMoment.visibility = View.GONE
+                        }
+                    }
+                    setUpRecyclerView(allDataList)
+                }else {
+                    binding.tvOopsMoment.visibility = View.VISIBLE
+                }
             }else{
-                binding.tvOopsMoment.visibility = View.VISIBLE
+                if (it.isNotEmpty()) {
+                    allDataList.addAll(it)
+                    setUpRecyclerView(it)
+                    binding.tvOopsMoment.visibility = View.GONE
+                } else {
+                    binding.tvOopsMoment.visibility = View.VISIBLE
+                }
             }
+
+//            if (allDataList.size <= 25) {
+//                if (it.isNotEmpty()) {
+//                    allDataList.addAll(it)
+//                    setUpRecyclerView(it)
+//                    binding.tvOopsMoment.visibility = View.GONE
+//                } else {
+//                    binding.tvOopsMoment.visibility = View.VISIBLE
+//                }
+//            }else if (!MyPreferences.isPurchased()){
+//                if (it.isNotEmpty()) {
+//                    allDataList.addAll(it)
+//                    setUpRecyclerView(it)
+//                    binding.tvOopsMoment.visibility = View.GONE
+//                } else {
+//                    binding.tvOopsMoment.visibility = View.VISIBLE
+//                }
+//            }
         })
 
         viewModel2.getTipsQuestion.observe(this, Observer {
@@ -280,59 +313,59 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
 
     }
 
-    override fun onResume() {
-        super.onResume()
-//        binding.rvQuestionList.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-//            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-//                super.onScrolled(recyclerView, dx, dy)
-//                val currFirstPos = layoutmanager!!.findFirstCompletelyVisibleItemPosition()
-//                val currLastPos = layoutmanager.findLastCompletelyVisibleItemPosition()
-//                val totalItemCount = layoutmanager.itemCount
-//                if (oldFirstPos === -1) {
-//                    totalItemsViewed += currLastPos - currFirstPos + 1
-//                } else {
-//                    if (dy > 0) {
-//                        totalItemsViewed += Math.abs(currLastPos - oldLastPos)
-//                    } else {
-//                        totalItemsViewed -= Math.abs(oldLastPos - currLastPos)
-//                    }
-//                }
-//                oldLastPos = currLastPos
-//                oldFirstPos = currFirstPos
-//                Log.e("totalItemsViewed", totalItemsViewed.toString())
-//                if (totalItemsViewed == 25){
-//                    binding.rvQuestionList.suppressLayout(true)
-//                    if (!MyPreferences.isPurchased()){
-//                            val dialog = AlertDialog.Builder(this@QuestionActivity)
-//                            dialog.setCancelable(false)
-//                            dialog.setTitle(R.string.app_name)
-//                            dialog.setMessage(getString(R.string.msg_subscription))
-//                            dialog.setPositiveButton(
-//                                "SUBSCRIBE",
-//                                object : DialogInterface.OnClickListener {
-//                                    override fun onClick(dialog: DialogInterface?, which: Int) {
-//                                        dialog!!.dismiss()
-//                                        startActivity(
-//                                            Intent(
-//                                                this@QuestionActivity,
-//                                                BillingActivity::class.java
-//                                            )
-//                                        )
-//                                    }
-//
-//                                })
-//                            dialog.setNegativeButton(
-//                                "Cancel",
-//                                object : DialogInterface.OnClickListener {
-//                                    override fun onClick(dialog: DialogInterface?, which: Int) {
-//                                        dialog!!.dismiss()
-//                                    }
-//
-//                                })
-//                        dialog.create().show()
-//                    }
-//                }
-//            }
-//        })
-    }
+//    override fun onResume() {
+//        super.onResume()
+////        binding.rvQuestionList.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+////            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+////                super.onScrolled(recyclerView, dx, dy)
+////                val currFirstPos = layoutmanager!!.findFirstCompletelyVisibleItemPosition()
+////                val currLastPos = layoutmanager.findLastCompletelyVisibleItemPosition()
+////                val totalItemCount = layoutmanager.itemCount
+////                if (oldFirstPos === -1) {
+////                    totalItemsViewed += currLastPos - currFirstPos + 1
+////                } else {
+////                    if (dy > 0) {
+////                        totalItemsViewed += Math.abs(currLastPos - oldLastPos)
+////                    } else {
+////                        totalItemsViewed -= Math.abs(oldLastPos - currLastPos)
+////                    }
+////                }
+////                oldLastPos = currLastPos
+////                oldFirstPos = currFirstPos
+////                Log.e("totalItemsViewed", totalItemsViewed.toString())
+////                if (totalItemsViewed == 25){
+////                    binding.rvQuestionList.suppressLayout(true)
+////                    if (!MyPreferences.isPurchased()){
+////                            val dialog = AlertDialog.Builder(this@QuestionActivity)
+////                            dialog.setCancelable(false)
+////                            dialog.setTitle(R.string.app_name)
+////                            dialog.setMessage(getString(R.string.msg_subscription))
+////                            dialog.setPositiveButton(
+////                                "SUBSCRIBE",
+////                                object : DialogInterface.OnClickListener {
+////                                    override fun onClick(dialog: DialogInterface?, which: Int) {
+////                                        dialog!!.dismiss()
+////                                        startActivity(
+////                                            Intent(
+////                                                this@QuestionActivity,
+////                                                BillingActivity::class.java
+////                                            )
+////                                        )
+////                                    }
+////
+////                                })
+////                            dialog.setNegativeButton(
+////                                "Cancel",
+////                                object : DialogInterface.OnClickListener {
+////                                    override fun onClick(dialog: DialogInterface?, which: Int) {
+////                                        dialog!!.dismiss()
+////                                    }
+////
+////                                })
+////                        dialog.create().show()
+////                    }
+////                }
+////            }
+////        })
+//    }
 }
