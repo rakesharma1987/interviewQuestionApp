@@ -34,6 +34,7 @@
                 android:layout_centerVertical="true"
                 android:gravity="center"
                 android:background="@drawable/shap_circle"
+                android:textColor="@color/txt_color"
                 />
 
             <com.google.android.material.textview.MaterialTextView
@@ -46,7 +47,8 @@
                 android:textSize="@dimen/text_size"
                 android:layout_marginLeft="10dp"
                 android:layout_toLeftOf="@id/tv_priority_value"
-                android:layout_marginRight="@dimen/margin_5dp"/>
+                android:layout_marginRight="@dimen/margin_5dp"
+                android:textColor="@color/txt_color"/>
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="25dp"
                 android:layout_height="25dp"

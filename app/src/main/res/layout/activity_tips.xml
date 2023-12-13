@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin_5dp"
+            tools:context=".views.QuestionAnswerDescriptionActivity">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_question"
+                android:text="What is your name"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="@dimen/text_size"
+                android:layout_margin="10dp"/>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/rv_tips_item"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@id/tv_question"
+                android:layout_marginBottom="10dp"
+                android:divider="@null"
+                android:dividerHeight="2dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

@@ -9,7 +9,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         tools:context=".views.QuestionActivity">
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/btn_marked_as_read"
-                android:text="Marked As Read"
+                android:text="@string/txt_read"
                 android:layout_weight="1"
                 android:textSize="@dimen/btn_small_txt_size_10sp"
                 android:layout_marginLeft="@dimen/dimen_1dp"
@@ -100,6 +100,7 @@
                 android:text="SNO"
                 android:textSize="@dimen/text_size"
                 android:layout_centerVertical="true"
+                android:textColor="@color/txt_color"
                 />
 
             <com.google.android.material.textview.MaterialTextView
@@ -113,7 +114,8 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="@dimen/margin_5dp"
-                android:layout_toLeftOf="@id/tv_priority"/>
+                android:layout_toLeftOf="@id/tv_priority"
+                android:textColor="@color/txt_color"/>
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -122,6 +124,7 @@
                 android:layout_alignParentEnd="true"
                 android:textSize="@dimen/text_size"
                 android:layout_centerVertical="true"
+                android:textColor="@color/txt_color"
                 />
         </RelativeLayout>
         <View
@@ -149,7 +152,16 @@
             app:layout_constraintBottom_toBottomOf="parent"
             android:textStyle="bold"
             android:textSize="20sp"
-            android:visibility="gone"/>
+            android:visibility="visible"/>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_subscription"
+            android:text="@string/txt_subscribe"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="@dimen/margin_2dp"
+            android:layout_marginRight="@dimen/margin_2dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

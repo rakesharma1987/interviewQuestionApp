@@ -38,6 +38,16 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_question_answer_description)
+        val tab = intent.getStringExtra(Constant.TAB_NAME)
+        if (tab == "TIPS"){
+            supportActionBar!!.title = resources.getString(R.string.txt_tips)
+        }else if (tab == "Bookmarks"){
+            supportActionBar!!.title = resources.getString(R.string.txt_save_for_later)
+        }else if (tab == "READ"){
+            supportActionBar!!.title = resources.getString(R.string.txt_read)
+        }else{
+            supportActionBar!!.title = resources.getString(R.string.app_name)
+        }
 
         val dao = AppDatabase.getInstance(this).dao
         val factory = DbFactory(AppRepository(dao))
@@ -46,6 +56,7 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity() {
         saveForLaterData = intent.getSerializableExtra(Constant.SAVE_FOR_LATER, SaveForLaterQues::class.java)!!
         markedAsReadData = intent.getSerializableExtra(Constant.MARKED_AS_READ, MarkedAsReadQues::class.java)!!
         isSaveOrMarkedAsRead = intent.getBooleanExtra(Constant.IS_SAVE_OR_MARKED_AS_READ_DATA, false)
+
         if (saveForLaterData.quesType == "Tips") {
             var tipsString = saveForLaterData.Answer.split("\n").toList()
             for (tips in tipsString.listIterator()){

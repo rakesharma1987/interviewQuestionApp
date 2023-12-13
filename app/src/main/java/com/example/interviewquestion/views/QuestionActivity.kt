@@ -31,6 +31,7 @@ import com.example.interviewquestion.model.QuestionAnswerList
 import com.example.interviewquestion.model.SaveForLaterQues
 import com.example.interviewquestion.util.MyPreferences
 import com.example.interviewquestion.viewModel.DbViewModel
+import com.google.gson.Gson
 
 
 class QuestionActivity : AppCompatActivity(), View.OnClickListener {
@@ -43,6 +44,8 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
     private  var oldLastPos:kotlin.Int = -1
     private  var totalItemsViewed:kotlin.Int = 0
     private lateinit var layoutmanager: LinearLayoutManager
+    var tempList = ArrayList<QuestionAnswer>()
+    lateinit var questionAnswer: QuestionAnswer
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_question)
@@ -68,10 +71,22 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
             }
         })
 
+        viewModel2.getTipsQuestion.observe(this, Observer {
+            questionAnswer = it[0]
+//            for (it in it.listIterator()){
+////                tempList.add(it)
+//            }
+        })
+
+//        for (data in tempList.listIterator()){
+//            questionAnswer = data
+//        }
+
         binding.btnAllQuestion.setOnClickListener(this)
         binding.btnSaveForLatter.setOnClickListener(this)
         binding.btnMarkedAsRead.setOnClickListener(this)
         binding.btnTips.setOnClickListener(this)
+        binding.btnSubscription.setOnClickListener(this)
 
     }
 
@@ -85,6 +100,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
                 intent.putExtra(Constant.SAVE_FOR_LATER, saveForLaterData)
                 intent.putExtra(Constant.MARKED_AS_READ, markedAsReadData)
                 intent.putExtra(Constant.IS_SAVE_OR_MARKED_AS_READ_DATA, isSaveOrMarkedOpen)
+                intent.putExtra(Constant.TAB_NAME, Constant.TAB)
                 startActivity(intent)
             }
 
@@ -96,12 +112,14 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.btn_all_question ->{
+                binding.btnSubscription.visibility = View.VISIBLE
                 binding.btnAllQuestion.setBackgroundColor(applicationContext.getColor(R.color.purple_500))
-                binding.btnSaveForLatter.setBackgroundColor(applicationContext.getColor(R.color.card_foreground_color))
-                binding.btnMarkedAsRead.setBackgroundColor(applicationContext.getColor(R.color.card_foreground_color))
-                binding.btnTips.setBackgroundColor(applicationContext.getColor(R.color.card_foreground_color))
+                binding.btnSaveForLatter.setBackgroundColor(applicationContext.getColor(R.color.tab_default_color))
+                binding.btnMarkedAsRead.setBackgroundColor(applicationContext.getColor(R.color.tab_default_color))
+                binding.btnTips.setBackgroundColor(applicationContext.getColor(R.color.tab_default_color))
 
                 isSaveOrMarkedOpen = false
+                Constant.TAB = "AllQA"
                 viewModel2.getAllQuestionAnswerData.observe(this, Observer {
                     if (it.isNotEmpty()){
                         setUpRecyclerView(it)
@@ -110,12 +128,14 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.btn_save_for_latter ->{
+                binding.btnSubscription.visibility = View.GONE
                 binding.btnSaveForLatter.setBackgroundColor(applicationContext.getColor(R.color.purple_500))
-                binding.btnMarkedAsRead.setBackgroundColor(applicationContext.getColor(R.color.card_foreground_color))
-                binding.btnTips.setBackgroundColor(applicationContext.getColor(R.color.card_foreground_color))
-                binding.btnAllQuestion.setBackgroundColor(applicationContext.getColor(R.color.card_foreground_color))
+                binding.btnMarkedAsRead.setBackgroundColor(applicationContext.getColor(R.color.tab_default_color))
+                binding.btnTips.setBackgroundColor(applicationContext.getColor(R.color.tab_default_color))
+                binding.btnAllQuestion.setBackgroundColor(applicationContext.getColor(R.color.tab_default_color))
 
                 isSaveOrMarkedOpen = true
+                Constant.TAB = "Bookmarks"
                 viewModel2.getAllSaveForLaterData.observe(this, Observer {
                     var list = ArrayList<QuestionAnswer>()
                     for (it in it.listIterator()){
@@ -126,12 +146,14 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.btn_marked_as_read ->{
-                binding.btnSaveForLatter.setBackgroundColor(applicationContext.getColor(R.color.card_foreground_color))
+                binding.btnSubscription.visibility = View.GONE
+                binding.btnSaveForLatter.setBackgroundColor(applicationContext.getColor(R.color.tab_default_color))
                 binding.btnMarkedAsRead.setBackgroundColor(applicationContext.getColor(R.color.purple_500))
-                binding.btnTips.setBackgroundColor(applicationContext.getColor(R.color.card_foreground_color))
-                binding.btnAllQuestion.setBackgroundColor(applicationContext.getColor(R.color.card_foreground_color))
+                binding.btnTips.setBackgroundColor(applicationContext.getColor(R.color.tab_default_color))
+                binding.btnAllQuestion.setBackgroundColor(applicationContext.getColor(R.color.tab_default_color))
 
                 isSaveOrMarkedOpen = true
+                Constant.TAB = "READ"
                 viewModel2.getAllMarkedAsReadData.observe(this, Observer {
                     var list = ArrayList<QuestionAnswer>()
                     for (it in it.listIterator()){
@@ -142,18 +164,40 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.btn_tips ->{
-                binding.btnSaveForLatter.setBackgroundColor(applicationContext.getColor(R.color.card_foreground_color))
-                binding.btnMarkedAsRead.setBackgroundColor(applicationContext.getColor(R.color.card_foreground_color))
+                binding.btnSubscription.visibility = View.GONE
+                binding.btnSaveForLatter.setBackgroundColor(applicationContext.getColor(R.color.tab_default_color))
+                binding.btnMarkedAsRead.setBackgroundColor(applicationContext.getColor(R.color.tab_default_color))
                 binding.btnTips.setBackgroundColor(applicationContext.getColor(R.color.purple_500))
-                binding.btnAllQuestion.setBackgroundColor(applicationContext.getColor(R.color.card_foreground_color))
+                binding.btnAllQuestion.setBackgroundColor(applicationContext.getColor(R.color.tab_default_color))
+                isSaveOrMarkedOpen = true
+                Constant.TAB = "TIPS"
+                var _intent = Intent(this, TipsActivity::class.java)
+                _intent.putExtra(Constant.TAB_NAME, Constant.TAB)
+                _intent.putExtra(Constant.TIPS, Gson().toJson(questionAnswer))
+                startActivity(_intent)
 
-                viewModel2.getTipsQuestion.observe(this, Observer {
-                    var tempList = ArrayList<QuestionAnswer>()
-                    for (it in it.listIterator()){
-                        tempList.add(it)
-                    }
-                    setUpRecyclerView(tempList)
-                })
+                binding.btnSubscription.visibility = View.VISIBLE
+                binding.btnAllQuestion.setBackgroundColor(applicationContext.getColor(R.color.purple_500))
+                binding.btnSaveForLatter.setBackgroundColor(applicationContext.getColor(R.color.tab_default_color))
+                binding.btnMarkedAsRead.setBackgroundColor(applicationContext.getColor(R.color.tab_default_color))
+                binding.btnTips.setBackgroundColor(applicationContext.getColor(R.color.tab_default_color))
+
+//                viewModel2.getTipsQuestion.observe(this, Observer {
+//                    var tempList = ArrayList<QuestionAnswer>()
+//                    for (it in it.listIterator()){
+//                        tempList.add(it)
+//                    }
+//                    setUpRecyclerView(tempList)
+//                })
+            }
+
+            R.id.btn_subscription ->{
+                startActivity(
+                    Intent(
+                        this@QuestionActivity,
+                        BillingActivity::class.java
+                    )
+                )
             }
         }
     }
@@ -199,7 +243,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
             R.id.item_share ->{
                 val intent= Intent()
                 intent.action=Intent.ACTION_SEND
-                intent.putExtra(Intent.EXTRA_TEXT,"Hey Check out this Great app:")
+                intent.putExtra(Intent.EXTRA_TEXT,"Hello, Take a look at this excellent app designed to help you excel in Oracle SQL interview questions and answers!!")
                 intent.type="text/plain"
                 startActivity(Intent.createChooser(intent,"Share To:"))
             }
@@ -238,57 +282,57 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onResume() {
         super.onResume()
-        binding.rvQuestionList.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                super.onScrolled(recyclerView, dx, dy)
-                val currFirstPos = layoutmanager!!.findFirstCompletelyVisibleItemPosition()
-                val currLastPos = layoutmanager.findLastCompletelyVisibleItemPosition()
-                val totalItemCount = layoutmanager.itemCount
-                if (oldFirstPos === -1) {
-                    totalItemsViewed += currLastPos - currFirstPos + 1
-                } else {
-                    if (dy > 0) {
-                        totalItemsViewed += Math.abs(currLastPos - oldLastPos)
-                    } else {
-                        totalItemsViewed -= Math.abs(oldLastPos - currLastPos)
-                    }
-                }
-                oldLastPos = currLastPos
-                oldFirstPos = currFirstPos
-                Log.e("totalItemsViewed", totalItemsViewed.toString())
-                if (totalItemsViewed > 25){
-                    binding.rvQuestionList.suppressLayout(true)
-                    if (!MyPreferences.isPurchased()){
-                            val dialog = AlertDialog.Builder(this@QuestionActivity)
-                            dialog.setCancelable(false)
-                            dialog.setTitle(R.string.app_name)
-                            dialog.setMessage(getString(R.string.msg_subscription))
-                            dialog.setPositiveButton(
-                                "SUBSCRIBE",
-                                object : DialogInterface.OnClickListener {
-                                    override fun onClick(dialog: DialogInterface?, which: Int) {
-                                        dialog!!.dismiss()
-                                        startActivity(
-                                            Intent(
-                                                this@QuestionActivity,
-                                                BillingActivity::class.java
-                                            )
-                                        )
-                                    }
-
-                                })
-                            dialog.setNegativeButton(
-                                "Cancel",
-                                object : DialogInterface.OnClickListener {
-                                    override fun onClick(dialog: DialogInterface?, which: Int) {
-                                        dialog!!.dismiss()
-                                    }
-
-                                })
-                        dialog.create().show()
-                    }
-                }
-            }
-        })
+//        binding.rvQuestionList.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+//            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+//                super.onScrolled(recyclerView, dx, dy)
+//                val currFirstPos = layoutmanager!!.findFirstCompletelyVisibleItemPosition()
+//                val currLastPos = layoutmanager.findLastCompletelyVisibleItemPosition()
+//                val totalItemCount = layoutmanager.itemCount
+//                if (oldFirstPos === -1) {
+//                    totalItemsViewed += currLastPos - currFirstPos + 1
+//                } else {
+//                    if (dy > 0) {
+//                        totalItemsViewed += Math.abs(currLastPos - oldLastPos)
+//                    } else {
+//                        totalItemsViewed -= Math.abs(oldLastPos - currLastPos)
+//                    }
+//                }
+//                oldLastPos = currLastPos
+//                oldFirstPos = currFirstPos
+//                Log.e("totalItemsViewed", totalItemsViewed.toString())
+//                if (totalItemsViewed == 25){
+//                    binding.rvQuestionList.suppressLayout(true)
+//                    if (!MyPreferences.isPurchased()){
+//                            val dialog = AlertDialog.Builder(this@QuestionActivity)
+//                            dialog.setCancelable(false)
+//                            dialog.setTitle(R.string.app_name)
+//                            dialog.setMessage(getString(R.string.msg_subscription))
+//                            dialog.setPositiveButton(
+//                                "SUBSCRIBE",
+//                                object : DialogInterface.OnClickListener {
+//                                    override fun onClick(dialog: DialogInterface?, which: Int) {
+//                                        dialog!!.dismiss()
+//                                        startActivity(
+//                                            Intent(
+//                                                this@QuestionActivity,
+//                                                BillingActivity::class.java
+//                                            )
+//                                        )
+//                                    }
+//
+//                                })
+//                            dialog.setNegativeButton(
+//                                "Cancel",
+//                                object : DialogInterface.OnClickListener {
+//                                    override fun onClick(dialog: DialogInterface?, which: Int) {
+//                                        dialog!!.dismiss()
+//                                    }
+//
+//                                })
+//                        dialog.create().show()
+//                    }
+//                }
+//            }
+//        })
     }
 }

@@ -41,6 +41,7 @@ class BillingActivity : AppCompatActivity(), OnCLickProduct {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         billingActivityBinding = DataBindingUtil.setContentView(this, R.layout.activity_billing)
+        supportActionBar!!.title = "Subscription"
 
         CoroutineScope(Dispatchers.IO).launch {
             billingConnection()
