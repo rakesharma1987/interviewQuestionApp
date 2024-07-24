@@ -28,7 +28,8 @@
                     android:text="PREMIUM"
                     android:textColor="@color/white"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif" />
 
 
             </RelativeLayout>
@@ -41,7 +42,8 @@
                 android:text="Unlock Unlimited Access"
                 android:textColor="@color/black"
                 android:textSize="15sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_subscriptionList"

@@ -1,26 +1,22 @@
 package com.example.interviewquestion.views
 
-import android.app.AlertDialog
 import android.content.ActivityNotFoundException
-import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.interviewquestion.Constant
 import com.example.interviewquestion.R
 import com.example.interviewquestion.adapters.QuestionActivityAdapter
-import com.example.interviewquestion.databinding.ActivityQuestionBinding
+import com.example.interviewquestion.databinding.ActivityQuestionTwentyFiveBinding
 import com.example.interviewquestion.db.AppDatabase
 import com.example.interviewquestion.db.AppRepository
 import com.example.interviewquestion.factory.DbFactory
@@ -33,9 +29,8 @@ import com.example.interviewquestion.util.MyPreferences
 import com.example.interviewquestion.viewModel.DbViewModel
 import com.google.gson.Gson
 
-
-class QuestionActivity : AppCompatActivity(), View.OnClickListener {
-    private lateinit var binding: ActivityQuestionBinding
+class QuestionTwentyFiveActivity : AppCompatActivity(), View.OnClickListener {
+    private lateinit var binding: ActivityQuestionTwentyFiveBinding
     private lateinit var list: QuestionAnswerList
     private lateinit var viewModel2: DbViewModel
     private var isSaveOrMarkedOpen: Boolean = false
@@ -46,11 +41,11 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var layoutmanager: LinearLayoutManager
     var tempList = ArrayList<QuestionAnswer>()
     lateinit var questionAnswer: QuestionAnswer
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_question)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_question_twenty_five)
         binding.rvQuestionList.alpha
-//        MyPreferences.init(this)
         layoutmanager = LinearLayoutManager(this)
         binding.rvQuestionList.layoutManager = layoutmanager
 
@@ -61,13 +56,15 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
         viewModel2 = ViewModelProvider(this, factory2)[DbViewModel::class.java]
 
         list = QuestionAnswerList()
-        viewModel2.getAllQuestionAnswerData.observe(this, Observer {
-            allDataList.clear()
-            if (it.isNotEmpty()) {
-                    allDataList.addAll(it)
-                    setUpRecyclerView(it)
-                    binding.tvOopsMoment.visibility = View.GONE
-                } else {
+        viewModel2.get25QuestionAnswerData.observe(this, Observer {
+                if (it.isNotEmpty()) {
+                    allDataList.clear()
+                    for (data in it.listIterator()) {
+                        allDataList.add(data)
+                        binding.tvOopsMoment.visibility = View.GONE
+                    }
+                    setUpRecyclerView(allDataList)
+                }else {
                     binding.tvOopsMoment.visibility = View.VISIBLE
                 }
         })
@@ -79,18 +76,18 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
 //            }
         })
 
+
         binding.btnAllQuestion.setOnClickListener(this)
         binding.btnSaveForLatter.setOnClickListener(this)
         binding.btnMarkedAsRead.setOnClickListener(this)
         binding.btnTips.setOnClickListener(this)
         binding.btnSubscription.setOnClickListener(this)
-
     }
 
     private fun setUpRecyclerView(tempList: List<QuestionAnswer>){
-        var questionAnswerAdapter = QuestionActivityAdapter(this, tempList, object: OnQuestionClickListener{
+        var questionAnswerAdapter = QuestionActivityAdapter(this, tempList, object: OnQuestionClickListener {
             override fun onClick(position: Int, item: QuestionAnswer) {
-                var intent = Intent(this@QuestionActivity, QuestionAnswerDescriptionActivity::class.java)
+                var intent = Intent(this@QuestionTwentyFiveActivity, QuestionAnswerDescriptionActivity::class.java)
                 val saveForLaterData = SaveForLaterQues(item.SrNo, item.isHtmlTag, item.quesType, item.Question, item.Answer)
                 val markedAsReadData = MarkedAsReadQues(item.SrNo, item.isHtmlTag, item.quesType, item.Question, item.Answer)
                 intent.putExtra(Constant.QUESTION_ANSWER, item)
@@ -118,12 +115,14 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
                 isSaveOrMarkedOpen = false
                 Constant.TAB = "AllQA"
                 allDataList.clear()
-                viewModel2.getAllQuestionAnswerData.observe(this, Observer {
+                viewModel2.get25QuestionAnswerData.observe(this, Observer {
                     if (it.isNotEmpty()) {
-                        allDataList.addAll(it)
-                        setUpRecyclerView(it)
-                        binding.tvOopsMoment.visibility = View.GONE
-                    } else {
+                        for (data in it.listIterator()) {
+                            allDataList.add(data)
+                            binding.tvOopsMoment.visibility = View.GONE
+                        }
+                        setUpRecyclerView(allDataList)
+                    }else {
                         binding.tvOopsMoment.visibility = View.VISIBLE
                     }
                 })
@@ -189,7 +188,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_subscription ->{
                 startActivity(
                     Intent(
-                        this@QuestionActivity,
+                        this@QuestionTwentyFiveActivity,
                         BillingActivity::class.java
                     )
                 )
@@ -237,7 +236,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.item_share ->{
                 val intent= Intent()
-                intent.action=Intent.ACTION_SEND
+                intent.action= Intent.ACTION_SEND
                 intent.putExtra(Intent.EXTRA_TEXT,"Hello, Take a look at this excellent app designed to help you excel in Oracle SQL interview questions and answers!!")
                 intent.type="text/plain"
                 startActivity(Intent.createChooser(intent,"Share To:"))
@@ -274,60 +273,4 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
         }
 
     }
-
-//    override fun onResume() {
-//        super.onResume()
-////        binding.rvQuestionList.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-////            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-////                super.onScrolled(recyclerView, dx, dy)
-////                val currFirstPos = layoutmanager!!.findFirstCompletelyVisibleItemPosition()
-////                val currLastPos = layoutmanager.findLastCompletelyVisibleItemPosition()
-////                val totalItemCount = layoutmanager.itemCount
-////                if (oldFirstPos === -1) {
-////                    totalItemsViewed += currLastPos - currFirstPos + 1
-////                } else {
-////                    if (dy > 0) {
-////                        totalItemsViewed += Math.abs(currLastPos - oldLastPos)
-////                    } else {
-////                        totalItemsViewed -= Math.abs(oldLastPos - currLastPos)
-////                    }
-////                }
-////                oldLastPos = currLastPos
-////                oldFirstPos = currFirstPos
-////                Log.e("totalItemsViewed", totalItemsViewed.toString())
-////                if (totalItemsViewed == 25){
-////                    binding.rvQuestionList.suppressLayout(true)
-////                    if (!MyPreferences.isPurchased()){
-////                            val dialog = AlertDialog.Builder(this@QuestionActivity)
-////                            dialog.setCancelable(false)
-////                            dialog.setTitle(R.string.app_name)
-////                            dialog.setMessage(getString(R.string.msg_subscription))
-////                            dialog.setPositiveButton(
-////                                "SUBSCRIBE",
-////                                object : DialogInterface.OnClickListener {
-////                                    override fun onClick(dialog: DialogInterface?, which: Int) {
-////                                        dialog!!.dismiss()
-////                                        startActivity(
-////                                            Intent(
-////                                                this@QuestionActivity,
-////                                                BillingActivity::class.java
-////                                            )
-////                                        )
-////                                    }
-////
-////                                })
-////                            dialog.setNegativeButton(
-////                                "Cancel",
-////                                object : DialogInterface.OnClickListener {
-////                                    override fun onClick(dialog: DialogInterface?, which: Int) {
-////                                        dialog!!.dismiss()
-////                                    }
-////
-////                                })
-////                        dialog.create().show()
-////                    }
-////                }
-////            }
-////        })
-//    }
 }

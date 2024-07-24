@@ -21,6 +21,7 @@ import com.example.interviewquestion.interfaces.OnItemClickListener
 import com.example.interviewquestion.model.QuestionAnswer
 import com.example.interviewquestion.model.QuestionAnswerList
 import com.example.interviewquestion.model.TechnologyName
+import com.example.interviewquestion.util.MyPreferences
 import com.example.interviewquestion.viewModel.DbViewModel
 import com.google.gson.Gson
 import java.io.BufferedReader
@@ -30,13 +31,16 @@ class DashboardActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDashboardBinding
     private lateinit var viewModel: DbViewModel
     private lateinit var listData: ArrayList<QuestionAnswer>
+    private lateinit var listData25: ArrayList<QuestionAnswer>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         installSplashScreen()
         binding = DataBindingUtil.setContentView(this, R.layout.activity_dashboard)
         supportActionBar!!.hide()
+        MyPreferences.init(this)
 
         listData = ArrayList<QuestionAnswer>()
+        listData25 = ArrayList<QuestionAnswer>()
         var jsonFile = readJSONFromAsset("Interview_Question_Answers_Sample.json")
 //        var tipsJsonFile = readJSONFromAsset("tips.json")
         val list = Gson().fromJson(jsonFile, QuestionAnswerList::class.java)
@@ -48,14 +52,41 @@ class DashboardActivity : AppCompatActivity() {
                 listData.add(it)
             }
             if (it.isEmpty()){
-                viewModel.saveAllQuestionAnswer(list)
+                if (MyPreferences.isPurchased()) {
+                    viewModel.saveAllQuestionAnswer(list)
+                }
+            }
+        })
+        viewModel.get25QuestionAnswerData.observe(this, Observer{
+            for (it in it.listIterator()){
+                listData25.add(it)
+            }
+            if (it.isEmpty()){
+                if (!MyPreferences.isPurchased()) {
+                    viewModel.saveAllQuestionAnswer(list)
+                }
             }
         })
 
         Handler().postDelayed({
-            var intent = Intent(this@DashboardActivity, QuestionActivity::class.java)
-            startActivity(intent)
-            finish()
+            if (MyPreferences.isPurchased()){
+//                if (MyPreferences.isFirstLaunchAfterPaid()){
+//                    viewModel.deleteAllQuestion()
+//                    MyPreferences.saveFirstLaunchAfterPaid(false)
+//                    viewModel.getAllBookmarkedAndReadQuestion.observe(this, Observer {
+//                        for (item in it.listIterator()){
+//                            viewModel.deleteQuestionAnswer(QuestionAnswer(item.SrNo, item.isHtmlTag, item.quesType, item.Question, item.Answer))
+//                        }
+//                    })
+//                }
+                var intent = Intent(this@DashboardActivity, QuestionActivity::class.java)
+                startActivity(intent)
+                finish()
+            }else {
+                var intent = Intent(this@DashboardActivity, QuestionTwentyFiveActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
         }, 5000)
 
     }

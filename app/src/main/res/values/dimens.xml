@@ -2,7 +2,7 @@
 <resources>
     <dimen name="cardview_radious">5dp</dimen>
     <dimen name="btn_height_60dp">55dp</dimen>
-    <dimen name="btn_small_txt_size_10sp">10sp</dimen>
+    <dimen name="btn_small_txt_size_10sp">9sp</dimen>
     <dimen name="dimen_1dp">1dp</dimen>
     <dimen name="margin_2dp">2dp</dimen>
     <dimen name="fab_margin">16dp</dimen>

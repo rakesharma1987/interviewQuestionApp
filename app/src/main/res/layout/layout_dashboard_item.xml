@@ -29,7 +29,8 @@
                 android:layout_gravity="center"
                 android:textSize="18sp"
                 android:textColor="@color/white"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"/>
         </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

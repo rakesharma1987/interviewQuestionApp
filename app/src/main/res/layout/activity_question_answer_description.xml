@@ -14,7 +14,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="@dimen/margin_5dp"
+        android:layout_margin="5dp"
         tools:context=".views.QuestionAnswerDescriptionActivity">
 
         <com.google.android.material.textview.MaterialTextView
@@ -25,7 +25,8 @@
             android:textStyle="bold"
             android:textColor="@color/black"
             app:layout_constraintTop_toTopOf="parent"
-            android:textSize="@dimen/text_size"/>
+            android:textSize="@dimen/text_size"
+            android:fontFamily="sans-serif"/>
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
@@ -34,7 +35,11 @@
             android:text="My name is Rakesh"
             android:textColor="@color/black"
             app:layout_constraintTop_toBottomOf="@id/tv_question"
-            android:layout_marginTop="@dimen/margin_5dp" />
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:singleLine="false"
+            android:inputType="textMultiLine"
+            android:fontFamily="sans-serif"
+            android:autoSizeTextType="uniform"/>
         <WebView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

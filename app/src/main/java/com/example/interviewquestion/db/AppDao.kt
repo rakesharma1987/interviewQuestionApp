@@ -6,6 +6,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import com.example.interviewquestion.model.BookmarkedAndReadQuestion
 import com.example.interviewquestion.model.MarkedAsReadQues
 import com.example.interviewquestion.model.QuestionAnswer
 import com.example.interviewquestion.model.SaveForLaterQues
@@ -15,6 +16,9 @@ interface AppDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun saveAllQuestionAnswerData(data: List<QuestionAnswer>)
+
+    @Query("SELECT * FROM questionanswer WHERE quesType != 'Tips' AND SrNo < 25")
+    fun get25QuestionAnswerData(): LiveData<List<QuestionAnswer>>
 
     @Query("SELECT * FROM questionanswer WHERE quesType != 'Tips'")
     fun getAllQuestionAnswerData(): LiveData<List<QuestionAnswer>>
@@ -36,5 +40,14 @@ interface AppDao {
 
     @Query("SELECT * FROM questionanswer WHERE quesType = 'Tips'")
     fun getAllTipsQuestion(): LiveData<List<QuestionAnswer>>
+
+    @Query("DELETE FROM questionanswer")
+    suspend fun deleteAllQuestionAnswer(): Int
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun saveAllBookmarkedAndReadQuestion(data: BookmarkedAndReadQuestion): Long
+
+    @Query("SELECT * FROM bookmarkedandreadquestion")
+    fun getAllBookmarkedAndReadQuestion(): LiveData<List<BookmarkedAndReadQuestion>>
 
 }

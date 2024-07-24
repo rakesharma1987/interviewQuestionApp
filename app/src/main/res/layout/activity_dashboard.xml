@@ -10,13 +10,16 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".views.DashboardActivity">
+        tools:context=".views.DashboardActivity"
+        android:background="@color/purple_700">
 
-        <androidx.recyclerview.widget.RecyclerView
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/rv_items"
-            android:visibility="gone"/>
+            android:visibility="visible"
+            android:src="@drawable/ic_drawable_background"
+            android:fitsSystemWindows="false"/>
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
@@ -26,9 +29,10 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:text="Interview Question Loading..."
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="@dimen/text_size"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:fontFamily="sans-serif" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.interviewquestion.db.AppRepository
+import com.example.interviewquestion.model.BookmarkedAndReadQuestion
 import com.example.interviewquestion.model.MarkedAsReadQues
 import com.example.interviewquestion.model.QuestionAnswer
 import com.example.interviewquestion.model.SaveForLaterQues
@@ -56,9 +57,24 @@ class DbViewModel(private val repository: AppRepository): ViewModel() {
         }
     }
 
+    fun saveAllBookmarkedAndReadQuestion(data: BookmarkedAndReadQuestion){
+        viewModelScope.launch {
+            repository.saveAllBookmarkedAndReadQuestion(data)
+        }
+    }
+
+    fun deleteAllQuestion(){
+        viewModelScope.launch {
+            repository.deleteAllQuestionAnswer()
+        }
+    }
+
 
     val getAllSaveForLaterData = repository.getSaveForLaterData
     val getAllMarkedAsReadData = repository.getMarkedAsReadData
     val getAllQuestionAnswerData = repository.getAllQuestionAnswerData
     val getTipsQuestion = repository.getTipsQuestion
+    val get25QuestionAnswerData = repository.get25QuestionAnswerData
+    val getAllBookmarkedAndReadQuestion = repository.getAllBookmarkedAndReadQuestion
+
 }

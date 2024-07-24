@@ -173,6 +173,7 @@ class BillingActivity : AppCompatActivity(), OnCLickProduct {
         ) { billingResult: BillingResult ->
             if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
                 MyPreferences.savePurchaseValueToPref(true)
+                MyPreferences.saveFirstLaunchAfterPaid(true)
                 this.finish()
             }
         }

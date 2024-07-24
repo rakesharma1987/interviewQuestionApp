@@ -1,7 +1,6 @@
 package com.example.interviewquestion.views
 
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -9,7 +8,7 @@ import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.core.text.HtmlCompat
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -19,6 +18,7 @@ import com.example.interviewquestion.databinding.ActivityQuestionAnswerDescripti
 import com.example.interviewquestion.db.AppDatabase
 import com.example.interviewquestion.db.AppRepository
 import com.example.interviewquestion.factory.DbFactory
+import com.example.interviewquestion.model.BookmarkedAndReadQuestion
 import com.example.interviewquestion.model.MarkedAsReadQues
 import com.example.interviewquestion.model.QuestionAnswer
 import com.example.interviewquestion.model.SaveForLaterQues
@@ -39,7 +39,7 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_question_answer_description)
         val tab = intent.getStringExtra(Constant.TAB_NAME)
-        if (tab == "TIPS"){
+        if (tab == "Tips"){
             supportActionBar!!.title = resources.getString(R.string.txt_tips)
         }else if (tab == "Bookmarks"){
             supportActionBar!!.title = resources.getString(R.string.txt_save_for_later)
@@ -87,7 +87,10 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity() {
         }else{
             binding.webView.visibility = View.GONE
             binding.tvAnswer.visibility = View.VISIBLE
-            binding.tvAnswer.text = HtmlCompat.fromHtml(saveForLaterData?.Answer!!, 0)
+            var txt = saveForLaterData!!.Answer.replace("\n", System.getProperty("line.separator"))
+//            binding.tvAnswer.text = HtmlCompat.fromHtml(saveForLaterData!!.Answer, 0)
+//            binding.tvAnswer.text = saveForLaterData!!.Answer
+            binding.tvAnswer.text = addNewLine(saveForLaterData!!.Answer)
         }
 
     }
@@ -112,13 +115,19 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.item_mark_as_read ->{
+
+                viewModel.saveAllBookmarkedAndReadQuestion(BookmarkedAndReadQuestion(saveForLaterData.SrNo, saveForLaterData.isHtmlTag, saveForLaterData.quesType, saveForLaterData.Question, saveForLaterData.Answer))
                 viewModel.saveForLater(saveForLaterData)
                 viewModel.deleteQuestionAnswer(QuestionAnswer(saveForLaterData.SrNo, saveForLaterData.isHtmlTag, saveForLaterData.quesType, saveForLaterData.Question, saveForLaterData.Answer))
+                this.finish()
             }
             R.id.item_save ->{
+                viewModel.saveAllBookmarkedAndReadQuestion(BookmarkedAndReadQuestion(markedAsReadData.SrNo, markedAsReadData.isHtmlTag, markedAsReadData.quesType, markedAsReadData.Question, markedAsReadData.Answer))
                 viewModel.saveMarkedAsRead(markedAsReadData)
                 viewModel.deleteQuestionAnswer(QuestionAnswer(markedAsReadData.SrNo, markedAsReadData.isHtmlTag, markedAsReadData.quesType, markedAsReadData.Question, markedAsReadData.Answer))
+                this.finish()
             }
+
         }
         return true
     }
@@ -132,5 +141,17 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity() {
 //            myMenu.findItem(R.id.item_save).isVisible = false
 //            myMenu.findItem(R.id.item_mark_as_read).isVisible = false
 //        }
+    }
+
+    fun addNewLine(string: String): String? {
+        val count = string.split("\n".toRegex()).toTypedArray().size - 1
+        val sb = StringBuilder(count)
+        val splitString = string.split("\n".toRegex()).dropLastWhile { it.isEmpty() }
+            .toTypedArray()
+        for (i in splitString.indices) {
+            sb.append(splitString[i])
+            if (i != splitString.size - 1) sb.append("\n\n\n")
+        }
+        return sb.toString()
     }
 }

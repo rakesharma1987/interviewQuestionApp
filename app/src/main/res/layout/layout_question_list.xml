@@ -16,6 +16,7 @@
             app:cardCornerRadius="@dimen/margin_5dp"
             app:cardUseCompatPadding="true"
             app:cardMaxElevation="@dimen/margin_2dp"
+            android:fontFamily="sans-serif"
             >
         <RelativeLayout
             android:layout_width="match_parent"
@@ -35,6 +36,7 @@
                 android:gravity="center"
                 android:background="@drawable/shap_circle"
                 android:textColor="@color/txt_color"
+                android:fontFamily="sans-serif"
                 />
 
             <com.google.android.material.textview.MaterialTextView
@@ -48,7 +50,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_toLeftOf="@id/tv_priority_value"
                 android:layout_marginRight="@dimen/margin_5dp"
-                android:textColor="@color/txt_color"/>
+                android:textColor="@color/txt_color"
+                android:fontFamily="sans-serif"/>
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
@@ -60,6 +63,7 @@
                 android:textColor="@color/white"
                 android:background="@drawable/spinner_background"
                 android:gravity="center"
+                android:fontFamily="sans-serif"
                 />
         </RelativeLayout>
         </com.google.android.material.card.MaterialCardView>
