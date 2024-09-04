@@ -90,6 +90,11 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
     private fun setUpRecyclerView(tempList: List<QuestionAnswer>){
         var questionAnswerAdapter = QuestionActivityAdapter(this, tempList, object: OnQuestionClickListener{
             override fun onClick(position: Int, item: QuestionAnswer) {
+                var lList = ArrayList<QuestionAnswer>()
+                lList.addAll(tempList)
+                for (list in 0..lList.size){
+                    lList.removeAt(list)
+                }
                 var intent = Intent(this@QuestionActivity, QuestionAnswerDescriptionActivity::class.java)
                 val saveForLaterData = SaveForLaterQues(item.SrNo, item.isHtmlTag, item.quesType, item.Question, item.Answer)
                 val markedAsReadData = MarkedAsReadQues(item.SrNo, item.isHtmlTag, item.quesType, item.Question, item.Answer)
@@ -98,6 +103,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
                 intent.putExtra(Constant.MARKED_AS_READ, markedAsReadData)
                 intent.putExtra(Constant.IS_SAVE_OR_MARKED_AS_READ_DATA, isSaveOrMarkedOpen)
                 intent.putExtra(Constant.TAB_NAME, Constant.TAB)
+                intent.putExtra(Constant.REMAINING_DATA_LIST, Gson().toJson(lList))
                 startActivity(intent)
             }
 

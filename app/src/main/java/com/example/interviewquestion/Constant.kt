@@ -10,5 +10,6 @@ class Constant {
         val TAB_NAME = "_tab_name"
         var TAB = "TAB"
         var TIPS = "_tips"
+        var REMAINING_DATA_LIST = "remainingData"
     }
 }

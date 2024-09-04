@@ -25,7 +25,7 @@ import com.example.interviewquestion.model.SaveForLaterQues
 import com.example.interviewquestion.viewModel.DbViewModel
 import kotlin.properties.Delegates
 
-class QuestionAnswerDescriptionActivity : AppCompatActivity() {
+class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityQuestionAnswerDescriptionBinding
     private lateinit var viewModel: DbViewModel
     private lateinit var saveForLaterData: SaveForLaterQues
@@ -56,6 +56,8 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity() {
         saveForLaterData = intent.getSerializableExtra(Constant.SAVE_FOR_LATER, SaveForLaterQues::class.java)!!
         markedAsReadData = intent.getSerializableExtra(Constant.MARKED_AS_READ, MarkedAsReadQues::class.java)!!
         isSaveOrMarkedAsRead = intent.getBooleanExtra(Constant.IS_SAVE_OR_MARKED_AS_READ_DATA, false)
+        var lData = intent.getStringExtra(Constant.REMAINING_DATA_LIST)
+        
 
         if (saveForLaterData.quesType == "Tips") {
             var tipsString = saveForLaterData.Answer.split("\n").toList()
@@ -92,6 +94,9 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity() {
 //            binding.tvAnswer.text = saveForLaterData!!.Answer
             binding.tvAnswer.text = addNewLine(saveForLaterData!!.Answer)
         }
+
+        binding.btnNext.setOnClickListener(this)
+        binding.btnPrev.setOnClickListener(this)
 
     }
 
@@ -153,5 +158,17 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity() {
             if (i != splitString.size - 1) sb.append("\n\n\n")
         }
         return sb.toString()
+    }
+
+    override fun onClick(v: View?) {
+        when(v!!.id){
+            R.id.btn_next ->{
+
+            }
+
+            R.id.btn_prev ->{
+
+            }
+        }
     }
 }
