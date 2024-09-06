@@ -88,14 +88,12 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun setUpRecyclerView(tempList: List<QuestionAnswer>){
-        var questionAnswerAdapter = QuestionActivityAdapter(this, tempList, object: OnQuestionClickListener{
+        val questionAnswerAdapter = QuestionActivityAdapter(this, tempList, object: OnQuestionClickListener{
             override fun onClick(position: Int, item: QuestionAnswer) {
-                var lList = ArrayList<QuestionAnswer>()
+                val lList = ArrayList<QuestionAnswer>()
                 lList.addAll(tempList)
-                for (list in 0..lList.size){
-                    lList.removeAt(list)
-                }
-                var intent = Intent(this@QuestionActivity, QuestionAnswerDescriptionActivity::class.java)
+                lList.subList(0, position).clear()
+                val intent = Intent(this@QuestionActivity, QuestionAnswerDescriptionActivity::class.java)
                 val saveForLaterData = SaveForLaterQues(item.SrNo, item.isHtmlTag, item.quesType, item.Question, item.Answer)
                 val markedAsReadData = MarkedAsReadQues(item.SrNo, item.isHtmlTag, item.quesType, item.Question, item.Answer)
                 intent.putExtra(Constant.QUESTION_ANSWER, item)
@@ -103,7 +101,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
                 intent.putExtra(Constant.MARKED_AS_READ, markedAsReadData)
                 intent.putExtra(Constant.IS_SAVE_OR_MARKED_AS_READ_DATA, isSaveOrMarkedOpen)
                 intent.putExtra(Constant.TAB_NAME, Constant.TAB)
-                intent.putExtra(Constant.REMAINING_DATA_LIST, Gson().toJson(lList))
+                intent.putParcelableArrayListExtra(Constant.REMAINING_DATA_LIST, lList)
                 startActivity(intent)
             }
 
@@ -145,7 +143,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
                 isSaveOrMarkedOpen = true
                 Constant.TAB = "Bookmarks"
                 viewModel2.getAllSaveForLaterData.observe(this, Observer {
-                    var list = ArrayList<QuestionAnswer>()
+                    val list = ArrayList<QuestionAnswer>()
                     for (it in it.listIterator()){
                         list.add(it)
                     }
@@ -163,7 +161,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
                 isSaveOrMarkedOpen = true
                 Constant.TAB = "READ"
                 viewModel2.getAllMarkedAsReadData.observe(this, Observer {
-                    var list = ArrayList<QuestionAnswer>()
+                    val list = ArrayList<QuestionAnswer>()
                     for (it in it.listIterator()){
                         list.add(it)
                     }

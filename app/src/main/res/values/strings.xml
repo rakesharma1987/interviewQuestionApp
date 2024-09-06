@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Oracle SQL Interview Success</string>
+    <string name="app_name">App name</string>
     <string name="txt_all_question">All Q&amp;A</string>
     <string name="txt_save_for_later">Bookmarks</string>
     <string name="txt_read">Read</string>

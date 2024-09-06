@@ -16,7 +16,7 @@
             android:layout_height="@dimen/btn_height_60dp"
             android:id="@+id/llc"
             app:layout_constraintTop_toTopOf="parent"
-            android:weightSum="4"
+            android:weightSum="3"
             android:orientation="horizontal"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
@@ -66,14 +66,14 @@
                 android:layout_height="match_parent"
                 android:id="@+id/btn_tips"
                 android:text="@string/txt_tips"
-                android:layout_weight="1"
                 android:textSize="@dimen/btn_small_txt_size_10sp"
                 android:layout_marginLeft="@dimen/dimen_1dp"
                 android:backgroundTint="@color/card_foreground_color"
                 android:insetTop="@dimen/margin_2dp"
                 android:insetBottom="@dimen/margin_2dp"
                 android:fontFamily="sans-serif"
-                android:autoSizeTextType="uniform"/>
+                android:autoSizeTextType="uniform"
+                android:visibility="gone"/>
 
         </LinearLayout>
         <androidx.appcompat.widget.SearchView

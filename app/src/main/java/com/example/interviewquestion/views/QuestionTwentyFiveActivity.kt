@@ -5,6 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -85,9 +86,12 @@ class QuestionTwentyFiveActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun setUpRecyclerView(tempList: List<QuestionAnswer>){
-        var questionAnswerAdapter = QuestionActivityAdapter(this, tempList, object: OnQuestionClickListener {
+        val questionAnswerAdapter = QuestionActivityAdapter(this, tempList, object: OnQuestionClickListener {
             override fun onClick(position: Int, item: QuestionAnswer) {
-                var intent = Intent(this@QuestionTwentyFiveActivity, QuestionAnswerDescriptionActivity::class.java)
+                val lList = ArrayList<QuestionAnswer>()
+                lList.addAll(tempList)
+                lList.subList(0, position).clear()
+                val intent = Intent(this@QuestionTwentyFiveActivity, QuestionAnswerDescriptionActivity::class.java)
                 val saveForLaterData = SaveForLaterQues(item.SrNo, item.isHtmlTag, item.quesType, item.Question, item.Answer)
                 val markedAsReadData = MarkedAsReadQues(item.SrNo, item.isHtmlTag, item.quesType, item.Question, item.Answer)
                 intent.putExtra(Constant.QUESTION_ANSWER, item)
@@ -95,6 +99,7 @@ class QuestionTwentyFiveActivity : AppCompatActivity(), View.OnClickListener {
                 intent.putExtra(Constant.MARKED_AS_READ, markedAsReadData)
                 intent.putExtra(Constant.IS_SAVE_OR_MARKED_AS_READ_DATA, isSaveOrMarkedOpen)
                 intent.putExtra(Constant.TAB_NAME, Constant.TAB)
+                intent.putParcelableArrayListExtra(Constant.REMAINING_DATA_LIST, lList)
                 startActivity(intent)
             }
 

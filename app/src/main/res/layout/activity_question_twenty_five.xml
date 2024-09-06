@@ -16,14 +16,14 @@
             android:layout_height="@dimen/btn_height_60dp"
             android:id="@+id/llc"
             app:layout_constraintTop_toTopOf="parent"
-            android:weightSum="4"
+            android:weightSum="3"
             android:orientation="horizontal"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
             >
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/btn_all_question"
                 android:text="@string/txt_all_question"
                 android:layout_weight="1"
@@ -34,7 +34,7 @@
                 android:fontFamily="sans-serif"/>
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/btn_save_for_latter"
                 android:text="@string/txt_save_for_later"
                 android:layout_weight="1"
@@ -47,7 +47,7 @@
                 android:fontFamily="sans-serif"/>
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/btn_marked_as_read"
                 android:text="@string/txt_read"
                 android:layout_weight="1"
@@ -69,7 +69,8 @@
                 android:backgroundTint="@color/card_foreground_color"
                 android:insetTop="@dimen/margin_2dp"
                 android:insetBottom="@dimen/margin_2dp"
-                android:fontFamily="sans-serif" />
+                android:fontFamily="sans-serif"
+                android:visibility="gone"/>
 
         </LinearLayout>
         <androidx.appcompat.widget.SearchView

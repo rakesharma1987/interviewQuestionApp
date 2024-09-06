@@ -2,6 +2,7 @@ package com.example.interviewquestion.views
 
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -23,6 +24,8 @@ import com.example.interviewquestion.model.MarkedAsReadQues
 import com.example.interviewquestion.model.QuestionAnswer
 import com.example.interviewquestion.model.SaveForLaterQues
 import com.example.interviewquestion.viewModel.DbViewModel
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import kotlin.properties.Delegates
 
 class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListener {
@@ -33,6 +36,8 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListe
     private lateinit var myMenu: Menu
     private var isSaveOrMarkedAsRead by Delegates.notNull<Boolean>()
     private var tipsList = ArrayList<String>()
+    private var remainingList: ArrayList<QuestionAnswer>? = null
+    private var currentIndex: Int = 0
 
     @RequiresApi(Build.VERSION_CODES.TIRAMISU)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,7 +61,8 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListe
         saveForLaterData = intent.getSerializableExtra(Constant.SAVE_FOR_LATER, SaveForLaterQues::class.java)!!
         markedAsReadData = intent.getSerializableExtra(Constant.MARKED_AS_READ, MarkedAsReadQues::class.java)!!
         isSaveOrMarkedAsRead = intent.getBooleanExtra(Constant.IS_SAVE_OR_MARKED_AS_READ_DATA, false)
-        var lData = intent.getStringExtra(Constant.REMAINING_DATA_LIST)
+        remainingList = intent.getParcelableArrayListExtra(Constant.REMAINING_DATA_LIST)
+        Log.d("TAG", "onCreate: $remainingList")
         
 
         if (saveForLaterData.quesType == "Tips") {
@@ -77,7 +83,8 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListe
         if (saveForLaterData?.isHtmlTag!!){
             binding.webView.visibility = View.VISIBLE
             binding.tvAnswer.visibility = View.GONE
-            binding.webView.loadDataWithBaseURL(null, saveForLaterData?.Answer!!, "text/html","utf-8", null)
+            binding.webView.loadDataWithBaseURL(null,
+                saveForLaterData.Answer, "text/html","utf-8", null)
         }else if (saveForLaterData.quesType.equals("Tips")){
             binding.webView.visibility = View.GONE
             binding.tvAnswer.visibility = View.GONE
@@ -163,12 +170,34 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListe
     override fun onClick(v: View?) {
         when(v!!.id){
             R.id.btn_next ->{
-
+                if (currentIndex < remainingList!!.size-1){
+                    currentIndex++
+                    val questionAnswer = remainingList!!.toMutableList()[currentIndex]
+                    displayView(questionAnswer)
+                }
             }
 
             R.id.btn_prev ->{
-
+                if (currentIndex > 0){
+                    currentIndex--
+                    val questionAnswer = remainingList!!.toMutableList()[currentIndex]
+                    displayView(questionAnswer)
+                }
             }
+        }
+    }
+
+    fun displayView(questionAnswer: QuestionAnswer){
+        binding.tvQuestion.text = "Question - "+questionAnswer.SrNo+". "+questionAnswer.Question
+        if (questionAnswer.isHtmlTag){
+            binding.webView.visibility = View.VISIBLE
+            binding.tvAnswer.visibility = View.GONE
+            binding.webView.loadDataWithBaseURL(null,
+                questionAnswer.Answer, "text/html","utf-8", null)
+        }else{
+            binding.webView.visibility = View.GONE
+            binding.tvAnswer.visibility = View.VISIBLE
+            binding.tvAnswer.text = addNewLine(questionAnswer!!.Answer)
         }
     }
 }
