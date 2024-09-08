@@ -17,7 +17,7 @@ interface AppDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun saveAllQuestionAnswerData(data: List<QuestionAnswer>)
 
-    @Query("SELECT * FROM questionanswer WHERE quesType != 'Tips' AND SrNo < 25")
+    @Query("SELECT * FROM questionanswer WHERE quesType != 'Tips' AND SrNo <= 259")
     fun get25QuestionAnswerData(): LiveData<List<QuestionAnswer>>
 
     @Query("SELECT * FROM questionanswer WHERE quesType != 'Tips'")

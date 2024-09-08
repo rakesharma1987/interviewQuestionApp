@@ -62,6 +62,7 @@ class QuestionTwentyFiveActivity : AppCompatActivity(), View.OnClickListener {
                     allDataList.clear()
                     for (data in it.listIterator()) {
                         allDataList.add(data)
+                        Log.d("DATA_COUNT", "onCreate: ${it.size}")
                         binding.tvOopsMoment.visibility = View.GONE
                     }
                     setUpRecyclerView(allDataList)
@@ -70,12 +71,12 @@ class QuestionTwentyFiveActivity : AppCompatActivity(), View.OnClickListener {
                 }
         })
 
-        viewModel2.getTipsQuestion.observe(this, Observer {
-            questionAnswer = it[0]
-//            for (it in it.listIterator()){
-////                tempList.add(it)
-//            }
-        })
+//        viewModel2.getTipsQuestion.observe(this, Observer {
+//            questionAnswer = it[0]
+////            for (it in it.listIterator()){
+//////                tempList.add(it)
+////            }
+//        })
 
 
         binding.btnAllQuestion.setOnClickListener(this)

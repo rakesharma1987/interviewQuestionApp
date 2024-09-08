@@ -83,11 +83,12 @@ class DashboardActivity : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             }else {
+                Log.d("COUNT_COUNT", "onCreate: ${viewModel.get25QuestionAnswerData.value!!.size}")
                 var intent = Intent(this@DashboardActivity, QuestionTwentyFiveActivity::class.java)
                 startActivity(intent)
                 finish()
             }
-        }, 5000)
+        }, 10000)
 
     }
 
