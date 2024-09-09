@@ -3,10 +3,9 @@ package com.example.interviewquestion.model
 import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import kotlinx.parcelize.Parcelize
+import java.io.Serializable
 
 @Entity(tableName = "QuestionAnswer")
-@Parcelize
 class QuestionAnswer(
     @PrimaryKey
     var SrNo: Int,
@@ -14,4 +13,4 @@ class QuestionAnswer(
     var quesType: String,
     var Question: String,
     var Answer: String
-): Parcelable
+): Serializable

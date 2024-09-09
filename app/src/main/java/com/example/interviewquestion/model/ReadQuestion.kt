@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 import java.io.Serializable
 
 @Entity
-data class SaveForLaterQues(
+data class ReadQuestion(
     @PrimaryKey
     var SrNo: Int,
     var isHtmlTag: Boolean,

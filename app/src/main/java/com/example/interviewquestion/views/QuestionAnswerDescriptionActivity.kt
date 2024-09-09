@@ -20,19 +20,17 @@ import com.example.interviewquestion.db.AppDatabase
 import com.example.interviewquestion.db.AppRepository
 import com.example.interviewquestion.factory.DbFactory
 import com.example.interviewquestion.model.BookmarkedAndReadQuestion
-import com.example.interviewquestion.model.MarkedAsReadQues
+import com.example.interviewquestion.model.BookmarkQuestion
 import com.example.interviewquestion.model.QuestionAnswer
-import com.example.interviewquestion.model.SaveForLaterQues
+import com.example.interviewquestion.model.ReadQuestion
 import com.example.interviewquestion.viewModel.DbViewModel
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 import kotlin.properties.Delegates
 
 class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityQuestionAnswerDescriptionBinding
     private lateinit var viewModel: DbViewModel
-    private lateinit var saveForLaterData: SaveForLaterQues
-    private lateinit var markedAsReadData: MarkedAsReadQues
+    private lateinit var saveForLaterData: QuestionAnswer
+    private lateinit var markedAsReadData: QuestionAnswer
     private lateinit var myMenu: Menu
     private var isSaveOrMarkedAsRead by Delegates.notNull<Boolean>()
     private var tipsList = ArrayList<String>()
@@ -60,8 +58,8 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListe
         val factory = DbFactory(AppRepository(dao))
         viewModel = ViewModelProvider(this, factory)[DbViewModel::class.java]
 
-        saveForLaterData = intent.getSerializableExtra(Constant.SAVE_FOR_LATER, SaveForLaterQues::class.java)!!
-        markedAsReadData = intent.getSerializableExtra(Constant.MARKED_AS_READ, MarkedAsReadQues::class.java)!!
+        saveForLaterData = intent.getSerializableExtra(Constant.SAVE_FOR_LATER, QuestionAnswer::class.java)!!
+        markedAsReadData = intent.getSerializableExtra(Constant.MARKED_AS_READ, QuestionAnswer::class.java)!!
         isSaveOrMarkedAsRead = intent.getBooleanExtra(Constant.IS_SAVE_OR_MARKED_AS_READ_DATA, false)
 //        remainingList = intent.getParcelableArrayListExtra(Constant.REMAINING_DATA_LIST)
         position = intent.getIntExtra(Constant.CLICKED_POSITION, 0)
@@ -116,8 +114,8 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListe
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_options, menu)
         myMenu = menu!!
-        var menuItemSave = menu.findItem(R.id.item_save)
-        var menuItemMarkedAsRead = menu.findItem(R.id.item_mark_as_read)
+        var menuItemSave = menu.findItem(R.id.item_bookmark)
+        var menuItemMarkedAsRead = menu.findItem(R.id.item_read)
 
         if (isSaveOrMarkedAsRead){
             menuItemSave.isVisible = false
@@ -132,16 +130,16 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListe
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
-            R.id.item_mark_as_read ->{
+            R.id.item_read ->{
 
-                viewModel.saveAllBookmarkedAndReadQuestion(BookmarkedAndReadQuestion(saveForLaterData.SrNo, saveForLaterData.isHtmlTag, saveForLaterData.quesType, saveForLaterData.Question, saveForLaterData.Answer))
-                viewModel.saveForLater(saveForLaterData)
+//                viewModel.saveAllBookmarkedAndReadQuestion(BookmarkedAndReadQuestion(saveForLaterData.SrNo, saveForLaterData.isHtmlTag, saveForLaterData.quesType, saveForLaterData.Question, saveForLaterData.Answer))
+                viewModel.saveReadQuestion(saveForLaterData)
                 viewModel.deleteQuestionAnswer(QuestionAnswer(saveForLaterData.SrNo, saveForLaterData.isHtmlTag, saveForLaterData.quesType, saveForLaterData.Question, saveForLaterData.Answer))
                 this.finish()
             }
-            R.id.item_save ->{
-                viewModel.saveAllBookmarkedAndReadQuestion(BookmarkedAndReadQuestion(markedAsReadData.SrNo, markedAsReadData.isHtmlTag, markedAsReadData.quesType, markedAsReadData.Question, markedAsReadData.Answer))
-                viewModel.saveMarkedAsRead(markedAsReadData)
+            R.id.item_bookmark ->{
+//                viewModel.saveAllBookmarkedAndReadQuestion(BookmarkedAndReadQuestion(markedAsReadData.SrNo, markedAsReadData.isHtmlTag, markedAsReadData.quesType, markedAsReadData.Question, markedAsReadData.Answer))
+                viewModel.saveBookmarkQuestion(markedAsReadData)
                 viewModel.deleteQuestionAnswer(QuestionAnswer(markedAsReadData.SrNo, markedAsReadData.isHtmlTag, markedAsReadData.quesType, markedAsReadData.Question, markedAsReadData.Answer))
                 this.finish()
             }
@@ -169,7 +167,7 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListe
                 remainingList = list
             })
         }else if (tabName.equals(Constant.TAB_BOOKMARKS)){
-            viewModel.getAllMarkedAsReadData.observe(this, Observer {
+            viewModel.getAllBookmarkQuestion.observe(this, Observer {
                 val list = ArrayList<QuestionAnswer>()
                 for (data in it.listIterator()) {
                     list.add(data)
@@ -177,7 +175,7 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListe
                 remainingList = list
             })
         }else if (tabName.equals(Constant.TAB_READ)){
-            viewModel.getAllSaveForLaterData.observe(this, Observer {
+            viewModel.getAllReadQuestion.observe(this, Observer {
                 val list = ArrayList<QuestionAnswer>()
                 for (data in it.listIterator()) {
                     list.add(data)

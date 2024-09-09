@@ -7,9 +7,9 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.example.interviewquestion.model.BookmarkedAndReadQuestion
-import com.example.interviewquestion.model.MarkedAsReadQues
+import com.example.interviewquestion.model.BookmarkQuestion
 import com.example.interviewquestion.model.QuestionAnswer
-import com.example.interviewquestion.model.SaveForLaterQues
+import com.example.interviewquestion.model.ReadQuestion
 
 @Dao
 interface AppDao {
@@ -24,16 +24,23 @@ interface AppDao {
     fun getAllQuestionAnswerData(): LiveData<List<QuestionAnswer>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun saveForLater(data: SaveForLaterQues): Long
+    suspend fun saveReadQuestion(data: QuestionAnswer): Long
 
-    @Query("SELECT * FROM saveforlaterques")
-    fun getAllSaveForLaterData(): LiveData<List<QuestionAnswer>>
+    @Query("SELECT * FROM readquestion")
+    fun getAllReadQuestion(): LiveData<List<QuestionAnswer>>
+
+    @Query("DELETE FROM readquestion")
+    suspend fun deleteReadQuestion(): Int
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun saveMarkedAsRead(data: MarkedAsReadQues): Long
+    suspend fun saveBookmarkQuestion(data: QuestionAnswer): Long
 
-    @Query("SELECT * FROM markedasreadques")
-    fun getAllMarkedAsReadData(): LiveData<List<QuestionAnswer>>
+    @Query("SELECT * FROM bookmarkedandreadquestion")
+    fun getAllBookMarkQuestion(): LiveData<List<QuestionAnswer>>
+
+    @Query("DELETE FROM bookmarkquestion")
+    suspend fun deleteBookmarkQuestion(): Int
+
 
     @Delete
     suspend fun deleteQuestionAnswerData(data: QuestionAnswer): Int

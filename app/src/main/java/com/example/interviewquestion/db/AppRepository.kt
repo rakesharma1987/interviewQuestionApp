@@ -1,24 +1,24 @@
 package com.example.interviewquestion.db
 
 import com.example.interviewquestion.model.BookmarkedAndReadQuestion
-import com.example.interviewquestion.model.MarkedAsReadQues
+import com.example.interviewquestion.model.BookmarkQuestion
 import com.example.interviewquestion.model.QuestionAnswer
-import com.example.interviewquestion.model.SaveForLaterQues
+import com.example.interviewquestion.model.ReadQuestion
 
 class AppRepository(private val appDao: AppDao) {
-    val getSaveForLaterData = appDao.getAllSaveForLaterData()
-    val getMarkedAsReadData = appDao.getAllMarkedAsReadData()
+    val getAllReadQuestion = appDao.getAllReadQuestion()
+    val getAllBookmarkQuestion = appDao.getAllBookMarkQuestion()
     val getAllQuestionAnswerData = appDao.getAllQuestionAnswerData()
     val getTipsQuestion = appDao.getAllTipsQuestion()
     val get25QuestionAnswerData = appDao.get25QuestionAnswerData()
     val getAllBookmarkedAndReadQuestion = appDao.getAllBookmarkedAndReadQuestion()
 
-    suspend fun saveForLaterData(data: SaveForLaterQues): Long{
-        return appDao.saveForLater(data)
+    suspend fun saveReadQuestion(data: QuestionAnswer): Long{
+        return appDao.saveReadQuestion(data)
     }
 
-    suspend fun markedAsReadData(data: MarkedAsReadQues): Long{
-        return appDao.saveMarkedAsRead(data)
+    suspend fun saveBookmarkQuestion(data: QuestionAnswer): Long{
+        return appDao.saveBookmarkQuestion(data)
     }
 
     suspend fun saveAllQuestionAnswer(data: List<QuestionAnswer>){
@@ -35,6 +35,14 @@ class AppRepository(private val appDao: AppDao) {
 
     suspend fun deleteAllQuestionAnswer(): Int{
         return appDao.deleteAllQuestionAnswer()
+    }
+
+    suspend fun deleteReadQuestion(): Int{
+        return appDao.deleteReadQuestion()
+    }
+
+    suspend fun deleteBookmarkQuestion(): Int{
+        return appDao.deleteBookmarkQuestion()
     }
 
 }

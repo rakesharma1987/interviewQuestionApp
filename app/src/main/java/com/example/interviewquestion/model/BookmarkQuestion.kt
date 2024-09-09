@@ -6,7 +6,7 @@ import java.io.Serializable
 
 
 @Entity
-data class MarkedAsReadQues(
+data class BookmarkQuestion(
     @PrimaryKey
     var SrNo: Int,
     var isHtmlTag: Boolean,

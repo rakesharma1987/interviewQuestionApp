@@ -2,16 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
    <item
-       android:id="@+id/item_mark_as_read"
+       android:id="@+id/item_read"
        android:title="Mark as read"
-       android:icon="@drawable/ic_mark"
+       android:icon="@drawable/ic_save"
        app:showAsAction="always"
        android:iconTint="@color/white"
        />
     <item
-        android:id="@+id/item_save"
+        android:id="@+id/item_bookmark"
         android:title="Save"
-        android:icon="@drawable/ic_save"
+        android:icon="@drawable/ic_mark"
         app:showAsAction="always"
         android:iconTint="@color/white"/>
 </menu>

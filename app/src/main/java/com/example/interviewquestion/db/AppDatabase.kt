@@ -1,18 +1,17 @@
 package com.example.interviewquestion.db
 
 import android.content.Context
-import androidx.room.AutoMigration
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.example.interviewquestion.model.BookmarkedAndReadQuestion
-import com.example.interviewquestion.model.MarkedAsReadQues
+import com.example.interviewquestion.model.BookmarkQuestion
 import com.example.interviewquestion.model.QuestionAnswer
-import com.example.interviewquestion.model.SaveForLaterQues
+import com.example.interviewquestion.model.ReadQuestion
 
-@Database(entities = [SaveForLaterQues::class, MarkedAsReadQues::class, QuestionAnswer::class, BookmarkedAndReadQuestion::class], version = 3)
+@Database(entities = [ReadQuestion::class, BookmarkQuestion::class, QuestionAnswer::class, BookmarkedAndReadQuestion::class], version = 4)
 abstract class AppDatabase: RoomDatabase(){
     abstract val dao: AppDao
     companion object{

@@ -22,11 +22,10 @@ import com.example.interviewquestion.db.AppDatabase
 import com.example.interviewquestion.db.AppRepository
 import com.example.interviewquestion.factory.DbFactory
 import com.example.interviewquestion.interfaces.OnQuestionClickListener
-import com.example.interviewquestion.model.MarkedAsReadQues
+import com.example.interviewquestion.model.BookmarkQuestion
 import com.example.interviewquestion.model.QuestionAnswer
 import com.example.interviewquestion.model.QuestionAnswerList
-import com.example.interviewquestion.model.SaveForLaterQues
-import com.example.interviewquestion.util.MyPreferences
+import com.example.interviewquestion.model.ReadQuestion
 import com.example.interviewquestion.viewModel.DbViewModel
 import com.google.gson.Gson
 
@@ -94,14 +93,13 @@ class QuestionTwentyFiveActivity : AppCompatActivity(), View.OnClickListener {
 //                lList.addAll(tempList)
 //                lList.subList(0, position).clear()
                 val intent = Intent(this@QuestionTwentyFiveActivity, QuestionAnswerDescriptionActivity::class.java)
-                val saveForLaterData = SaveForLaterQues(item.SrNo, item.isHtmlTag, item.quesType, item.Question, item.Answer)
-                val markedAsReadData = MarkedAsReadQues(item.SrNo, item.isHtmlTag, item.quesType, item.Question, item.Answer)
+                val saveForLaterData = QuestionAnswer(item.SrNo, item.isHtmlTag, item.quesType, item.Question, item.Answer)
+                val markedAsReadData = QuestionAnswer(item.SrNo, item.isHtmlTag, item.quesType, item.Question, item.Answer)
                 intent.putExtra(Constant.QUESTION_ANSWER, item)
                 intent.putExtra(Constant.SAVE_FOR_LATER, saveForLaterData)
                 intent.putExtra(Constant.MARKED_AS_READ, markedAsReadData)
                 intent.putExtra(Constant.IS_SAVE_OR_MARKED_AS_READ_DATA, isSaveOrMarkedOpen)
                 intent.putExtra(Constant.TAB_NAME, TAB_NAME)
-//                intent.putParcelableArrayListExtra(Constant.REMAINING_DATA_LIST, lList)
                 intent.putExtra(Constant.CLICKED_POSITION, position)
                 startActivity(intent)
             }
@@ -145,10 +143,10 @@ class QuestionTwentyFiveActivity : AppCompatActivity(), View.OnClickListener {
 
                 isSaveOrMarkedOpen = true
                 TAB_NAME = Constant.TAB_BOOKMARKS
-                viewModel2.getAllSaveForLaterData.observe(this, Observer {
-                    var list = ArrayList<QuestionAnswer>()
-                    for (it in it.listIterator()){
-                        list.add(it)
+                viewModel2.getAllBookmarkQuestion.observe(this, Observer {
+                    val list = ArrayList<QuestionAnswer>()
+                    for (data in it.listIterator()){
+                        list.add(data)
                     }
                     setUpRecyclerView(list)
                 })
@@ -163,10 +161,10 @@ class QuestionTwentyFiveActivity : AppCompatActivity(), View.OnClickListener {
 
                 isSaveOrMarkedOpen = true
                 TAB_NAME = Constant.TAB_READ
-                viewModel2.getAllMarkedAsReadData.observe(this, Observer {
-                    var list = ArrayList<QuestionAnswer>()
-                    for (it in it.listIterator()){
-                        list.add(it)
+                viewModel2.getAllReadQuestion.observe(this, Observer {
+                    val list = ArrayList<QuestionAnswer>()
+                    for (data in it.listIterator()){
+                        list.add(data)
                     }
                     setUpRecyclerView(list)
                 })
