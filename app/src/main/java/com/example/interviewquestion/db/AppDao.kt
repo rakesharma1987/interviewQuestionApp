@@ -17,10 +17,10 @@ interface AppDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun saveAllQuestionAnswerData(data: List<QuestionAnswer>)
 
-    @Query("SELECT * FROM questionanswer WHERE quesType != 'Tips' AND SrNo <= 259")
+    @Query("SELECT * FROM questionanswer")
     fun get25QuestionAnswerData(): LiveData<List<QuestionAnswer>>
 
-    @Query("SELECT * FROM questionanswer WHERE quesType != 'Tips'")
+    @Query("SELECT * FROM questionanswer")
     fun getAllQuestionAnswerData(): LiveData<List<QuestionAnswer>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
@@ -38,7 +38,7 @@ interface AppDao {
     @Delete
     suspend fun deleteQuestionAnswerData(data: QuestionAnswer): Int
 
-    @Query("SELECT * FROM questionanswer WHERE quesType = 'Tips'")
+    @Query("SELECT * FROM questionanswer")
     fun getAllTipsQuestion(): LiveData<List<QuestionAnswer>>
 
     @Query("DELETE FROM questionanswer")

@@ -38,6 +38,8 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListe
     private var tipsList = ArrayList<String>()
     private var remainingList: ArrayList<QuestionAnswer>? = null
     private var currentIndex: Int = 0
+    private var position: Int = 0
+    private var tabName: String = Constant.TAB_ALL
 
     @RequiresApi(Build.VERSION_CODES.TIRAMISU)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -61,7 +63,11 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListe
         saveForLaterData = intent.getSerializableExtra(Constant.SAVE_FOR_LATER, SaveForLaterQues::class.java)!!
         markedAsReadData = intent.getSerializableExtra(Constant.MARKED_AS_READ, MarkedAsReadQues::class.java)!!
         isSaveOrMarkedAsRead = intent.getBooleanExtra(Constant.IS_SAVE_OR_MARKED_AS_READ_DATA, false)
-        remainingList = intent.getParcelableArrayListExtra(Constant.REMAINING_DATA_LIST)
+//        remainingList = intent.getParcelableArrayListExtra(Constant.REMAINING_DATA_LIST)
+        position = intent.getIntExtra(Constant.CLICKED_POSITION, 0)
+        tabName = intent.getStringExtra(Constant.TAB_NAME)!!
+        if (tabName == "") tabName = Constant.TAB_ALL
+        currentIndex = position
         Log.d("TAG", "onCreate: $remainingList")
         
 
@@ -153,6 +159,32 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListe
 //            myMenu.findItem(R.id.item_save).isVisible = false
 //            myMenu.findItem(R.id.item_mark_as_read).isVisible = false
 //        }
+
+        if (tabName.equals(Constant.TAB_ALL)) {
+            viewModel.get25QuestionAnswerData.observe(this, Observer {
+                val list = ArrayList<QuestionAnswer>()
+                for (data in it.listIterator()) {
+                    list.add(data)
+                }
+                remainingList = list
+            })
+        }else if (tabName.equals(Constant.TAB_BOOKMARKS)){
+            viewModel.getAllMarkedAsReadData.observe(this, Observer {
+                val list = ArrayList<QuestionAnswer>()
+                for (data in it.listIterator()) {
+                    list.add(data)
+                }
+                remainingList = list
+            })
+        }else if (tabName.equals(Constant.TAB_READ)){
+            viewModel.getAllSaveForLaterData.observe(this, Observer {
+                val list = ArrayList<QuestionAnswer>()
+                for (data in it.listIterator()) {
+                    list.add(data)
+                }
+                remainingList = list
+            })
+        }
     }
 
     fun addNewLine(string: String): String? {

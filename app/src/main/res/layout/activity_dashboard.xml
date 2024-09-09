@@ -32,7 +32,8 @@
             android:textColor="@color/white"
             android:textSize="@dimen/text_size"
             android:layout_marginBottom="20dp"
-            android:fontFamily="sans-serif" />
+            android:fontFamily="sans-serif"
+            android:visibility="gone"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

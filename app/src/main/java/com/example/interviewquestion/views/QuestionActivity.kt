@@ -46,6 +46,8 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var layoutmanager: LinearLayoutManager
     var tempList = ArrayList<QuestionAnswer>()
     lateinit var questionAnswer: QuestionAnswer
+    private var TAB_NAME = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_question)
@@ -100,8 +102,9 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
                 intent.putExtra(Constant.SAVE_FOR_LATER, saveForLaterData)
                 intent.putExtra(Constant.MARKED_AS_READ, markedAsReadData)
                 intent.putExtra(Constant.IS_SAVE_OR_MARKED_AS_READ_DATA, isSaveOrMarkedOpen)
-                intent.putExtra(Constant.TAB_NAME, Constant.TAB)
+                intent.putExtra(Constant.TAB_NAME, TAB_NAME)
                 intent.putParcelableArrayListExtra(Constant.REMAINING_DATA_LIST, lList)
+                intent.putExtra(Constant.CLICKED_POSITION, position)
                 startActivity(intent)
             }
 
@@ -120,7 +123,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
                 binding.btnTips.setBackgroundColor(applicationContext.getColor(R.color.tab_default_color))
 
                 isSaveOrMarkedOpen = false
-                Constant.TAB = "AllQA"
+                TAB_NAME = Constant.TAB_ALL
                 allDataList.clear()
                 viewModel2.getAllQuestionAnswerData.observe(this, Observer {
                     if (it.isNotEmpty()) {
@@ -141,7 +144,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
                 binding.btnAllQuestion.setBackgroundColor(applicationContext.getColor(R.color.tab_default_color))
 
                 isSaveOrMarkedOpen = true
-                Constant.TAB = "Bookmarks"
+                TAB_NAME = Constant.TAB_BOOKMARKS
                 viewModel2.getAllSaveForLaterData.observe(this, Observer {
                     val list = ArrayList<QuestionAnswer>()
                     for (it in it.listIterator()){
@@ -159,7 +162,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
                 binding.btnAllQuestion.setBackgroundColor(applicationContext.getColor(R.color.tab_default_color))
 
                 isSaveOrMarkedOpen = true
-                Constant.TAB = "READ"
+                TAB_NAME = Constant.TAB_READ
                 viewModel2.getAllMarkedAsReadData.observe(this, Observer {
                     val list = ArrayList<QuestionAnswer>()
                     for (it in it.listIterator()){
@@ -176,9 +179,9 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
                 binding.btnTips.setBackgroundColor(applicationContext.getColor(R.color.purple_500))
                 binding.btnAllQuestion.setBackgroundColor(applicationContext.getColor(R.color.tab_default_color))
                 isSaveOrMarkedOpen = true
-                Constant.TAB = "Tips"
+                TAB_NAME = "Tips"
                 var _intent = Intent(this, TipsActivity::class.java)
-                _intent.putExtra(Constant.TAB_NAME, Constant.TAB)
+                _intent.putExtra(Constant.TAB_NAME, TAB_NAME)
                 _intent.putExtra(Constant.TIPS, Gson().toJson(questionAnswer))
                 startActivity(_intent)
 

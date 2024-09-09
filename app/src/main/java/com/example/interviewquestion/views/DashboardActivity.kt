@@ -1,14 +1,18 @@
 package com.example.interviewquestion.views
 
+import android.app.ProgressDialog
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
+import android.view.Gravity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.interviewquestion.Constant
 import com.example.interviewquestion.R
@@ -24,6 +28,9 @@ import com.example.interviewquestion.model.TechnologyName
 import com.example.interviewquestion.util.MyPreferences
 import com.example.interviewquestion.viewModel.DbViewModel
 import com.google.gson.Gson
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
@@ -39,6 +46,13 @@ class DashboardActivity : AppCompatActivity() {
         supportActionBar!!.hide()
         MyPreferences.init(this)
 
+        val progressDialog = ProgressDialog(this).apply {
+            setMessage("Loading...")
+            setCancelable(false)
+            show()
+        }
+
+
         listData = ArrayList<QuestionAnswer>()
         listData25 = ArrayList<QuestionAnswer>()
         var jsonFile = readJSONFromAsset("Interview_Question_Answers_Sample.json")
@@ -48,8 +62,8 @@ class DashboardActivity : AppCompatActivity() {
         val factory = DbFactory(AppRepository(dao))
         viewModel = ViewModelProvider(this, factory)[DbViewModel::class.java]
         viewModel.getAllQuestionAnswerData.observe(this, Observer {
-            for (it in it.listIterator()){
-                listData.add(it)
+            for (data in it.listIterator()){
+                listData.add(data)
             }
             if (it.isEmpty()){
                 if (MyPreferences.isPurchased()) {
@@ -58,8 +72,8 @@ class DashboardActivity : AppCompatActivity() {
             }
         })
         viewModel.get25QuestionAnswerData.observe(this, Observer{
-            for (it in it.listIterator()){
-                listData25.add(it)
+            for (data in it.listIterator()){
+                listData25.add(data)
             }
             if (it.isEmpty()){
                 if (!MyPreferences.isPurchased()) {
@@ -79,16 +93,39 @@ class DashboardActivity : AppCompatActivity() {
 //                        }
 //                    })
 //                }
-                var intent = Intent(this@DashboardActivity, QuestionActivity::class.java)
+                viewModel.saveAllQuestionAnswer(listData)
+                val intent = Intent(this@DashboardActivity, QuestionActivity::class.java)
                 startActivity(intent)
                 finish()
             }else {
-                Log.d("COUNT_COUNT", "onCreate: ${viewModel.get25QuestionAnswerData.value!!.size}")
-                var intent = Intent(this@DashboardActivity, QuestionTwentyFiveActivity::class.java)
+                viewModel.saveAllQuestionAnswer(listData25)
+                progressDialog.dismiss()
+                val intent = Intent(this@DashboardActivity, QuestionTwentyFiveActivity::class.java)
                 startActivity(intent)
                 finish()
             }
-        }, 10000)
+        }, 5000)
+
+        /*lifecycleScope.launch(Dispatchers.IO){
+            try {
+                viewModel.deleteAllQuestion()
+                viewModel.saveAllQuestionAnswer(listData25)
+                withContext(Dispatchers.Main){
+                    progressDialog.dismiss()
+                    val intent = Intent(this@DashboardActivity, QuestionTwentyFiveActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+            }catch (e: Exception){
+                Log.d("TAG", "onCreate: ${e.message}")
+                withContext(Dispatchers.Main){
+                    progressDialog.dismiss()
+                    val intent = Intent(this@DashboardActivity, QuestionTwentyFiveActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+            }
+        }*/
 
     }
 
