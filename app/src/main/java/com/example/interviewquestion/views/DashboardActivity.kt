@@ -46,17 +46,9 @@ class DashboardActivity : AppCompatActivity() {
         supportActionBar!!.hide()
         MyPreferences.init(this)
 
-        val progressDialog = ProgressDialog(this).apply {
-            setMessage("Loading...")
-            setCancelable(false)
-            show()
-        }
-
-
         listData = ArrayList<QuestionAnswer>()
         listData25 = ArrayList<QuestionAnswer>()
         var jsonFile = readJSONFromAsset("Interview_Question_Answers_Sample.json")
-//        var tipsJsonFile = readJSONFromAsset("tips.json")
         val list = Gson().fromJson(jsonFile, QuestionAnswerList::class.java)
         val dao = AppDatabase.getInstance(this).dao
         val factory = DbFactory(AppRepository(dao))
@@ -99,33 +91,11 @@ class DashboardActivity : AppCompatActivity() {
                 finish()
             }else {
                 viewModel.saveAllQuestionAnswer(listData25)
-                progressDialog.dismiss()
                 val intent = Intent(this@DashboardActivity, QuestionTwentyFiveActivity::class.java)
                 startActivity(intent)
                 finish()
             }
         }, 5000)
-
-        /*lifecycleScope.launch(Dispatchers.IO){
-            try {
-                viewModel.deleteAllQuestion()
-                viewModel.saveAllQuestionAnswer(listData25)
-                withContext(Dispatchers.Main){
-                    progressDialog.dismiss()
-                    val intent = Intent(this@DashboardActivity, QuestionTwentyFiveActivity::class.java)
-                    startActivity(intent)
-                    finish()
-                }
-            }catch (e: Exception){
-                Log.d("TAG", "onCreate: ${e.message}")
-                withContext(Dispatchers.Main){
-                    progressDialog.dismiss()
-                    val intent = Intent(this@DashboardActivity, QuestionTwentyFiveActivity::class.java)
-                    startActivity(intent)
-                    finish()
-                }
-            }
-        }*/
 
     }
 

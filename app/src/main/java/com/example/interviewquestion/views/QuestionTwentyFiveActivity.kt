@@ -35,12 +35,8 @@ class QuestionTwentyFiveActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var viewModel2: DbViewModel
     private var isSaveOrMarkedOpen: Boolean = false
     private lateinit var allDataList:ArrayList<QuestionAnswer>
-    private var oldFirstPos = -1
-    private  var oldLastPos:kotlin.Int = -1
-    private  var totalItemsViewed:kotlin.Int = 0
     private lateinit var layoutmanager: LinearLayoutManager
-    var tempList = ArrayList<QuestionAnswer>()
-    lateinit var questionAnswer: QuestionAnswer
+    private lateinit var questionAnswer: QuestionAnswer
     private var TAB_NAME = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -70,14 +66,6 @@ class QuestionTwentyFiveActivity : AppCompatActivity(), View.OnClickListener {
                     binding.tvOopsMoment.visibility = View.VISIBLE
                 }
         })
-
-//        viewModel2.getTipsQuestion.observe(this, Observer {
-//            questionAnswer = it[0]
-////            for (it in it.listIterator()){
-//////                tempList.add(it)
-////            }
-//        })
-
 
         binding.btnAllQuestion.setOnClickListener(this)
         binding.btnSaveForLatter.setOnClickListener(this)

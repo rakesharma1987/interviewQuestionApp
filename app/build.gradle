@@ -7,14 +7,14 @@ plugins {
 
 android {
     namespace 'com.example.interviewquestion'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.example.interviewquestion"
         minSdk 24
-        targetSdk 33
-        versionCode 7
-        versionName "1.7"
+        targetSdk 34
+        versionCode 8
+        versionName "1.8"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 

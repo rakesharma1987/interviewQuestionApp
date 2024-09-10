@@ -19,7 +19,8 @@
             android:id="@+id/rv_items"
             android:visibility="visible"
             android:src="@drawable/ic_drawable_background"
-            android:fitsSystemWindows="false"/>
+            android:fitsSystemWindows="true"
+            android:scaleType="fitXY"/>
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
@@ -33,7 +34,7 @@
             android:textSize="@dimen/text_size"
             android:layout_marginBottom="20dp"
             android:fontFamily="sans-serif"
-            android:visibility="gone"/>
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
