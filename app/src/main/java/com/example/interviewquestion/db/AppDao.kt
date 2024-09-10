@@ -24,19 +24,19 @@ interface AppDao {
     fun getAllQuestionAnswerData(): LiveData<List<QuestionAnswer>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun saveReadQuestion(data: QuestionAnswer): Long
+    suspend fun saveReadQuestion(data: ReadQuestion): Long
 
     @Query("SELECT * FROM readquestion")
-    fun getAllReadQuestion(): LiveData<List<QuestionAnswer>>
+    fun getAllReadQuestion(): LiveData<List<ReadQuestion>>
 
     @Query("DELETE FROM readquestion")
     suspend fun deleteReadQuestion(): Int
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun saveBookmarkQuestion(data: QuestionAnswer): Long
+    suspend fun saveBookmarkQuestion(data: BookmarkQuestion): Long
 
-    @Query("SELECT * FROM bookmarkedandreadquestion")
-    fun getAllBookMarkQuestion(): LiveData<List<QuestionAnswer>>
+    @Query("SELECT * FROM bookmarkquestion")
+    fun getAllBookMarkQuestion(): LiveData<List<BookmarkQuestion>>
 
     @Query("DELETE FROM bookmarkquestion")
     suspend fun deleteBookmarkQuestion(): Int

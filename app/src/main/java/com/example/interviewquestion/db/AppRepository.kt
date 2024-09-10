@@ -13,11 +13,11 @@ class AppRepository(private val appDao: AppDao) {
     val get25QuestionAnswerData = appDao.get25QuestionAnswerData()
     val getAllBookmarkedAndReadQuestion = appDao.getAllBookmarkedAndReadQuestion()
 
-    suspend fun saveReadQuestion(data: QuestionAnswer): Long{
+    suspend fun saveReadQuestion(data: ReadQuestion): Long{
         return appDao.saveReadQuestion(data)
     }
 
-    suspend fun saveBookmarkQuestion(data: QuestionAnswer): Long{
+    suspend fun saveBookmarkQuestion(data: BookmarkQuestion): Long{
         return appDao.saveBookmarkQuestion(data)
     }
 

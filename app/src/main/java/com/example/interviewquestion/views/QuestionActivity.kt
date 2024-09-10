@@ -140,11 +140,14 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
                 isSaveOrMarkedOpen = true
                 TAB_NAME = Constant.TAB_BOOKMARKS
                 viewModel2.getAllBookmarkQuestion.observe(this, Observer {
-                    val list = ArrayList<QuestionAnswer>()
+                    val list = ArrayList<BookmarkQuestion>()
                     for (data in it.listIterator()){
                         list.add(data)
                     }
-                    setUpRecyclerView(list)
+                    val questionAnswerList: ArrayList<QuestionAnswer> = list.map {
+                        QuestionAnswer(it.SrNo, it.isHtmlTag, it.quesType, it.Question, it.Answer)
+                    } as ArrayList<QuestionAnswer>
+                    setUpRecyclerView(questionAnswerList)
                 })
             }
 
@@ -158,11 +161,14 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
                 isSaveOrMarkedOpen = true
                 TAB_NAME = Constant.TAB_READ
                 viewModel2.getAllReadQuestion.observe(this, Observer {
-                    val list = ArrayList<QuestionAnswer>()
+                    val list = ArrayList<ReadQuestion>()
                     for (data in it.listIterator()){
                         list.add(data)
                     }
-                    setUpRecyclerView(list)
+                    val questionAnswerList: ArrayList<QuestionAnswer> = list.map {
+                        QuestionAnswer(it.SrNo, it.isHtmlTag, it.quesType, it.Question, it.Answer)
+                    } as ArrayList<QuestionAnswer>
+                    setUpRecyclerView(questionAnswerList)
                 })
             }
 

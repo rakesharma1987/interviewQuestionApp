@@ -29,8 +29,8 @@ import kotlin.properties.Delegates
 class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityQuestionAnswerDescriptionBinding
     private lateinit var viewModel: DbViewModel
-    private lateinit var saveForLaterData: QuestionAnswer
-    private lateinit var markedAsReadData: QuestionAnswer
+    private lateinit var bookmarkQuestion: BookmarkQuestion
+    private lateinit var readQuestion: ReadQuestion
     private lateinit var myMenu: Menu
     private var isSaveOrMarkedAsRead by Delegates.notNull<Boolean>()
     private var tipsList = ArrayList<String>()
@@ -58,24 +58,13 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListe
         val factory = DbFactory(AppRepository(dao))
         viewModel = ViewModelProvider(this, factory)[DbViewModel::class.java]
 
-        saveForLaterData = intent.getSerializableExtra(Constant.SAVE_FOR_LATER, QuestionAnswer::class.java)!!
-        markedAsReadData = intent.getSerializableExtra(Constant.MARKED_AS_READ, QuestionAnswer::class.java)!!
+        bookmarkQuestion = intent.getSerializableExtra(Constant.SAVE_FOR_LATER, BookmarkQuestion::class.java)!!
+        readQuestion = intent.getSerializableExtra(Constant.MARKED_AS_READ, ReadQuestion::class.java)!!
         isSaveOrMarkedAsRead = intent.getBooleanExtra(Constant.IS_SAVE_OR_MARKED_AS_READ_DATA, false)
-//        remainingList = intent.getParcelableArrayListExtra(Constant.REMAINING_DATA_LIST)
         position = intent.getIntExtra(Constant.CLICKED_POSITION, 0)
         tabName = intent.getStringExtra(Constant.TAB_NAME)!!
         if (tabName == "") tabName = Constant.TAB_ALL
         currentIndex = position
-        Log.d("TAG", "onCreate: $remainingList")
-        
-
-        if (saveForLaterData.quesType == "Tips") {
-            var tipsString = saveForLaterData.Answer.split("\n").toList()
-            for (tips in tipsString.listIterator()){
-                tipsList.add(tips)
-            }
-
-        }
 
         viewModel.message.observe(this, Observer {
             it.getContentIfNotHandled()?.let {
@@ -83,13 +72,13 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListe
             }
         })
 
-        binding.tvQuestion.text = "Question - "+saveForLaterData?.SrNo+". "+saveForLaterData?.Question
-        if (saveForLaterData?.isHtmlTag!!){
+        binding.tvQuestion.text = "Question - "+bookmarkQuestion?.SrNo+". "+bookmarkQuestion?.Question
+        if (bookmarkQuestion?.isHtmlTag!!){
             binding.webView.visibility = View.VISIBLE
             binding.tvAnswer.visibility = View.GONE
             binding.webView.loadDataWithBaseURL(null,
-                saveForLaterData.Answer, "text/html","utf-8", null)
-        }else if (saveForLaterData.quesType.equals("Tips")){
+                bookmarkQuestion.Answer, "text/html","utf-8", null)
+        }else if (bookmarkQuestion.quesType.equals("Tips")){
             binding.webView.visibility = View.GONE
             binding.tvAnswer.visibility = View.GONE
             binding.rvTipsItem.visibility = View.VISIBLE
@@ -100,10 +89,8 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListe
         }else{
             binding.webView.visibility = View.GONE
             binding.tvAnswer.visibility = View.VISIBLE
-            var txt = saveForLaterData!!.Answer.replace("\n", System.getProperty("line.separator"))
-//            binding.tvAnswer.text = HtmlCompat.fromHtml(saveForLaterData!!.Answer, 0)
-//            binding.tvAnswer.text = saveForLaterData!!.Answer
-            binding.tvAnswer.text = addNewLine(saveForLaterData!!.Answer)
+            var txt = bookmarkQuestion!!.Answer.replace("\n", System.getProperty("line.separator"))
+            binding.tvAnswer.text = addNewLine(bookmarkQuestion!!.Answer)
         }
 
         binding.btnNext.setOnClickListener(this)
@@ -131,16 +118,15 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListe
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.item_read ->{
-
 //                viewModel.saveAllBookmarkedAndReadQuestion(BookmarkedAndReadQuestion(saveForLaterData.SrNo, saveForLaterData.isHtmlTag, saveForLaterData.quesType, saveForLaterData.Question, saveForLaterData.Answer))
-                viewModel.saveReadQuestion(saveForLaterData)
-                viewModel.deleteQuestionAnswer(QuestionAnswer(saveForLaterData.SrNo, saveForLaterData.isHtmlTag, saveForLaterData.quesType, saveForLaterData.Question, saveForLaterData.Answer))
+                viewModel.saveReadQuestion(readQuestion)
+                viewModel.deleteQuestionAnswer(QuestionAnswer(readQuestion.SrNo, readQuestion.isHtmlTag, readQuestion.quesType, readQuestion.Question, readQuestion.Answer))
                 this.finish()
             }
             R.id.item_bookmark ->{
 //                viewModel.saveAllBookmarkedAndReadQuestion(BookmarkedAndReadQuestion(markedAsReadData.SrNo, markedAsReadData.isHtmlTag, markedAsReadData.quesType, markedAsReadData.Question, markedAsReadData.Answer))
-                viewModel.saveBookmarkQuestion(markedAsReadData)
-                viewModel.deleteQuestionAnswer(QuestionAnswer(markedAsReadData.SrNo, markedAsReadData.isHtmlTag, markedAsReadData.quesType, markedAsReadData.Question, markedAsReadData.Answer))
+                viewModel.saveBookmarkQuestion(bookmarkQuestion)
+                viewModel.deleteQuestionAnswer(QuestionAnswer(bookmarkQuestion.SrNo, bookmarkQuestion.isHtmlTag, bookmarkQuestion.quesType, bookmarkQuestion.Question, bookmarkQuestion.Answer))
                 this.finish()
             }
 
@@ -150,14 +136,6 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListe
 
     override fun onResume() {
         super.onResume()
-//        if (isSaveOrMarkedAsRead){
-//            myMenu.findItem(R.id.item_save).isVisible = true
-//            myMenu.findItem(R.id.item_mark_as_read).isVisible = true
-//        }else{
-//            myMenu.findItem(R.id.item_save).isVisible = false
-//            myMenu.findItem(R.id.item_mark_as_read).isVisible = false
-//        }
-
         if (tabName.equals(Constant.TAB_ALL)) {
             viewModel.get25QuestionAnswerData.observe(this, Observer {
                 val list = ArrayList<QuestionAnswer>()
@@ -170,7 +148,7 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListe
             viewModel.getAllBookmarkQuestion.observe(this, Observer {
                 val list = ArrayList<QuestionAnswer>()
                 for (data in it.listIterator()) {
-                    list.add(data)
+                    list.add(QuestionAnswer(data.SrNo, data.isHtmlTag, data.quesType, data.Question, data.Answer))
                 }
                 remainingList = list
             })
@@ -178,7 +156,7 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListe
             viewModel.getAllReadQuestion.observe(this, Observer {
                 val list = ArrayList<QuestionAnswer>()
                 for (data in it.listIterator()) {
-                    list.add(data)
+                    list.add(QuestionAnswer(data.SrNo, data.isHtmlTag, data.quesType, data.Question, data.Answer))
                 }
                 remainingList = list
             })

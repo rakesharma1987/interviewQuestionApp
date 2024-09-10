@@ -89,15 +89,12 @@ class QuestionTwentyFiveActivity : AppCompatActivity(), View.OnClickListener {
     private fun setUpRecyclerView(tempList: List<QuestionAnswer>){
         val questionAnswerAdapter = QuestionActivityAdapter(this, tempList, object: OnQuestionClickListener {
             override fun onClick(position: Int, item: QuestionAnswer) {
-//                val lList = ArrayList<QuestionAnswer>()
-//                lList.addAll(tempList)
-//                lList.subList(0, position).clear()
                 val intent = Intent(this@QuestionTwentyFiveActivity, QuestionAnswerDescriptionActivity::class.java)
-                val saveForLaterData = QuestionAnswer(item.SrNo, item.isHtmlTag, item.quesType, item.Question, item.Answer)
-                val markedAsReadData = QuestionAnswer(item.SrNo, item.isHtmlTag, item.quesType, item.Question, item.Answer)
+                val bookmarkQuestion = BookmarkQuestion(item.SrNo, item.isHtmlTag, item.quesType, item.Question, item.Answer)
+                val readQuestion = ReadQuestion(item.SrNo, item.isHtmlTag, item.quesType, item.Question, item.Answer)
                 intent.putExtra(Constant.QUESTION_ANSWER, item)
-                intent.putExtra(Constant.SAVE_FOR_LATER, saveForLaterData)
-                intent.putExtra(Constant.MARKED_AS_READ, markedAsReadData)
+                intent.putExtra(Constant.SAVE_FOR_LATER, bookmarkQuestion)
+                intent.putExtra(Constant.MARKED_AS_READ, readQuestion)
                 intent.putExtra(Constant.IS_SAVE_OR_MARKED_AS_READ_DATA, isSaveOrMarkedOpen)
                 intent.putExtra(Constant.TAB_NAME, TAB_NAME)
                 intent.putExtra(Constant.CLICKED_POSITION, position)
@@ -144,11 +141,14 @@ class QuestionTwentyFiveActivity : AppCompatActivity(), View.OnClickListener {
                 isSaveOrMarkedOpen = true
                 TAB_NAME = Constant.TAB_BOOKMARKS
                 viewModel2.getAllBookmarkQuestion.observe(this, Observer {
-                    val list = ArrayList<QuestionAnswer>()
+                    val list = ArrayList<BookmarkQuestion>()
                     for (data in it.listIterator()){
                         list.add(data)
                     }
-                    setUpRecyclerView(list)
+                    val questionAnswerList: ArrayList<QuestionAnswer> = list.map {
+                        QuestionAnswer(it.SrNo, it.isHtmlTag, it.quesType, it.Question, it.Answer)
+                    } as ArrayList<QuestionAnswer>
+                    setUpRecyclerView(questionAnswerList)
                 })
             }
 
@@ -162,11 +162,15 @@ class QuestionTwentyFiveActivity : AppCompatActivity(), View.OnClickListener {
                 isSaveOrMarkedOpen = true
                 TAB_NAME = Constant.TAB_READ
                 viewModel2.getAllReadQuestion.observe(this, Observer {
-                    val list = ArrayList<QuestionAnswer>()
+                    val list = ArrayList<ReadQuestion>()
                     for (data in it.listIterator()){
                         list.add(data)
                     }
-                    setUpRecyclerView(list)
+                    val questionAnswerList: ArrayList<QuestionAnswer> = list.map {
+                        QuestionAnswer(it.SrNo, it.isHtmlTag, it.quesType, it.Question, it.Answer)
+                    } as ArrayList<QuestionAnswer>
+                    setUpRecyclerView(questionAnswerList)
+                    setUpRecyclerView(questionAnswerList)
                 })
             }
 

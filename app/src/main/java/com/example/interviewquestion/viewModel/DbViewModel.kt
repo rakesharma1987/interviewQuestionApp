@@ -19,7 +19,7 @@ class DbViewModel(private val repository: AppRepository): ViewModel() {
     val message : LiveData<Event<String>>
     get() = statusMessage
 
-    fun saveBookmarkQuestion(data: QuestionAnswer){
+    fun saveBookmarkQuestion(data: BookmarkQuestion){
         viewModelScope.launch(Dispatchers.IO) {
             val id = repository.saveBookmarkQuestion(data)
             withContext(Dispatchers.Main){
@@ -32,7 +32,7 @@ class DbViewModel(private val repository: AppRepository): ViewModel() {
         }
     }
 
-    fun saveReadQuestion(data: QuestionAnswer){
+    fun saveReadQuestion(data: ReadQuestion){
         viewModelScope.launch(Dispatchers.IO) {
             val id = repository.saveReadQuestion(data)
             withContext(Dispatchers.Main){
