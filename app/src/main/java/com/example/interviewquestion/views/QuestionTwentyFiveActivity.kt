@@ -14,7 +14,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.interviewquestion.Constant
+import com.example.interviewquestion.util.Constant
 import com.example.interviewquestion.R
 import com.example.interviewquestion.adapters.QuestionActivityAdapter
 import com.example.interviewquestion.databinding.ActivityQuestionTwentyFiveBinding

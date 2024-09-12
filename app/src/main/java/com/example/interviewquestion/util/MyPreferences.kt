@@ -23,7 +23,7 @@ object MyPreferences {
     }
 
     fun isPurchased() : Boolean{
-        return prefs.getBoolean(IS_PURCHASED_No, false)
+        return prefs.getBoolean(IS_PURCHASED_No, true)
     }
 
     fun saveFirstLaunchAfterPaid(b: Boolean){

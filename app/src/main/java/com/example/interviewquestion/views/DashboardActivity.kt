@@ -1,36 +1,23 @@
 package com.example.interviewquestion.views
 
-import android.app.ProgressDialog
 import android.content.Intent
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
-import android.view.Gravity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
-import androidx.recyclerview.widget.GridLayoutManager
-import com.example.interviewquestion.Constant
 import com.example.interviewquestion.R
-import com.example.interviewquestion.adapters.DashboardRVAdapter
 import com.example.interviewquestion.databinding.ActivityDashboardBinding
 import com.example.interviewquestion.db.AppDatabase
 import com.example.interviewquestion.db.AppRepository
 import com.example.interviewquestion.factory.DbFactory
-import com.example.interviewquestion.interfaces.OnItemClickListener
 import com.example.interviewquestion.model.QuestionAnswer
 import com.example.interviewquestion.model.QuestionAnswerList
-import com.example.interviewquestion.model.TechnologyName
 import com.example.interviewquestion.util.MyPreferences
 import com.example.interviewquestion.viewModel.DbViewModel
 import com.google.gson.Gson
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import java.io.BufferedReader
 import java.io.InputStreamReader
 

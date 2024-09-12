@@ -1,4 +1,4 @@
-package com.example.interviewquestion
+package com.example.interviewquestion.util
 
 class Constant {
     companion object{

@@ -13,7 +13,7 @@
         tools:context=".views.QuestionActivity">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/btn_height_60dp"
+            android:layout_height="wrap_content"
             android:id="@+id/llc"
             app:layout_constraintTop_toTopOf="parent"
             android:weightSum="3"
@@ -23,19 +23,18 @@
             >
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/btn_all_question"
                 android:text="@string/txt_all_question"
                 android:layout_weight="1"
-                android:textSize="10sp"
+                android:textSize="@dimen/btn_small_txt_size_10sp"
                 android:layout_marginRight="@dimen/dimen_1dp"
                 android:insetTop="@dimen/margin_2dp"
                 android:insetBottom="@dimen/margin_2dp"
-                android:fontFamily="sans-serif"
-                android:autoSizeTextType="uniform"/>
+                android:fontFamily="sans-serif"/>
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/btn_save_for_latter"
                 android:text="@string/txt_save_for_later"
                 android:layout_weight="1"
@@ -45,11 +44,10 @@
                 android:backgroundTint="@color/card_foreground_color"
                 android:insetTop="@dimen/margin_2dp"
                 android:insetBottom="@dimen/margin_2dp"
-                android:fontFamily="sans-serif"
-                android:autoSizeTextType="uniform"/>
+                android:fontFamily="sans-serif"/>
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/btn_marked_as_read"
                 android:text="@string/txt_read"
                 android:layout_weight="1"
@@ -59,8 +57,7 @@
                 android:backgroundTint="@color/card_foreground_color"
                 android:insetTop="@dimen/margin_2dp"
                 android:insetBottom="@dimen/margin_2dp"
-                android:fontFamily="sans-serif"
-                android:autoSizeTextType="uniform"/>
+                android:fontFamily="sans-serif"/>
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -174,6 +171,8 @@
             android:layout_marginLeft="@dimen/margin_2dp"
             android:layout_marginRight="@dimen/margin_2dp"
             android:fontFamily="sans-serif"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,7 +2,6 @@ package com.example.interviewquestion.views
 
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -13,13 +12,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.interviewquestion.Constant
+import com.example.interviewquestion.util.Constant
 import com.example.interviewquestion.R
 import com.example.interviewquestion.databinding.ActivityQuestionAnswerDescriptionBinding
 import com.example.interviewquestion.db.AppDatabase
 import com.example.interviewquestion.db.AppRepository
 import com.example.interviewquestion.factory.DbFactory
-import com.example.interviewquestion.model.BookmarkedAndReadQuestion
 import com.example.interviewquestion.model.BookmarkQuestion
 import com.example.interviewquestion.model.QuestionAnswer
 import com.example.interviewquestion.model.ReadQuestion

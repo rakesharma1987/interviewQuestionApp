@@ -10,7 +10,7 @@ android {
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.interviewquestion"
+        applicationId "com.sqlinterviewsuccess.aityl"
         minSdk 24
         targetSdk 34
         versionCode 8
@@ -47,11 +47,12 @@ android {
 
 dependencies {
 
+    implementation 'androidx.activity:activity:1.9.2'
     def lifecycle_version = "2.6.2"
     def arch_version = "2.2.0"
     def room_version = "2.5.2"
     def coroutine_version = "1.7.3"
-    def billing_version = "5.2.0"
+    def billing_version = "6.0.1"
 
 
     // ViewModel

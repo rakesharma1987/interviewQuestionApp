@@ -2,11 +2,9 @@ package com.example.interviewquestion.views
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.ArrayAdapter
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.interviewquestion.Constant
+import com.example.interviewquestion.util.Constant
 import com.example.interviewquestion.R
 import com.example.interviewquestion.databinding.ActivityTipsBinding
 import com.example.interviewquestion.model.QuestionAnswer
@@ -14,7 +12,6 @@ import com.example.interviewquestion.util.MyPreferences
 import com.google.gson.Gson
 import com.iamageo.library.BeautifulDialog
 import com.iamageo.library.description
-import com.iamageo.library.hideNegativeButton
 import com.iamageo.library.onNegative
 import com.iamageo.library.onPositive
 import com.iamageo.library.position

@@ -13,7 +13,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.interviewquestion.Constant
+import com.example.interviewquestion.util.Constant
 import com.example.interviewquestion.R
 import com.example.interviewquestion.adapters.QuestionActivityAdapter
 import com.example.interviewquestion.databinding.ActivityQuestionBinding
@@ -91,8 +91,8 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
                 lList.addAll(tempList)
                 lList.subList(0, position).clear()
                 val intent = Intent(this@QuestionActivity, QuestionAnswerDescriptionActivity::class.java)
-                val saveForLaterData = QuestionAnswer(item.SrNo, item.isHtmlTag, item.quesType, item.Question, item.Answer)
-                val markedAsReadData = QuestionAnswer(item.SrNo, item.isHtmlTag, item.quesType, item.Question, item.Answer)
+                val saveForLaterData = BookmarkQuestion(item.SrNo, item.isHtmlTag, item.quesType, item.Question, item.Answer)
+                val markedAsReadData = ReadQuestion(item.SrNo, item.isHtmlTag, item.quesType, item.Question, item.Answer)
                 intent.putExtra(Constant.QUESTION_ANSWER, item)
                 intent.putExtra(Constant.SAVE_FOR_LATER, saveForLaterData)
                 intent.putExtra(Constant.MARKED_AS_READ, markedAsReadData)
@@ -197,7 +197,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(
                     Intent(
                         this@QuestionActivity,
-                        BillingActivity::class.java
+                        BuyNowActivity::class.java
                     )
                 )
             }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">App name</string>
+    <string name="app_name">SQL Interview Success</string>
     <string name="txt_all_question">All Q&amp;A</string>
     <string name="txt_save_for_later">Bookmarks</string>
     <string name="txt_read">Read</string>
@@ -54,4 +54,6 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="txt_buy_now">Buy Now</string>
+    <string name="txt_btn_restore">Restore</string>
 </resources>
