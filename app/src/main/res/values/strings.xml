@@ -5,7 +5,6 @@
     <string name="txt_read">Read</string>
     <string name="txt_tips">Tips</string>
     <string name="msg_subscription">You can see only 25 items free, for click subscribe button</string>
-    <string name="txt_subscribe">Subscribe</string>
     <string-array name="question_type">
         <item>Low</item>
         <item>Medium</item>
@@ -54,6 +53,25 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
-    <string name="txt_buy_now">Buy Now</string>
-    <string name="txt_btn_restore">Restore</string>
+    <string name="txt_buy_now">Buy Premium</string>
+    <string name="txt_premium">Premium</string>
+    <string name="txt_btn_restore">Restore Purchase</string>
+    <string name="txt_upgrade_now">Upgrade Now!</string>
+    <string name="txt_symbol">$ 300.00/lifetime</string>
+    <string name="txt_content">Comprehensive SQL Interview Prep: Get access to 259 expertly curated Oracle SQL interview questions, ranging from beginner to advanced levels, ensuring you’re fully prepared for any interview scenario.</string>
+    <string name="txt_content_1">Expert-Crafted Answers: Access accurate and reliable answers created by a database expert with 16 years of experience. By mastering these Q&amp;As, you\'ll confidently tackle any SQL challenge.</string>
+    <string name="txt_content_2">In-Depth Coverage: Dive deep into essential SQL topics, including data analytics, joins, subqueries, row-level and aggregate functions, tricky and complex questions, advanced queries, analytical functions, data modelling, performance tuning, data handling, indexing, constraints, and more.</string>
+    <string name="txt_content_3">Clear Explanations &amp; Code Snippets: Each answer comes with detailed explanations and practical code snippets, simplifying even the most complex concepts.</string>
+    <string name="txt_content_4">SQL Mastery: Perfect for those looking to deepen their understanding of Oracle SQL database functionalities and achieve true SQL mastery.</string>
+    <string name="txt_content_5">Maximize Interview Success: With comprehensive, interview-focused content, this app equips you with the knowledge and confidence to succeed in your upcoming SQL interviews.</string>
+    <string name="txt_content_6">Future-Proof Learning: Stay ahead with free access to all future updates, ensuring you\'re up-to-date with the latest SQL trends and interview techniques.</string>
+    <string name="txt_share">Hello,
+
+Explore this comprehensive app, thoughtfully designed to enhance your expertise in Oracle SQL interview questions and answers, helping you achieve success in your next interview.
+
+https://play.google.com/store/apps/details?id=com.sqlinterviewsuccess.aityl
+
+Thanks,</string>
+    <string name="txt_other_app">https://play.google.com/store/apps/dev?id=5422523287693933202</string>
+    <string name="txt_unlock">Unlock Premium Access:</string>
 </resources>

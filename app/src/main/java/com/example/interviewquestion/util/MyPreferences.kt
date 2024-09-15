@@ -10,6 +10,7 @@ object MyPreferences {
     private const val PREFS_NAME = "_iq"
     private const val IS_PURCHASED_No : String = "is_purchased"
     private const val FIRST_LAUNCH_AFTER_PAID = "paid"
+    private const val VERSION = "_version"
 
     fun init(context: Context){
         prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
@@ -23,7 +24,7 @@ object MyPreferences {
     }
 
     fun isPurchased() : Boolean{
-        return prefs.getBoolean(IS_PURCHASED_No, true)
+        return prefs.getBoolean(IS_PURCHASED_No, false)
     }
 
     fun saveFirstLaunchAfterPaid(b: Boolean){
@@ -33,5 +34,14 @@ object MyPreferences {
 
     fun isFirstLaunchAfterPaid(): Boolean{
         return prefs.getBoolean(FIRST_LAUNCH_AFTER_PAID, false)
+    }
+
+    fun setVersion(version: Int){
+        editor.putInt(VERSION, version)
+        editor.commit()
+    }
+
+    fun getVersion(): Int{
+        return prefs.getInt(VERSION, 0)
     }
 }

@@ -2,4 +2,5 @@
 <resources>
     <dimen name="text_size">16sp</dimen>
     <dimen name="margin_5dp">2dp</dimen>
+    <dimen name="txt_size_small">14sp</dimen>
 </resources>

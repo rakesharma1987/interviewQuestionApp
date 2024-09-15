@@ -30,11 +30,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/tv_question"
             android:text="What is your name"
-            android:textStyle="bold"
             android:textColor="@color/black"
             app:layout_constraintTop_toTopOf="parent"
             android:textSize="@dimen/text_size"
-            android:fontFamily="sans-serif"/>
+            android:fontFamily="@font/roboto_regular"/>
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
@@ -46,8 +45,8 @@
             android:layout_marginTop="@dimen/margin_5dp"
             android:singleLine="false"
             android:inputType="textMultiLine"
-            android:fontFamily="sans-serif"
-            android:autoSizeTextType="uniform"/>
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/roboto_regular"/>
         <WebView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -75,15 +74,19 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
                 android:weightSum="1">
+
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_prev"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/btn_prev"
-                    android:text="Previous"
-                    android:layout_weight=".5"
+                    android:layout_marginLeft="2dp"
                     android:layout_marginRight="2dp"
-                    android:layout_marginLeft="2dp"/>
+                    android:layout_weight=".5"
+                    android:text="Previous"
+                    android:fontFamily="@font/roboto_regular"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:layout_width="wrap_content"
@@ -93,6 +96,7 @@
                     android:layout_weight=".5"
                     android:layout_marginRight="2dp"
                     android:layout_marginLeft="2dp"
+                    android:fontFamily="@font/roboto_regular"
                     />
             </LinearLayout>
         </RelativeLayout>

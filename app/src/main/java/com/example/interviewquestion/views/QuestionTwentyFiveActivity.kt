@@ -187,7 +187,7 @@ class QuestionTwentyFiveActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(
                     Intent(
                         this@QuestionTwentyFiveActivity,
-                        BillingActivity::class.java
+                        BuyNowActivity::class.java
                     )
                 )
             }
@@ -235,12 +235,12 @@ class QuestionTwentyFiveActivity : AppCompatActivity(), View.OnClickListener {
             R.id.item_share ->{
                 val intent= Intent()
                 intent.action= Intent.ACTION_SEND
-                intent.putExtra(Intent.EXTRA_TEXT,"Hello, Take a look at this excellent app designed to help you excel in Oracle SQL interview questions and answers!!")
+                intent.putExtra(Intent.EXTRA_TEXT,resources.getString(R.string.txt_share))
                 intent.type="text/plain"
                 startActivity(Intent.createChooser(intent,"Share To:"))
             }
             R.id.item_other_app ->{
-                val uri = Uri.parse("https://play.google.com/store/apps/developer?id=Suvarna+Tech+Lab")
+                val uri = Uri.parse(resources.getString(R.string.txt_other_app))
                 val myAppLinkToMarket = Intent(Intent.ACTION_VIEW, uri)
                 try {
                     startActivity(myAppLinkToMarket)

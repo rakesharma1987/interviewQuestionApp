@@ -4,10 +4,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import androidx.activity.enableEdgeToEdge
+import androidx.core.content.ContextCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.interviewquestion.BuildConfig
 import com.example.interviewquestion.R
 import com.example.interviewquestion.databinding.ActivityDashboardBinding
 import com.example.interviewquestion.db.AppDatabase
@@ -29,37 +32,56 @@ class DashboardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         installSplashScreen()
+        window.statusBarColor = ContextCompat.getColor(this, R.color.black)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_dashboard)
         supportActionBar!!.hide()
         MyPreferences.init(this)
-
-        listData = ArrayList<QuestionAnswer>()
-        listData25 = ArrayList<QuestionAnswer>()
-        var jsonFile = readJSONFromAsset("Interview_Question_Answers_Sample.json")
-        val list = Gson().fromJson(jsonFile, QuestionAnswerList::class.java)
+        MyPreferences.setVersion(BuildConfig.VERSION_CODE)
         val dao = AppDatabase.getInstance(this).dao
         val factory = DbFactory(AppRepository(dao))
         viewModel = ViewModelProvider(this, factory)[DbViewModel::class.java]
-        viewModel.getAllQuestionAnswerData.observe(this, Observer {
-            for (data in it.listIterator()){
-                listData.add(data)
-            }
-            if (it.isEmpty()){
-                if (MyPreferences.isPurchased()) {
-                    viewModel.saveAllQuestionAnswer(list)
+
+        listData = ArrayList<QuestionAnswer>()
+        listData25 = ArrayList<QuestionAnswer>()
+        var jsonFile = ""
+        if (MyPreferences.isPurchased()){
+            viewModel.deleteAllQuestion()
+            viewModel.deleteReadQuestion()
+            viewModel.deleteBookmarkQuestion()
+            jsonFile = readJSONFromAsset("Interview_Question_Answers_Sample.json")
+        }else{
+            viewModel.deleteAllQuestion()
+            jsonFile = readJSONFromAsset("Interview_Question_Answer_25.json")
+        }
+        val list = Gson().fromJson(jsonFile, QuestionAnswerList::class.java)
+        if (MyPreferences.getVersion() >  BuildConfig.VERSION_CODE){
+            viewModel.deleteAllQuestion()
+            viewModel.deleteReadQuestion()
+            viewModel.deleteBookmarkQuestion()
+        }
+        if (MyPreferences.isPurchased()) {
+            viewModel.getAllQuestionAnswerData.observe(this, Observer {
+                for (data in it.listIterator()) {
+                    listData.add(data)
                 }
-            }
-        })
-        viewModel.get25QuestionAnswerData.observe(this, Observer{
-            for (data in it.listIterator()){
-                listData25.add(data)
-            }
-            if (it.isEmpty()){
-                if (!MyPreferences.isPurchased()) {
-                    viewModel.saveAllQuestionAnswer(list)
+                if (it.isEmpty()) {
+                    if (MyPreferences.isPurchased()) {
+                        viewModel.saveAllQuestionAnswer(list)
+                    }
                 }
-            }
-        })
+            })
+        }else {
+            viewModel.get25QuestionAnswerData.observe(this, Observer {
+                for (data in it.listIterator()) {
+                    listData25.add(data)
+                }
+                if (it.isEmpty()) {
+                    if (!MyPreferences.isPurchased()) {
+                        viewModel.saveAllQuestionAnswer(list)
+                    }
+                }
+            })
+        }
 
         Handler().postDelayed({
             if (MyPreferences.isPurchased()){
