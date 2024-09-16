@@ -168,7 +168,4 @@ class BuyNowActivity : AppCompatActivity(), View.OnClickListener, PurchasesUpdat
         return true
     }
 
-    override fun onBackPressed() {
-
-    }
 }
