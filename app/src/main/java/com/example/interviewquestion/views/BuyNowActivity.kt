@@ -40,8 +40,7 @@ class BuyNowActivity : AppCompatActivity(), View.OnClickListener, PurchasesUpdat
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         binding.iv.setBackgroundColor(0xFFFFFFF)
         val txt_list = arrayOf(resources.getString(R.string.txt_content), resources.getString(R.string.txt_content_1),
-            resources.getString(R.string.txt_content_2), resources.getString(R.string.txt_content_3), resources.getString(R.string.txt_content_4),
-            resources.getString(R.string.txt_content_5), resources.getString(R.string.txt_content_6))
+            resources.getString(R.string.txt_content_2), resources.getString(R.string.txt_content_3), resources.getString(R.string.txt_content_4))
 
         val adapter = BuyNowListviewAdapter(txt_list)
         binding.listView.adapter = adapter

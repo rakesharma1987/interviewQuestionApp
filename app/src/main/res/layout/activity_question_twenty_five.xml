@@ -105,7 +105,8 @@
                 android:textSize="15sp"
                 android:layout_centerVertical="true"
                 android:textColor="@color/txt_color"
-                android:fontFamily="@font/roboto_regular" />
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginLeft="@dimen/margin_2dp"/>
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_ques_title"
@@ -113,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_toRightOf="@id/tv_srno"
-                android:text="Title"
+                android:text="Questions"
                 android:textSize="@dimen/text_size"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
@@ -125,12 +126,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tv_priority"
-                android:text="Priority"
+                android:text="Probability"
                 android:layout_alignParentEnd="true"
                 android:textSize="@dimen/text_size"
                 android:layout_centerVertical="true"
                 android:textColor="@color/txt_color"
-                android:fontFamily="@font/roboto_regular"/>
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginRight="@dimen/margin_2dp"/>
         </RelativeLayout>
         <View
             android:layout_width="match_parent"
