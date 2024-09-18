@@ -106,7 +106,7 @@
                 android:layout_centerVertical="true"
                 android:textColor="@color/txt_color"
                 android:fontFamily="@font/roboto_regular"
-                android:layout_marginLeft="@dimen/margin_2dp"/>
+                android:layout_marginLeft="7dp"/>
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_ques_title"
@@ -122,17 +122,18 @@
                 android:layout_toLeftOf="@id/tv_priority"
                 android:textColor="@color/txt_color"
                 android:fontFamily="@font/roboto_regular"/>
+
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_priority"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/tv_priority"
-                android:text="Probability"
                 android:layout_alignParentEnd="true"
-                android:textSize="@dimen/text_size"
-                android:layout_centerVertical="true"
-                android:textColor="@color/txt_color"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="7dp"
                 android:fontFamily="@font/roboto_regular"
-                android:layout_marginRight="@dimen/margin_2dp"/>
+                android:text="Probability"
+                android:textColor="@color/txt_color"
+                android:textSize="@dimen/text_size" />
         </RelativeLayout>
         <View
             android:layout_width="match_parent"
@@ -172,8 +173,8 @@
             android:layout_marginLeft="@dimen/margin_2dp"
             android:layout_marginRight="@dimen/margin_2dp"
             android:fontFamily="@font/roboto_regular"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="25dp"/>
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

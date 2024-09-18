@@ -26,6 +26,7 @@ import com.example.interviewquestion.model.BookmarkQuestion
 import com.example.interviewquestion.model.QuestionAnswer
 import com.example.interviewquestion.model.QuestionAnswerList
 import com.example.interviewquestion.model.ReadQuestion
+import com.example.interviewquestion.util.MyPreferences
 import com.example.interviewquestion.viewModel.DbViewModel
 import com.google.gson.Gson
 
@@ -43,6 +44,7 @@ class QuestionTwentyFiveActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_question_twenty_five)
         binding.rvQuestionList.alpha
+        if (MyPreferences.isPurchased()) binding.btnSubscription.text = getString(R.string.btn_txt_premium)
         layoutmanager = LinearLayoutManager(this)
         binding.rvQuestionList.layoutManager = layoutmanager
 

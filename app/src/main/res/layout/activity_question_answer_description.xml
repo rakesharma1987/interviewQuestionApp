@@ -33,7 +33,8 @@
             android:textColor="@color/black"
             app:layout_constraintTop_toTopOf="parent"
             android:textSize="@dimen/text_size"
-            android:fontFamily="@font/roboto_regular"/>
+            android:fontFamily="@font/opensans_semibold"
+            android:layout_margin="5dp"/>
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
