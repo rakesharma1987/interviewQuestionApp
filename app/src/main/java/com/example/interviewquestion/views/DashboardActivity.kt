@@ -44,22 +44,18 @@ class DashboardActivity : AppCompatActivity() {
         listData = ArrayList<QuestionAnswer>()
         listData25 = ArrayList<QuestionAnswer>()
         var jsonFile = ""
-        if (MyPreferences.isPurchased()){
+        if (MyPreferences.isPurchased() && MyPreferences.isDeletedAndRestored()){
             viewModel.deleteAllQuestion()
             viewModel.deleteReadQuestion()
             viewModel.deleteBookmarkQuestion()
             jsonFile = readJSONFromAsset("Interview_Question_Answers_Sample.json")
-        }else{
+        }else if (MyPreferences.isFreeVersion() && MyPreferences.isDeletedAndRestored()){
             viewModel.deleteAllQuestion()
             jsonFile = readJSONFromAsset("Interview_Question_Answer_25.json")
         }
         val list = Gson().fromJson(jsonFile, QuestionAnswerList::class.java)
-        if (MyPreferences.getVersion() >  BuildConfig.VERSION_CODE){
-            viewModel.deleteAllQuestion()
-            viewModel.deleteReadQuestion()
-            viewModel.deleteBookmarkQuestion()
-        }
-        if (MyPreferences.isPurchased()) {
+        if (MyPreferences.isPurchased() && MyPreferences.isDeletedAndRestored()) {
+            MyPreferences.saveDeleteAndRestoredValue(false)
             viewModel.getAllQuestionAnswerData.observe(this, Observer {
                 for (data in it.listIterator()) {
                     listData.add(data)
@@ -70,7 +66,8 @@ class DashboardActivity : AppCompatActivity() {
                     }
                 }
             })
-        }else {
+        }else if (MyPreferences.isDeletedAndRestored() && MyPreferences.isFreeVersion()){
+            MyPreferences.saveDeleteAndRestoredValue(false)
             viewModel.get25QuestionAnswerData.observe(this, Observer {
                 for (data in it.listIterator()) {
                     listData25.add(data)

@@ -92,9 +92,16 @@ class BuyNowActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.btn_restore -> {
+                if (MyPreferences.isRestored()){
+                    Toast.makeText(this, "Already restored.", Toast.LENGTH_SHORT).show()
+                    return
+                }
                 billingClient.queryPurchasesAsync(BillingClient.ProductType.INAPP) { billingResult, purchases ->
-                    if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
+                    if (/*billingResult.responseCode == BillingClient.BillingResponseCode.ITEM_ALREADY_OWNED*/ purchases[0].purchaseToken.isNotEmpty()) {
                         MyPreferences.savePurchaseValueToPref(true)
+                        MyPreferences.saveDeleteAndRestoredValue(true)
+                        MyPreferences.setFreeVersion(false)
+                        MyPreferences.setRestoreValue(true)
                         binding.btnBuyPremium.text = getString(R.string.txt_premium)
                         binding.btnBuyPremium.isEnabled = false
                         Log.d("Billing", "Restore purchases: ${billingResult.debugMessage}")
@@ -214,6 +221,11 @@ class BuyNowActivity : AppCompatActivity(), View.OnClickListener {
         ) { billingResult: BillingResult ->
             if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
                 MyPreferences.savePurchaseValueToPref(true)
+                MyPreferences.saveDeleteAndRestoredValue(true)
+                MyPreferences.setFreeVersion(false)
+                Snackbar.make(binding.listView, "Please restart app.", Snackbar.LENGTH_LONG).setAction("Restart", View.OnClickListener {
+                    Toast.makeText(this, "Please restart app.", Toast.LENGTH_SHORT).show()
+                }).show()
             }
         }
     }
