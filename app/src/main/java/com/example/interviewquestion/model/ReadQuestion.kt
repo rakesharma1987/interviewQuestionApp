@@ -12,4 +12,4 @@ data class ReadQuestion(
     var quesType: String,
     var Question: String,
     var Answer: String
-): Serializable
+)

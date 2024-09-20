@@ -82,9 +82,9 @@ class QuestionTwentyFiveActivity : AppCompatActivity(), View.OnClickListener {
                 val intent = Intent(this@QuestionTwentyFiveActivity, QuestionAnswerDescriptionActivity::class.java)
                 val bookmarkQuestion = BookmarkQuestion(item.SrNo, item.isHtmlTag, item.quesType, item.Question, item.Answer)
                 val readQuestion = ReadQuestion(item.SrNo, item.isHtmlTag, item.quesType, item.Question, item.Answer)
-                intent.putExtra(Constant.QUESTION_ANSWER, item)
-                intent.putExtra(Constant.SAVE_FOR_LATER, bookmarkQuestion)
-                intent.putExtra(Constant.MARKED_AS_READ, readQuestion)
+                intent.putExtra(Constant.QUESTION_ANSWER, Gson().toJson(item))
+                intent.putExtra(Constant.SAVE_FOR_LATER, Gson().toJson(bookmarkQuestion))
+                intent.putExtra(Constant.MARKED_AS_READ, Gson().toJson(readQuestion))
                 intent.putExtra(Constant.IS_SAVE_OR_MARKED_AS_READ_DATA, isSaveOrMarkedOpen)
                 intent.putExtra(Constant.TAB_NAME, TAB_NAME)
                 intent.putExtra(Constant.CLICKED_POSITION, position)
@@ -159,7 +159,6 @@ class QuestionTwentyFiveActivity : AppCompatActivity(), View.OnClickListener {
                     val questionAnswerList: ArrayList<QuestionAnswer> = list.map {
                         QuestionAnswer(it.SrNo, it.isHtmlTag, it.quesType, it.Question, it.Answer)
                     } as ArrayList<QuestionAnswer>
-                    setUpRecyclerView(questionAnswerList)
                     setUpRecyclerView(questionAnswerList)
                 })
             }

@@ -22,6 +22,7 @@ import com.example.interviewquestion.model.BookmarkQuestion
 import com.example.interviewquestion.model.QuestionAnswer
 import com.example.interviewquestion.model.ReadQuestion
 import com.example.interviewquestion.viewModel.DbViewModel
+import com.google.gson.Gson
 import kotlin.properties.Delegates
 
 class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListener {
@@ -56,8 +57,10 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListe
         val factory = DbFactory(AppRepository(dao))
         viewModel = ViewModelProvider(this, factory)[DbViewModel::class.java]
 
-        bookmarkQuestion = intent.getSerializableExtra(Constant.SAVE_FOR_LATER, BookmarkQuestion::class.java)!!
-        readQuestion = intent.getSerializableExtra(Constant.MARKED_AS_READ, ReadQuestion::class.java)!!
+        bookmarkQuestion = Gson().fromJson(intent.getStringExtra(Constant.SAVE_FOR_LATER), BookmarkQuestion::class.java)
+//        bookmarkQuestion = intent.getSerializableExtra(Constant.SAVE_FOR_LATER, BookmarkQuestion::class.java)!!
+        readQuestion = Gson().fromJson(intent.getStringExtra(Constant.MARKED_AS_READ), ReadQuestion::class.java)
+//        readQuestion = intent.getSerializableExtra(Constant.MARKED_AS_READ, ReadQuestion::class.java)!!
         isSaveOrMarkedAsRead = intent.getBooleanExtra(Constant.IS_SAVE_OR_MARKED_AS_READ_DATA, false)
         position = intent.getIntExtra(Constant.CLICKED_POSITION, 0)
         tabName = intent.getStringExtra(Constant.TAB_NAME)!!
