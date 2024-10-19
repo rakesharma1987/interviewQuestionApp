@@ -59,10 +59,10 @@
     <string name="txt_upgrade_now">Upgrade Now!</string>
     <string name="txt_symbol">$ 300.00/lifetime</string>
     <string name="txt_content">259 Oracle SQL Interview Questions: Expertly curated, covering beginner to advanced levels.</string>
-    <string name="txt_content_1">Expert Answers: Reliable answers crafted by a database expert with 16 years of experience.</string>
+    <string name="txt_content_1">Expert Answers: Trustworthy answers crafted by a database professional with 16 years of experience, covering the most asked questions in SQL interviews.</string>
     <string name="txt_content_2">Comprehensive SQL Topics: Includes joins, subqueries, functions, advanced queries, performance tuning, indexing, and complex, tricky queries.</string>
     <string name="txt_content_3">Detailed Explanations &amp; Code: Clear, practical code snippets and explanations for each question.</string>
-    <string name="txt_content_4">Stay Interview-Ready: Master SQL concepts and boost your confidence.</string>
+    <string name="txt_content_4">Stay Interview-Ready: Master SQL concepts and boost your confidence. You\'ll be fully prepared to succeed in almost any SQL interview.</string>
 <!--    <string name="txt_content_5">Maximize Interview Success: With comprehensive, interview-focused content, this app equips you with the knowledge and confidence to succeed in your upcoming SQL interviews.</string>-->
 <!--    <string name="txt_content_6">Future-Proof Learning: Stay ahead with free access to all future updates, ensuring you\'re up-to-date with the latest SQL trends and interview techniques.</string>-->
     <string name="txt_share">Hello,

@@ -11,16 +11,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".views.DashboardActivity"
-        android:background="@color/purple_700">
+        android:background="@color/white">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/rv_items"
-            android:visibility="visible"
-            android:src="@drawable/ic_drawable_background"
-            android:fitsSystemWindows="true"
-            android:scaleType="fitXY"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:id="@+id/iv"
+            app:srcCompat="@drawable/ic_drawable_background"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:shapeAppearanceOverlay="@style/roundedCornersImageView"
+            />
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
