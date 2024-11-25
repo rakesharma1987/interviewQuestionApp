@@ -29,6 +29,8 @@ import kotlinx.coroutines.launch
 import java.util.Timer
 import kotlin.concurrent.schedule
 
+// TODO: This activity is not in use.
+
 class BillingActivity : AppCompatActivity(), OnCLickProduct {
     private var billingClient : BillingClient?= null
     private var productDetailList = mutableListOf<ProductDetails.SubscriptionOfferDetails>()
