@@ -1,7 +1,9 @@
 package com.example.interviewquestion.views
 
 import android.content.ActivityNotFoundException
+import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -271,5 +273,13 @@ class QuestionTwentyFiveActivity : AppCompatActivity(), View.OnClickListener {
             setUpRecyclerView(filteredList)
         }
 
+    }
+
+    override fun attachBaseContext(newBase: Context?) {
+        val newOverride = Configuration(newBase?.resources?.configuration)
+        newOverride.fontScale = 1.0f
+        applyOverrideConfiguration(newOverride)
+
+        super.attachBaseContext(newBase)
     }
 }

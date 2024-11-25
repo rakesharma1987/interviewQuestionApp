@@ -1,5 +1,7 @@
 package com.example.interviewquestion.views
 
+import android.content.Context
+import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
 import android.view.Menu
@@ -208,5 +210,13 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListe
             binding.tvAnswer.visibility = View.VISIBLE
             binding.tvAnswer.text = addNewLine(questionAnswer!!.Answer)
         }
+    }
+
+    override fun attachBaseContext(newBase: Context?) {
+        val newOverride = Configuration(newBase?.resources?.configuration)
+        newOverride.fontScale = 1.0f
+        applyOverrideConfiguration(newOverride)
+
+        super.attachBaseContext(newBase)
     }
 }

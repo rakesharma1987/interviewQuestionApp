@@ -2,22 +2,13 @@ package com.example.interviewquestion.views
 
 import android.annotation.SuppressLint
 import android.app.ProgressDialog
-import android.content.ContentValues.TAG
-import android.content.DialogInterface
-import android.content.Intent
+import android.content.Context
+import android.content.res.Configuration
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.util.Log
 import android.view.View
-import android.widget.ArrayAdapter
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.ui.graphics.Color
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.android.billingclient.api.AcknowledgePurchaseParams
 import com.android.billingclient.api.BillingClient
 import com.android.billingclient.api.BillingClientStateListener
@@ -25,23 +16,17 @@ import com.android.billingclient.api.BillingFlowParams
 import com.android.billingclient.api.BillingResult
 import com.android.billingclient.api.ProductDetails
 import com.android.billingclient.api.Purchase
-import com.android.billingclient.api.PurchasesUpdatedListener
 import com.android.billingclient.api.QueryProductDetailsParams
 import com.android.billingclient.api.QueryPurchasesParams
-import com.android.billingclient.api.SkuDetails
-import com.android.billingclient.api.SkuDetailsParams
-import com.android.billingclient.api.queryPurchasesAsync
 import com.example.interviewquestion.R
 import com.example.interviewquestion.adapters.BuyNowListviewAdapter
 import com.example.interviewquestion.databinding.ActivityBuyNowBinding
 import com.example.interviewquestion.util.MyPreferences
 import com.google.android.material.snackbar.Snackbar
 import com.google.common.collect.ImmutableList
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import java.util.Timer
 import kotlin.concurrent.schedule
+
 
 class BuyNowActivity : AppCompatActivity(), View.OnClickListener {
     lateinit var binding: ActivityBuyNowBinding
@@ -267,5 +252,13 @@ class BuyNowActivity : AppCompatActivity(), View.OnClickListener {
 //            }
 //        }
 //    }
+
+    override fun attachBaseContext(newBase: Context?) {
+        val newOverride = Configuration(newBase?.resources?.configuration)
+        newOverride.fontScale = 1.0f
+        applyOverrideConfiguration(newOverride)
+
+        super.attachBaseContext(newBase)
+    }
 
 }
