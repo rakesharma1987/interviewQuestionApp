@@ -5,8 +5,10 @@ import android.app.ProgressDialog
 import android.content.Context
 import android.content.res.Configuration
 import android.os.Bundle
+import android.util.DisplayMetrics
 import android.util.Log
 import android.view.View
+import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.android.billingclient.api.AcknowledgePurchaseParams
@@ -28,7 +30,7 @@ import java.util.Timer
 import kotlin.concurrent.schedule
 
 
-class BuyNowActivity : AppCompatActivity(), View.OnClickListener {
+class BuyNowActivity : BaseActivity(), View.OnClickListener {
     lateinit var binding: ActivityBuyNowBinding
     private lateinit var billingClient: BillingClient
     val TAG = "_tag"
@@ -253,12 +255,13 @@ class BuyNowActivity : AppCompatActivity(), View.OnClickListener {
 //        }
 //    }
 
-    override fun attachBaseContext(newBase: Context?) {
-        val newOverride = Configuration(newBase?.resources?.configuration)
-        newOverride.fontScale = 1.0f
-        applyOverrideConfiguration(newOverride)
-
-        super.attachBaseContext(newBase)
-    }
+//    override fun attachBaseContext(newBase: Context?) {
+//        val newOverride = Configuration(newBase?.resources?.configuration)
+//        newOverride.fontScale = 1.0f
+//        newOverride.densityDpi = DisplayMetrics.DENSITY_DEVICE_STABLE
+//        applyOverrideConfiguration(newOverride)
+//
+//        super.attachBaseContext(newBase)
+//    }
 
 }

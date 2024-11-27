@@ -27,7 +27,7 @@ import com.example.interviewquestion.viewModel.DbViewModel
 import com.google.gson.Gson
 import kotlin.properties.Delegates
 
-class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListener {
+class QuestionAnswerDescriptionActivity : BaseActivity(), View.OnClickListener {
     private lateinit var binding: ActivityQuestionAnswerDescriptionBinding
     private lateinit var viewModel: DbViewModel
     private lateinit var bookmarkQuestion: BookmarkQuestion
@@ -210,13 +210,5 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListe
             binding.tvAnswer.visibility = View.VISIBLE
             binding.tvAnswer.text = addNewLine(questionAnswer!!.Answer)
         }
-    }
-
-    override fun attachBaseContext(newBase: Context?) {
-        val newOverride = Configuration(newBase?.resources?.configuration)
-        newOverride.fontScale = 1.0f
-        applyOverrideConfiguration(newOverride)
-
-        super.attachBaseContext(newBase)
     }
 }
