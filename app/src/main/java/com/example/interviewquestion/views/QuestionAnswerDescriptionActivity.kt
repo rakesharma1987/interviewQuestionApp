@@ -1,6 +1,7 @@
 package com.example.interviewquestion.views
 
 import android.content.Context
+import android.content.Intent
 import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
@@ -23,6 +24,7 @@ import com.example.interviewquestion.factory.DbFactory
 import com.example.interviewquestion.model.BookmarkQuestion
 import com.example.interviewquestion.model.QuestionAnswer
 import com.example.interviewquestion.model.ReadQuestion
+import com.example.interviewquestion.util.MyPreferences
 import com.example.interviewquestion.viewModel.DbViewModel
 import com.google.gson.Gson
 import kotlin.properties.Delegates
@@ -185,6 +187,9 @@ class QuestionAnswerDescriptionActivity : BaseActivity(), View.OnClickListener {
                     currentIndex++
                     val questionAnswer = remainingList!!.toMutableList()[currentIndex]
                     displayView(questionAnswer)
+                }else if(MyPreferences.isFreeVersion() && currentIndex == remainingList?.size?.minus(1)){
+                    finish()
+                    startActivity(Intent(this, BuyNowActivity::class.java))
                 }
             }
 

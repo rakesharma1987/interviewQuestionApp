@@ -75,6 +75,11 @@ class BuyNowActivity : BaseActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when(v?.id) {
             R.id.btn_buy_premium -> {
+                // todo: ByPass Here
+//                MyPreferences.savePurchaseValueToPref(true)
+//                MyPreferences.saveDeleteAndRestoredValue(true)
+//                MyPreferences.setFreeVersion(false)
+//                MyPreferences.setRestoreValue(true)
                 launchPurchaseFlow(productDetails)
             }
 
