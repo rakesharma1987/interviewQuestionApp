@@ -37,7 +37,7 @@ class DashboardActivity : BaseActivity() {
         window.statusBarColor = ContextCompat.getColor(this, R.color.black)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_dashboard)
         supportActionBar!!.hide()
-        MyPreferences.init(this)
+//        MyPreferences.init(this)
         MyPreferences.setVersion(BuildConfig.VERSION_CODE)
         val dao = AppDatabase.getInstance(this).dao
         val factory = DbFactory(AppRepository(dao))

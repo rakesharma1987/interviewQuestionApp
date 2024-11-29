@@ -13,4 +13,11 @@ open class BaseActivity:AppCompatActivity() {
         val context = newBase.createConfigurationContext(configuration)
         super.attachBaseContext(context)
     }
+
+//    override fun attachBaseContext(newBase: Context?) {
+//        val newOverride = Configuration(newBase?.resources?.configuration)
+//        newOverride.fontScale = 1.0f
+//        applyOverrideConfiguration(newOverride)
+//        super.attachBaseContext(newBase)
+//    }
 }

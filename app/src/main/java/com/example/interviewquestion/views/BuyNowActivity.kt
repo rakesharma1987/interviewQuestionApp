@@ -11,6 +11,7 @@ import android.view.View
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.ui.unit.sp
 import com.android.billingclient.api.AcknowledgePurchaseParams
 import com.android.billingclient.api.BillingClient
 import com.android.billingclient.api.BillingClientStateListener
@@ -46,6 +47,7 @@ class BuyNowActivity : BaseActivity(), View.OnClickListener {
         binding = ActivityBuyNowBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        binding.tvAmount.textSize
         binding.tvAmount.text = buildString {}
 
         dialog = ProgressDialog(this)
@@ -170,7 +172,7 @@ class BuyNowActivity : BaseActivity(), View.OnClickListener {
                             dialog.dismiss()
                             binding.tvAmount.text = buildString {
                                 append(prodDetailsList[0].oneTimePurchaseOfferDetails!!.formattedPrice)
-                                append("/lifetime")
+                                append("/LIFETIME")
                             }
                         }
                     }else{
@@ -258,15 +260,6 @@ class BuyNowActivity : BaseActivity(), View.OnClickListener {
 //                Toast.makeText(applicationContext, "Failed to query purchases: ${billingResult.debugMessage}", Toast.LENGTH_LONG).show()
 //            }
 //        }
-//    }
-
-//    override fun attachBaseContext(newBase: Context?) {
-//        val newOverride = Configuration(newBase?.resources?.configuration)
-//        newOverride.fontScale = 1.0f
-//        newOverride.densityDpi = DisplayMetrics.DENSITY_DEVICE_STABLE
-//        applyOverrideConfiguration(newOverride)
-//
-//        super.attachBaseContext(newBase)
 //    }
 
 }

@@ -3,4 +3,12 @@
     <dimen name="text_size">16sp</dimen>
     <dimen name="margin_5dp">2dp</dimen>
     <dimen name="txt_size_small">14sp</dimen>
+    <dimen name="dimen_1dp">1dp</dimen>
+    <dimen name="cardview_radious">5dp</dimen>
+    <dimen name="btn_height_60dp">55dp</dimen>
+    <dimen name="btn_small_txt_size_10sp">9sp</dimen>
+    <dimen name="margin_2dp">2dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="txt_size_big">25sp</dimen>
+    <dimen name="txt_extra_big_size">30sp</dimen>
 </resources>
