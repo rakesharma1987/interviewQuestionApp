@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -26,6 +27,11 @@ import com.example.interviewquestion.model.QuestionAnswer
 import com.example.interviewquestion.model.ReadQuestion
 import com.example.interviewquestion.util.MyPreferences
 import com.example.interviewquestion.viewModel.DbViewModel
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.LoadAdError
+import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.interstitial.InterstitialAd
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import com.google.gson.Gson
 import kotlin.properties.Delegates
 
@@ -41,11 +47,15 @@ class QuestionAnswerDescriptionActivity : BaseActivity(), View.OnClickListener {
     private var currentIndex: Int = 0
     private var position: Int = 0
     private var tabName: String = Constant.TAB_ALL
+    private var mInterstitialAd: InterstitialAd? = null
 
     @RequiresApi(Build.VERSION_CODES.TIRAMISU)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_question_answer_description)
+        MobileAds.initialize(this)
+
+
         val tab = intent.getStringExtra(Constant.TAB_NAME)
         if (tab == "Tips"){
             supportActionBar!!.title = resources.getString(R.string.txt_tips)
@@ -183,6 +193,14 @@ class QuestionAnswerDescriptionActivity : BaseActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when(v!!.id){
             R.id.btn_next ->{
+                loadInterstitialAd()
+                showAdIfReady()
+//                if (mInterstitialAd != null){
+//                    showAdIfReady()
+//                    loadInterstitialAd()
+//                }else {
+//                loadInterstitialAd()
+//                }
                 if (currentIndex < remainingList!!.size-1){
                     currentIndex++
                     val questionAnswer = remainingList!!.toMutableList()[currentIndex]
@@ -215,5 +233,28 @@ class QuestionAnswerDescriptionActivity : BaseActivity(), View.OnClickListener {
             binding.tvAnswer.visibility = View.VISIBLE
             binding.tvAnswer.text = addNewLine(questionAnswer!!.Answer)
         }
+    }
+
+    private fun loadInterstitialAd(){
+        val adRequest = AdRequest.Builder().build()
+        InterstitialAd.load(
+            this,
+            "ca-app-pub-3940256099942544/1033173712", // <-- Test ad unit
+            adRequest,
+            object : InterstitialAdLoadCallback() {
+                override fun onAdLoaded(ad: InterstitialAd) {
+                    mInterstitialAd = ad
+                    Log.d("Ad", "Interstitial Ad loaded.")
+                }
+
+                override fun onAdFailedToLoad(adError: LoadAdError) {
+                    mInterstitialAd = null
+                    Log.e("Ad", "Failed to load: ${adError.message}")
+                }
+            })
+    }
+
+    private fun showAdIfReady() {
+        mInterstitialAd?.show(this)
     }
 }

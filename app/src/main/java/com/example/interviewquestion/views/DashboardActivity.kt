@@ -12,7 +12,7 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.interviewquestion.BuildConfig
+//import com.example.interviewquestion.BuildConfig
 import com.example.interviewquestion.R
 import com.example.interviewquestion.databinding.ActivityDashboardBinding
 import com.example.interviewquestion.db.AppDatabase
@@ -38,7 +38,7 @@ class DashboardActivity : BaseActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_dashboard)
         supportActionBar!!.hide()
 //        MyPreferences.init(this)
-        MyPreferences.setVersion(BuildConfig.VERSION_CODE)
+//        MyPreferences.setVersion(BuildConfig.VERSION_CODE)
         val dao = AppDatabase.getInstance(this).dao
         val factory = DbFactory(AppRepository(dao))
         viewModel = ViewModelProvider(this, factory)[DbViewModel::class.java]

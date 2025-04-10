@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="com.android.vending.BILLING" />
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:allowBackup="true"
@@ -15,6 +16,10 @@
         android:theme="@style/Theme.InterviewQuestion"
         tools:targetApi="31"
         android:name=".application.MyApplication">
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-1542045347784977~2219321846"/>
+
         <activity
             android:name=".views.BuyNowActivity"
             android:exported="false" />
