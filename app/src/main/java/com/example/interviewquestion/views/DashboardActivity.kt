@@ -26,7 +26,7 @@ import com.google.gson.Gson
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
-class DashboardActivity : AppCompatActivity() {
+class DashboardActivity : BaseActivity() {
     private lateinit var binding: ActivityDashboardBinding
     private lateinit var viewModel: DbViewModel
     private lateinit var listData: ArrayList<QuestionAnswer>
@@ -37,7 +37,7 @@ class DashboardActivity : AppCompatActivity() {
         window.statusBarColor = ContextCompat.getColor(this, R.color.black)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_dashboard)
         supportActionBar!!.hide()
-        MyPreferences.init(this)
+//        MyPreferences.init(this)
         MyPreferences.setVersion(BuildConfig.VERSION_CODE)
         val dao = AppDatabase.getInstance(this).dao
         val factory = DbFactory(AppRepository(dao))
@@ -113,13 +113,5 @@ class DashboardActivity : AppCompatActivity() {
         val bufferReader = BufferedReader(InputStreamReader(inputStream))
         val jsonString = bufferReader.readText()
         return jsonString
-    }
-
-    override fun attachBaseContext(newBase: Context?) {
-        val newOverride = Configuration(newBase?.resources?.configuration)
-        newOverride.fontScale = 1.0f
-        applyOverrideConfiguration(newOverride)
-
-        super.attachBaseContext(newBase)
     }
 }

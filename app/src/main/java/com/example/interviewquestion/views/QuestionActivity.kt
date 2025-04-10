@@ -32,7 +32,7 @@ import com.example.interviewquestion.viewModel.DbViewModel
 import com.google.gson.Gson
 
 
-class QuestionActivity : AppCompatActivity(), View.OnClickListener {
+class QuestionActivity : BaseActivity(), View.OnClickListener {
     private lateinit var binding: ActivityQuestionBinding
     private lateinit var list: QuestionAnswerList
     private lateinit var viewModel2: DbViewModel
@@ -340,12 +340,4 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
 ////            }
 ////        })
 //    }
-
-    override fun attachBaseContext(newBase: Context?) {
-        val newOverride = Configuration(newBase?.resources?.configuration)
-        newOverride.fontScale = 1.0f
-        applyOverrideConfiguration(newOverride)
-
-        super.attachBaseContext(newBase)
-    }
 }

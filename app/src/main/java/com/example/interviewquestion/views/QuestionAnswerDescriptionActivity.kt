@@ -1,6 +1,7 @@
 package com.example.interviewquestion.views
 
 import android.content.Context
+import android.content.Intent
 import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
@@ -23,11 +24,12 @@ import com.example.interviewquestion.factory.DbFactory
 import com.example.interviewquestion.model.BookmarkQuestion
 import com.example.interviewquestion.model.QuestionAnswer
 import com.example.interviewquestion.model.ReadQuestion
+import com.example.interviewquestion.util.MyPreferences
 import com.example.interviewquestion.viewModel.DbViewModel
 import com.google.gson.Gson
 import kotlin.properties.Delegates
 
-class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListener {
+class QuestionAnswerDescriptionActivity : BaseActivity(), View.OnClickListener {
     private lateinit var binding: ActivityQuestionAnswerDescriptionBinding
     private lateinit var viewModel: DbViewModel
     private lateinit var bookmarkQuestion: BookmarkQuestion
@@ -185,6 +187,9 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListe
                     currentIndex++
                     val questionAnswer = remainingList!!.toMutableList()[currentIndex]
                     displayView(questionAnswer)
+                }else if(MyPreferences.isFreeVersion() && currentIndex == remainingList?.size?.minus(1)){
+                    finish()
+                    startActivity(Intent(this, BuyNowActivity::class.java))
                 }
             }
 
@@ -210,13 +215,5 @@ class QuestionAnswerDescriptionActivity : AppCompatActivity(), View.OnClickListe
             binding.tvAnswer.visibility = View.VISIBLE
             binding.tvAnswer.text = addNewLine(questionAnswer!!.Answer)
         }
-    }
-
-    override fun attachBaseContext(newBase: Context?) {
-        val newOverride = Configuration(newBase?.resources?.configuration)
-        newOverride.fontScale = 1.0f
-        applyOverrideConfiguration(newOverride)
-
-        super.attachBaseContext(newBase)
     }
 }

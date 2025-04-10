@@ -5,10 +5,13 @@ import android.app.ProgressDialog
 import android.content.Context
 import android.content.res.Configuration
 import android.os.Bundle
+import android.util.DisplayMetrics
 import android.util.Log
 import android.view.View
+import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.ui.unit.sp
 import com.android.billingclient.api.AcknowledgePurchaseParams
 import com.android.billingclient.api.BillingClient
 import com.android.billingclient.api.BillingClientStateListener
@@ -28,7 +31,7 @@ import java.util.Timer
 import kotlin.concurrent.schedule
 
 
-class BuyNowActivity : AppCompatActivity(), View.OnClickListener {
+class BuyNowActivity : BaseActivity(), View.OnClickListener {
     lateinit var binding: ActivityBuyNowBinding
     private lateinit var billingClient: BillingClient
     val TAG = "_tag"
@@ -44,6 +47,7 @@ class BuyNowActivity : AppCompatActivity(), View.OnClickListener {
         binding = ActivityBuyNowBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        binding.tvAmount.textSize
         binding.tvAmount.text = buildString {}
 
         dialog = ProgressDialog(this)
@@ -73,6 +77,11 @@ class BuyNowActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when(v?.id) {
             R.id.btn_buy_premium -> {
+                // todo: ByPass Here
+//                MyPreferences.savePurchaseValueToPref(true)
+//                MyPreferences.saveDeleteAndRestoredValue(true)
+//                MyPreferences.setFreeVersion(false)
+//                MyPreferences.setRestoreValue(true)
                 launchPurchaseFlow(productDetails)
             }
 
@@ -163,7 +172,7 @@ class BuyNowActivity : AppCompatActivity(), View.OnClickListener {
                             dialog.dismiss()
                             binding.tvAmount.text = buildString {
                                 append(prodDetailsList[0].oneTimePurchaseOfferDetails!!.formattedPrice)
-                                append("/lifetime")
+                                append("/LIFETIME")
                             }
                         }
                     }else{
@@ -252,13 +261,5 @@ class BuyNowActivity : AppCompatActivity(), View.OnClickListener {
 //            }
 //        }
 //    }
-
-    override fun attachBaseContext(newBase: Context?) {
-        val newOverride = Configuration(newBase?.resources?.configuration)
-        newOverride.fontScale = 1.0f
-        applyOverrideConfiguration(newOverride)
-
-        super.attachBaseContext(newBase)
-    }
 
 }
