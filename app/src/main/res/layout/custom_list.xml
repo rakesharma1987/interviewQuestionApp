@@ -25,6 +25,7 @@
         android:padding="7dp"
         android:singleLine="false"
         android:layout_toEndOf="@id/image_view"
+        android:textSize="@dimen/txt_size_small"
         />
 
 </RelativeLayout>

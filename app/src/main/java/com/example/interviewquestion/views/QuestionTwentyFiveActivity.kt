@@ -30,6 +30,11 @@ import com.example.interviewquestion.model.QuestionAnswerList
 import com.example.interviewquestion.model.ReadQuestion
 import com.example.interviewquestion.util.MyPreferences
 import com.example.interviewquestion.viewModel.DbViewModel
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.LoadAdError
+import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.interstitial.InterstitialAd
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import com.google.gson.Gson
 
 class QuestionTwentyFiveActivity : BaseActivity(), View.OnClickListener {
@@ -41,11 +46,13 @@ class QuestionTwentyFiveActivity : BaseActivity(), View.OnClickListener {
     private lateinit var layoutmanager: LinearLayoutManager
     private lateinit var questionAnswer: QuestionAnswer
     private var TAB_NAME = ""
+//    private var mInterstitialAd: InterstitialAd? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_question_twenty_five)
         binding.rvQuestionList.alpha
+//        MobileAds.initialize(this)
         if (MyPreferences.isPurchased()) binding.btnSubscription.text = getString(R.string.btn_txt_premium)
         layoutmanager = LinearLayoutManager(this)
         binding.rvQuestionList.layoutManager = layoutmanager
@@ -81,6 +88,8 @@ class QuestionTwentyFiveActivity : BaseActivity(), View.OnClickListener {
     private fun setUpRecyclerView(tempList: List<QuestionAnswer>){
         val questionAnswerAdapter = QuestionActivityAdapter(this, tempList, object: OnQuestionClickListener {
             override fun onClick(position: Int, item: QuestionAnswer) {
+//                loadInterstitialAd()
+//                showAdIfReady()
                 val intent = Intent(this@QuestionTwentyFiveActivity, QuestionAnswerDescriptionActivity::class.java)
                 val bookmarkQuestion = BookmarkQuestion(item.SrNo, item.isHtmlTag, item.quesType, item.Question, item.Answer)
                 val readQuestion = ReadQuestion(item.SrNo, item.isHtmlTag, item.quesType, item.Question, item.Answer)
@@ -274,4 +283,28 @@ class QuestionTwentyFiveActivity : BaseActivity(), View.OnClickListener {
         }
 
     }
+
+//    private fun loadInterstitialAd(){
+//        val adRequest = AdRequest.Builder().build()
+//        InterstitialAd.load(
+//            this,
+//            "ca-app-pub-3940256099942544/1033173712", // <-- Test ad unit
+//            adRequest,
+//            object : InterstitialAdLoadCallback() {
+//                override fun onAdLoaded(ad: InterstitialAd) {
+//                    mInterstitialAd = ad
+//                    Log.d("Ad", "Interstitial Ad loaded.")
+//                }
+//
+//                override fun onAdFailedToLoad(adError: LoadAdError) {
+//                    mInterstitialAd = null
+//                    Log.e("Ad", "Failed to load: ${adError.message}")
+//                }
+//            })
+//    }
+//
+//    private fun showAdIfReady() {
+//        mInterstitialAd?.show(this)
+//    }
+
 }

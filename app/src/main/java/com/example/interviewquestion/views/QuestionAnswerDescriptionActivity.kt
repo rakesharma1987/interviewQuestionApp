@@ -27,7 +27,9 @@ import com.example.interviewquestion.model.QuestionAnswer
 import com.example.interviewquestion.model.ReadQuestion
 import com.example.interviewquestion.util.MyPreferences
 import com.example.interviewquestion.viewModel.DbViewModel
+import com.google.android.gms.ads.AdError
 import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.FullScreenContentCallback
 import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.interstitial.InterstitialAd
@@ -54,8 +56,6 @@ class QuestionAnswerDescriptionActivity : BaseActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_question_answer_description)
         MobileAds.initialize(this)
-
-
         val tab = intent.getStringExtra(Constant.TAB_NAME)
         if (tab == "Tips"){
             supportActionBar!!.title = resources.getString(R.string.txt_tips)
@@ -110,7 +110,7 @@ class QuestionAnswerDescriptionActivity : BaseActivity(), View.OnClickListener {
 
         binding.btnNext.setOnClickListener(this)
         binding.btnPrev.setOnClickListener(this)
-
+        if (MyPreferences.isFreeVersion()) loadInterstitialAdNew()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -193,14 +193,7 @@ class QuestionAnswerDescriptionActivity : BaseActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when(v!!.id){
             R.id.btn_next ->{
-                loadInterstitialAd()
-                showAdIfReady()
-//                if (mInterstitialAd != null){
-//                    showAdIfReady()
-//                    loadInterstitialAd()
-//                }else {
-//                loadInterstitialAd()
-//                }
+                if (MyPreferences.isFreeVersion()) loadInterstitialAdNew()
                 if (currentIndex < remainingList!!.size-1){
                     currentIndex++
                     val questionAnswer = remainingList!!.toMutableList()[currentIndex]
@@ -235,26 +228,60 @@ class QuestionAnswerDescriptionActivity : BaseActivity(), View.OnClickListener {
         }
     }
 
-    private fun loadInterstitialAd(){
+//    private fun loadInterstitialAd(){
+//        val adRequest = AdRequest.Builder().build()
+//        InterstitialAd.load(
+//            this,
+//            "ca-app-pub-3940256099942544/1033173712", // <-- Test ad unit
+//            adRequest,
+//            object : InterstitialAdLoadCallback() {
+//                override fun onAdLoaded(ad: InterstitialAd) {
+//                    mInterstitialAd = ad
+//                    Log.d("Ad", "Interstitial Ad loaded.")
+//                }
+//
+//                override fun onAdFailedToLoad(adError: LoadAdError) {
+//                    mInterstitialAd = null
+//                    Log.e("Ad", "Failed to load: ${adError.message}")
+//                }
+//            })
+//
+//        mInterstitialAd?.show(this@QuestionAnswerDescriptionActivity)
+//    }
+
+    private fun loadInterstitialAdNew() {
         val adRequest = AdRequest.Builder().build()
-        InterstitialAd.load(
-            this,
-            "ca-app-pub-3940256099942544/1033173712", // <-- Test ad unit
-            adRequest,
-            object : InterstitialAdLoadCallback() {
-                override fun onAdLoaded(ad: InterstitialAd) {
-                    mInterstitialAd = ad
-                    Log.d("Ad", "Interstitial Ad loaded.")
+
+        InterstitialAd.load(this, "ca-app-pub-3940256099942544/1033173712", adRequest, object : InterstitialAdLoadCallback() {
+            override fun onAdLoaded(ad: InterstitialAd) {
+                mInterstitialAd = ad
+                Log.d("AdMob", "Interstitial loaded")
+
+                mInterstitialAd?.fullScreenContentCallback = object : FullScreenContentCallback() {
+                    override fun onAdDismissedFullScreenContent() {
+                        Log.d("AdMob", "Ad dismissed")
+                        // Reload the ad if needed
+//                        loadInterstitialAd()
+                    }
+
+                    override fun onAdFailedToShowFullScreenContent(adError: AdError) {
+                        Log.e("AdMob", "Ad failed to show: ${adError.message}")
+                    }
+
+                    override fun onAdShowedFullScreenContent() {
+                        mInterstitialAd = null
+                        Log.d("AdMob", "Ad shown")
+                    }
                 }
 
-                override fun onAdFailedToLoad(adError: LoadAdError) {
-                    mInterstitialAd = null
-                    Log.e("Ad", "Failed to load: ${adError.message}")
-                }
-            })
-    }
+                // Show the ad immediately when loaded
+                mInterstitialAd?.show(this@QuestionAnswerDescriptionActivity)
+            }
 
-    private fun showAdIfReady() {
-        mInterstitialAd?.show(this)
+            override fun onAdFailedToLoad(adError: LoadAdError) {
+                Log.e("AdMob", "Failed to load interstitial: ${adError.message}")
+                mInterstitialAd = null
+            }
+        })
     }
 }

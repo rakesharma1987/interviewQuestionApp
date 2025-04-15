@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.res.Configuration
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -29,6 +30,11 @@ import com.example.interviewquestion.model.QuestionAnswerList
 import com.example.interviewquestion.model.ReadQuestion
 import com.example.interviewquestion.util.MyPreferences
 import com.example.interviewquestion.viewModel.DbViewModel
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.LoadAdError
+import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.interstitial.InterstitialAd
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import com.google.gson.Gson
 
 
@@ -45,10 +51,12 @@ class QuestionActivity : BaseActivity(), View.OnClickListener {
     var tempList = ArrayList<QuestionAnswer>()
     lateinit var questionAnswer: QuestionAnswer
     private var TAB_NAME = ""
+//    private var mInterstitialAd: InterstitialAd? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_question)
+//        MobileAds.initialize(this)
         binding.rvQuestionList.alpha
         if (MyPreferences.isPurchased()) binding.btnSubscription.text = getString(R.string.btn_txt_premium)
         layoutmanager = LinearLayoutManager(this)
@@ -85,11 +93,15 @@ class QuestionActivity : BaseActivity(), View.OnClickListener {
         binding.btnTips.setOnClickListener(this)
         binding.btnSubscription.setOnClickListener(this)
 
+//        loadInterstitialAd()
+
     }
 
     private fun setUpRecyclerView(tempList: List<QuestionAnswer>){
         val questionAnswerAdapter = QuestionActivityAdapter(this, tempList, object: OnQuestionClickListener{
             override fun onClick(position: Int, item: QuestionAnswer) {
+//                loadInterstitialAd()
+//                showAdIfReady()
                 val lList = ArrayList<QuestionAnswer>()
                 lList.addAll(tempList)
                 lList.subList(0, position).clear()
@@ -285,59 +297,26 @@ class QuestionActivity : BaseActivity(), View.OnClickListener {
 
     }
 
-//    override fun onResume() {
-//        super.onResume()
-////        binding.rvQuestionList.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-////            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-////                super.onScrolled(recyclerView, dx, dy)
-////                val currFirstPos = layoutmanager!!.findFirstCompletelyVisibleItemPosition()
-////                val currLastPos = layoutmanager.findLastCompletelyVisibleItemPosition()
-////                val totalItemCount = layoutmanager.itemCount
-////                if (oldFirstPos === -1) {
-////                    totalItemsViewed += currLastPos - currFirstPos + 1
-////                } else {
-////                    if (dy > 0) {
-////                        totalItemsViewed += Math.abs(currLastPos - oldLastPos)
-////                    } else {
-////                        totalItemsViewed -= Math.abs(oldLastPos - currLastPos)
-////                    }
-////                }
-////                oldLastPos = currLastPos
-////                oldFirstPos = currFirstPos
-////                Log.e("totalItemsViewed", totalItemsViewed.toString())
-////                if (totalItemsViewed == 25){
-////                    binding.rvQuestionList.suppressLayout(true)
-////                    if (!MyPreferences.isPurchased()){
-////                            val dialog = AlertDialog.Builder(this@QuestionActivity)
-////                            dialog.setCancelable(false)
-////                            dialog.setTitle(R.string.app_name)
-////                            dialog.setMessage(getString(R.string.msg_subscription))
-////                            dialog.setPositiveButton(
-////                                "SUBSCRIBE",
-////                                object : DialogInterface.OnClickListener {
-////                                    override fun onClick(dialog: DialogInterface?, which: Int) {
-////                                        dialog!!.dismiss()
-////                                        startActivity(
-////                                            Intent(
-////                                                this@QuestionActivity,
-////                                                BillingActivity::class.java
-////                                            )
-////                                        )
-////                                    }
-////
-////                                })
-////                            dialog.setNegativeButton(
-////                                "Cancel",
-////                                object : DialogInterface.OnClickListener {
-////                                    override fun onClick(dialog: DialogInterface?, which: Int) {
-////                                        dialog!!.dismiss()
-////                                    }
-////
-////                                })
-////                        dialog.create().show()
-////                    }
-////                }
-////            }
-////        })
+//    private fun loadInterstitialAd(){
+//        val adRequest = AdRequest.Builder().build()
+//        InterstitialAd.load(
+//            this,
+//            "ca-app-pub-3940256099942544/1033173712", // <-- Test ad unit
+//            adRequest,
+//            object : InterstitialAdLoadCallback() {
+//                override fun onAdLoaded(ad: InterstitialAd) {
+//                    mInterstitialAd = ad
+//                    Log.d("Ad", "Interstitial Ad loaded.")
+//                }
+//
+//                override fun onAdFailedToLoad(adError: LoadAdError) {
+//                    mInterstitialAd = null
+//                    Log.e("Ad", "Failed to load: ${adError.message}")
+//                }
+//            })
+//    }
+//
+//    private fun showAdIfReady() {
+//        mInterstitialAd?.show(this)
 //    }
 }
