@@ -1,0 +1,190 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 4,
+    "identityHash": "976fc6e93db7c63c5f4774fb5fe3beb2",
+    "entities": [
+      {
+        "tableName": "ReadQuestion",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`SrNo` INTEGER NOT NULL, `isHtmlTag` INTEGER NOT NULL, `quesType` TEXT NOT NULL, `Question` TEXT NOT NULL, `Answer` TEXT NOT NULL, PRIMARY KEY(`SrNo`))",
+        "fields": [
+          {
+            "fieldPath": "SrNo",
+            "columnName": "SrNo",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isHtmlTag",
+            "columnName": "isHtmlTag",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "quesType",
+            "columnName": "quesType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Question",
+            "columnName": "Question",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Answer",
+            "columnName": "Answer",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "SrNo"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "BookmarkQuestion",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`SrNo` INTEGER NOT NULL, `isHtmlTag` INTEGER NOT NULL, `quesType` TEXT NOT NULL, `Question` TEXT NOT NULL, `Answer` TEXT NOT NULL, PRIMARY KEY(`SrNo`))",
+        "fields": [
+          {
+            "fieldPath": "SrNo",
+            "columnName": "SrNo",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isHtmlTag",
+            "columnName": "isHtmlTag",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "quesType",
+            "columnName": "quesType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Question",
+            "columnName": "Question",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Answer",
+            "columnName": "Answer",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "SrNo"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "QuestionAnswer",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`SrNo` INTEGER NOT NULL, `isHtmlTag` INTEGER NOT NULL, `quesType` TEXT NOT NULL, `Question` TEXT NOT NULL, `Answer` TEXT NOT NULL, PRIMARY KEY(`SrNo`))",
+        "fields": [
+          {
+            "fieldPath": "SrNo",
+            "columnName": "SrNo",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isHtmlTag",
+            "columnName": "isHtmlTag",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "quesType",
+            "columnName": "quesType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Question",
+            "columnName": "Question",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Answer",
+            "columnName": "Answer",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "SrNo"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "BookmarkedAndReadQuestion",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`SrNo` INTEGER NOT NULL, `isHtmlTag` INTEGER NOT NULL, `quesType` TEXT NOT NULL, `Question` TEXT NOT NULL, `Answer` TEXT NOT NULL, PRIMARY KEY(`SrNo`))",
+        "fields": [
+          {
+            "fieldPath": "SrNo",
+            "columnName": "SrNo",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isHtmlTag",
+            "columnName": "isHtmlTag",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "quesType",
+            "columnName": "quesType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Question",
+            "columnName": "Question",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Answer",
+            "columnName": "Answer",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "SrNo"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '976fc6e93db7c63c5f4774fb5fe3beb2')"
+    ]
+  }
+}
