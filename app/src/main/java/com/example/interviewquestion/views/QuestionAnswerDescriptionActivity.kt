@@ -252,7 +252,7 @@ class QuestionAnswerDescriptionActivity : BaseActivity(), View.OnClickListener {
     private fun loadInterstitialAdNew() {
         val adRequest = AdRequest.Builder().build()
 
-        InterstitialAd.load(this, "ca-app-pub-3940256099942544/1033173712", adRequest, object : InterstitialAdLoadCallback() {
+        InterstitialAd.load(this, getString(R.string.ad_unit_id), adRequest, object : InterstitialAdLoadCallback() {
             override fun onAdLoaded(ad: InterstitialAd) {
                 mInterstitialAd = ad
                 Log.d("AdMob", "Interstitial loaded")
